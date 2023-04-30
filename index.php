@@ -43,13 +43,13 @@ else
             ?>
             </div>
             <div id = "section_1">
-                <img id = "pic_a" src = "./pictures/0426.png"/>
+                <img id = "pic_a" src = "./pics/0426.png"/>
                 <p class = "text_a" id = "cat">喵喵喵</p>
                 <p class = "text_a" id = "cat_text">健身房的東東 對。</p>
                 <input id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">
             </div>
             <div id = "section_2">
-                <img id = "pic_b" src = "./pictures/0426.png"/>
+                <img id = "pic_b" src = "./pics/0426.png"/>
                 <p class = "text_b" id = "dog">汪汪汪</p>
                 <p class = "text_b" id = "dog_text">教練的東東 對。</p>
                 <input id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
