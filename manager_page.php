@@ -38,6 +38,26 @@ else
             }
             ?>
             </div>
+            <div style="color:blue">
+                <?php
+                    $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                    //$link = require_once "configure.php";
+                    $sql = "SELECT * FROM regular_member";
+                    $result_1 = mysqli_query($link, $sql);
+                    echo "<table>";
+                    echo "<tr><th>ID</th><th>Name</th></tr>";
+                    if (mysqli_num_rows($result_1) > 0) {
+                        while($row = mysqli_fetch_assoc($result_1)) {
+                            echo "<tr><td>" . $row["member_id"] . "</td><td>" . $row["birthday"] . "</td></tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='2'>沒有結果</td></tr>";
+                    }
+                    echo "</table>";
+                    mysqli_close($link);
+                ?>
+
+            </div>
         </div>
     </body>
 </html>
