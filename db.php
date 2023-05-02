@@ -4,11 +4,12 @@
     <h1 style="text-align:center;color:black;">最新資料表狀況</h1>
     <div class="a">  
         <?php
-            define('DB_SERVER', 'localhost');
-            define('DB_USERNAME', 'share');
-            define('DB_PASSWORD', 'ihaveabigdick');
-            define('DB_NAME', 'gym');
-            $link = mysqli_connect("192.168.0.104:3306", DB_USERNAME, DB_PASSWORD, DB_NAME);
+            $conn = require_once "configure.php";
+            // define('DB_SERVER', 'localhost');
+            // define('DB_USERNAME', 'share');
+            // define('DB_PASSWORD', 'ihaveabigdick');
+            // define('DB_NAME', 'gym');
+            $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
             $sql = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='gym'";
             $result_2 = mysqli_query($link, $sql);
 
