@@ -13,7 +13,7 @@
                 <div id = "the_back_4">
                     <form method="post" action="manager_log_procedure.php">
                     <p class = "input_bar">
-                        帳號：<input type="text" name="manager_name"></p>
+                        帳號：<input type="text" name="manager_account"></p>
                     <p class = "input_bar">
                         密碼：<input type="password" name="password"></p>
                     <input id = "log_in_bt" type="submit" value="管理員登入" name = "submit">
