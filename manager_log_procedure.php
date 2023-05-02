@@ -3,15 +3,15 @@
 $conn=require_once "configure.php";
  
 // Define variables and initialize with empty values
-$manager_name=$_POST["manager_name"];
+$manager_account=$_POST["manager_account"];
 $password=$_POST["password"];
 $password_hash=password_hash($password,PASSWORD_DEFAULT);
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $sql = "SELECT * FROM manager WHERE manager_name ='".$manager_name."'";
+    $sql = "SELECT * FROM manager WHERE manager_account ='".$manager_account."'";
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)==1 && $password==mysqli_fetch_assoc($result)["password"]){
-        setcookie("manager_name", $manager_name, time()+60*60*24*30);
+        setcookie("manager_account", $manager_account, time()+60*60*24*30);
         header("location:manager_page.php");
         exit;
     }else{

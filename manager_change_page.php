@@ -28,7 +28,7 @@
                 <div id = "the_back_4">
                     <form name="changeForm" method="post" action="manager_change_procedure.php" onsubmit="return validateCheck()">
                         <p class = "input_bar">
-                            輸入帳號：<input type="text" name="manager_name"></p>
+                            輸入帳號：<input type="text" name="manager_account"></p>
                         <p class = "input_bar">
                             輸入舊密碼：<input type="password" name="old_password"></p>
                         <p class = "input_bar">
