@@ -1,6 +1,6 @@
 <?php
 
-define('DB_SERVER', '192.168.0.104:3306');
+define('DB_SERVER', '25.41.90.151:3306');
 define('DB_USERNAME', 'share');
 define('DB_PASSWORD', 'ihaveabigdick');
 define('DB_NAME', 'gym');
