@@ -18,6 +18,7 @@
                         密碼：<input type="password" name="password"></p>
                     <input id = "log_in_bt" type="submit" value="管理員登入" name = "submit">
                     <input id = "back_bt" type="button" value="訪客瀏覽" onclick = "location.href = 'index.php'">
+                    </form>
                 </div>
             </div>
             <div class = "end"></div>
