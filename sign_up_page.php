@@ -3,6 +3,7 @@ $conn=require_once("configure.php");
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     $member_account=$_POST["member_account"];
+    $member_name=$_POST["member_name"];
     $password=$_POST["password"];
     $gmail=$_POST["gmail"];
     $birthday=$_POST["birthday"];
@@ -10,8 +11,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     //檢查帳號是否重複
     $check="SELECT * FROM regular_member WHERE member_account='".$member_account."'";
     if(mysqli_num_rows(mysqli_query($conn,$check))==0){
-        $sql="INSERT INTO regular_member (member_id, member_account, password, birthday, gmail, gender)
-            VALUES(NULL,'".$member_account."','".$password."','".$birthday."','".$gmail."','".$gender."')";
+        $sql="INSERT INTO regular_member (member_id, member_name, member_account, password, birthday, gmail, gender)
+            VALUES(NULL,'".$member_account."','".$member_account."','".$password."','".$birthday."','".$gmail."','".$gender."')";
         
         if(mysqli_query($conn, $sql)){
             header("location:log_in_page.php");
