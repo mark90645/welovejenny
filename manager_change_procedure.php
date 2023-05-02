@@ -2,7 +2,7 @@
 $conn=require_once("configure.php");
 session_start();
 
-    $manager_name=$_POST["manager_account"];
+    $manager_account=$_POST["manager_account"];
     $old_password=$_POST["old_password"];
     $new_password=$_POST["new_password"];
     $check = mysqli_query($conn,"SELECT `password` FROM manager WHERE `manager_account` = '".$manager_account."'");
