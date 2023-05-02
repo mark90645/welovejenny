@@ -76,6 +76,8 @@ function function_alert($message) {
                         <p class = "input_bar">
                             輸入gmail：<input type="text" name="gmail"></p>
                         <p class = "input_bar">
+                            輸入名稱：<input type="text" name="member_name"></p>
+                        <p class = "input_bar">
                             輸入帳號：<input type="text" name="member_account"></p>
                         <p class = "input_bar">
                             輸入密碼：<input type="password" name="password"></p>
