@@ -87,7 +87,7 @@ else
                 </div>
                 <?php
                     if(isset($_POST['submit'])){
-                        $link = mysqli_connect('localhost','share','ihaveabigdick','gym');
+                        $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                         if(!$link){
                             die('資料庫連線失敗！'.mysqli_connect_error());
                         }
