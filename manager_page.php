@@ -46,19 +46,32 @@ else
                     //$link = require_once "configure.php";
                     $sql = "SELECT * FROM regular_member";
                     $result_1 = mysqli_query($link, $sql);
+                    echo "<form action='' method='post'>";
                     echo "<table>";
-                    echo "<tr><th>會員ID</th><th>會員姓名</th><th>會員生日</th><th>會員信箱</th><th>會員性別</th></tr>";
+                    echo "<tr><th></th><th>會員ID</th><th>會員姓名</th><th>會員生日</th><th>會員信箱</th><th>會員性別</th></tr>";
                     if (mysqli_num_rows($result_1) > 0) {
                         while($row = mysqli_fetch_assoc($result_1)) {
                             $gender = $row["gender"] === "male" ? "男" : "女";
-                            echo "<tr><td>" . $row["member_id"] . "</td><td>" . $row["member_name"] . "</td><td>" . $row["birthday"] ."</td><td>" . $row["gmail"] ."</td><td>" . $gender ."</td></tr>";
+                            echo "<tr><td><input type='checkbox' name='delete[]' value='" . $row["member_id"] . "'></td><td>" . $row["member_id"] . "</td><td>" . $row["member_name"] . "</td><td>" . $row["birthday"] ."</td><td>" . $row["gmail"] ."</td><td>" . $gender ."</td></tr>";
                         }
                     } else {
-                        echo "<tr><td colspan='5'>沒有結果</td></tr>";
+                        echo "<tr><td colspan='6'>沒有結果</td></tr>";
                     }
                     echo "</table>";
+                    echo "<input type='submit' value='刪除'>";
+                    echo "</form>";
+
+                    if(isset($_POST['delete'])){
+                        foreach ($_POST['delete'] as $id){
+                            $sql = "DELETE FROM regular_member WHERE member_id = '$id'";
+                            mysqli_query($link, $sql);
+                        }
+                        echo '<script>alert("刪除成功！");</script>';
+                        echo '<script>alert("會員資料更新中！");</script>';
+                    }
                     mysqli_close($link);
                 ?>
+
 
             </div>
             <!-- 手動新增區 -->
