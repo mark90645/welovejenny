@@ -16,7 +16,7 @@
                 unset($_SESSION['reloaded']);
             }
             
-            $sql=mysqli_connect("140.113.139.49:3307","share","ihaveabigdick","gym");
+            $sql=mysqli_connect("140.113.139.50:3307","share","ihaveabigdick","gym");
 
             $table=[];
             $column=[];
