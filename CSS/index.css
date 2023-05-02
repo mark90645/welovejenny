@@ -30,5 +30,11 @@
 .box_2 {
     width:630px;
     margin:0 auto;
+    background-color: rgb(153, 215, 248);
+    padding:15px;
+    justify-content: center; 
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;
     
 }
