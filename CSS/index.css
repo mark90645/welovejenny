@@ -1,5 +1,5 @@
 .box_1{
-    width:530px;
+    width:630px;
     height:450px;
     float:center;
     background-color: #fff0c9;
@@ -11,15 +11,24 @@
     flex-direction: column; /* 彈性方向：縱向*/
     justify-content: center; 
     text-align: center;
-    color:red;
+    align-items: center;
+    color:purple;
+    margin:0 auto
   }
 
 .box_1 table {
     border-collapse: collapse;
     margin: 0 auto;
+    color:purple;
 }
 
 .box_1 th, .box_1 td {
     border: 1px solid black;
     padding: 5px;
+    color:purple;
+}
+.box_2 {
+    width:630px;
+    margin:0 auto;
+    
 }

@@ -22,7 +22,7 @@ else
     <body>
         <div id = "background">
             <div id = "banner">
-                <input id = "index_bt" type="button" value="健身房" onclick = "location.href = 'index.php'">
+                <input id = "index_bt" style="font-size:34px;float:center;cursor:pointer"type="button" value="健身房" onclick = "location.href = 'index.php'">
                 <?php
             if ($log_check == 0)
             {
@@ -31,7 +31,7 @@ else
             else
             {
                 ?>
-                <p>成功了</p>
+                <p>連線成功</p>
                 <input id = "logout_bt" type="button" value="登出" onclick = "location.href = 'manager_login_page.php'">
                 <input id = "change_bt" type="button" value="修改密碼" onclick = "location.href = 'manager_change_page.php'">
             <?php
@@ -61,16 +61,16 @@ else
 
             </div>
             <!-- 手動新增區 -->
-            <div> 
-                <h4>新增會員資料</h4>
+            <div class="box_2"> 
+                <h4>新增會員資料 (還沒用好)</h4>
                 <div id = "the_back_4">
                     <form method="post" action="manager_log_procedure.php">
                     <p class = "input_bar">
-                        帳號：<input type="text" name="manager_name"></p>
+                        會員名稱：<input type="text" name="member_name"></p>
                     <p class = "input_bar">
-                        密碼：<input type="password" name="password"></p>
+                        會員帳號：<input type="text" name="member_account"></p>
                     <input id = "log_in_bt" type="submit" value="新增值" name = "submit">
-                    <input id = "back_bt" type="button" value="訪客瀏覽" onclick = "location.href = 'index.php'">
+                    
                     </form>
                 </div>
             </div>
