@@ -1,8 +1,8 @@
 <?php
 
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+define('DB_SERVER', '192.168.0.104:3306');
+define('DB_USERNAME', 'share');
+define('DB_PASSWORD', 'ihaveabigdick');
 define('DB_NAME', 'gym');
  
 /* Attempt to connect to MySQL database */
