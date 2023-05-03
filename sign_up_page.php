@@ -87,6 +87,8 @@ function function_alert($message) {
                         <p class = "input_bar">
                             輸入生日：<input type="date" name="birthday"></p>
                         <p class = "input_bar">
+                            輸入電話：<input type="text" name="phone"></p>
+                        <p class = "input_bar">
                             輸入性別：<input type="radio" name="gender"  value = "male">男
                             <input type="radio" name="gender"  value = "female">女</p>
                         <input id = "sign_up_bt" type="submit" value="我要註冊" name = "submit">
