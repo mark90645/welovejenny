@@ -38,6 +38,7 @@ else
                 <input id = "mem_info_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
                 <input id = "logout_bt" type="button" value="登出" onclick = "location.href = 'log_out.php'">
                 <input id = "change_bt" type="button" value="修改密碼" onclick = "location.href = 'change_password.php'">
+                <input id = "change_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
             <?php
             }
             ?>
