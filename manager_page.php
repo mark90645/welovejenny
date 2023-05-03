@@ -1,5 +1,4 @@
 <?php
-
 if (isset($_COOKIE["manager_account"]))
 {
     $log_check = True;
@@ -33,7 +32,7 @@ else
             {
                 ?>
                 <p>連線成功</p>
-                <input id = "logout_bt" type="button" value="登出" onclick = "location.href = 'manager_login_page.php'">
+                <input id = "logout_bt" type="button" value="登出" onclick = "location.href = 'index.php'">
                 <input id = "change_bt" type="button" value="修改密碼" onclick = "location.href = 'manager_change_page.php'">
             <?php
             }
@@ -89,7 +88,7 @@ else
                     <p class = "input_bar">
                         會員密碼：<input type="text" name="password"></p>
                     <p class = "input_bar">
-                        會員生日：<input type="text" value="YYYY-MM-DD"name="birthday"></p>
+                        會員生日：<input type="date" name="birthday"></p>
                     <p class = "input_bar">
                         會員信箱：<input type="text" name="gmail"></p>
                     <p class = "input_bar">
