@@ -18,5 +18,3 @@ else{
     return $link;
 }
 ?>
-
-// welovejenny

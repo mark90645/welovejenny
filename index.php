@@ -30,6 +30,7 @@ else
                 <input id = "log_bt" type="button" value="登入" onclick = "location.href = 'log_in_page.php'">
                 <input id = "sign_bt" type="button" value="註冊" onclick = "location.href = 'sign_up_page.php'">
                 <input id = "manager_bt" type="button" value="管理員" onclick = "location.href = 'manager_login_page.php'">
+                <input id = "mem_info_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
             <?php
             }
             else
