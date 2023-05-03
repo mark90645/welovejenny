@@ -58,7 +58,7 @@ else
                 <p class = "text_a" id = "cat_text">方案內容介紹</p>
                 <p class = "text_a" id = "cat_text">A:時效:半年 介紹:抓資料庫的 價格:4799</p>
                 <p class = "text_a" id = "cat_text">B:時效:一年 介紹:抓資料庫的 價格:8999</p>
-                <p class = "text_a" id = "cat_text">C:時效:兩年 介紹:抓資料庫的 價格:10999</p>
+                <p class = "text_a" id = "cat_text">C:時效:兩年 介紹:抓資料庫的 價格:12999</p>
                 <input id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">
             </div>
         </div>
