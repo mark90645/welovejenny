@@ -45,15 +45,21 @@ else
             </div>
             <div id = "section_1">
                 <img id = "pic_a" src = "./pics/0426.png"/>
-                <p class = "text_a" id = "cat">喵喵喵</p>
-                <p class = "text_a" id = "cat_text">健身房的東東 對。</p>
+                <p class = "text_a" id = "cat_text">健身房的照片(看要不要弄幻燈片)</p>
                 <input id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">
             </div>
             <div id = "section_2">
                 <img id = "pic_b" src = "./pics/0426.png"/>
                 <p class = "text_b" id = "dog">汪汪隊出任務</p>
-                <p class = "text_b" id = "dog_text">教練的東東 對。</p>
+                <p class = "text_b" id = "dog_text">幾張教練照片</p>
                 <input id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
+            </div>
+            <div id = "section_3">
+                <p class = "text_a" id = "cat_text">方案內容介紹</p>
+                <p class = "text_a" id = "cat_text">A:時效:半年 介紹:抓資料庫的 價格:4799</p>
+                <p class = "text_a" id = "cat_text">B:時效:一年 介紹:抓資料庫的 價格:8999</p>
+                <p class = "text_a" id = "cat_text">C:時效:兩年 介紹:抓資料庫的 價格:12999</p>
+                <input id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">
             </div>
         </div>
     </body>
