@@ -43,7 +43,6 @@ else
                 <hr/>
                 <?php
                     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-                    //$link = require_once "configure.php";
                     $sql = "SELECT * FROM regular_member";
                     $result_1 = mysqli_query($link, $sql);
                     echo "<form action='' method='post'>";
@@ -52,7 +51,7 @@ else
                     if (mysqli_num_rows($result_1) > 0) {
                         while($row = mysqli_fetch_assoc($result_1)) {
                             $gender = $row["gender"] === "male" ? "男" : "女";
-                            echo "<tr><td><input type='checkbox' name='delete[]' value='" . $row["member_id"] . "'></td><td>" . $row["member_id"] . "</td><td>" . $row["member_name"] . "</td><td>" . $row["birthday"] ."</td><td>" . $row["gmail"] ."</td><td>". $row["phone"] ."</td><td>" . $gender ."</td></tr>";
+                            echo "<tr><td><input type='checkbox' name='delete[]' value='" . $row["member_name"] . "'></td><td>" . $row["member_id"] . "</td><td>" . $row["member_name"] . "</td><td>" . $row["birthday"] ."</td><td>" . $row["gmail"] ."</td><td>". $row["phone"] ."</td><td>" . $gender ."</td></tr>";
                         }
                     } else {
                         echo "<tr><td colspan='7'>沒有結果</td></tr>";
@@ -63,8 +62,8 @@ else
                     echo "</form>";
 
                     if(isset($_POST['delete'])){
-                        foreach ($_POST['delete'] as $id){
-                            $sql = "DELETE FROM regular_member WHERE member_id = '$id'";
+                        foreach ($_POST['delete'] as $name){
+                            $sql = "DELETE FROM regular_member WHERE member_name = '$name'";
                             mysqli_query($link, $sql);
                         }
                         echo '<script>alert("刪除成功！");</script>';
