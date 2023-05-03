@@ -1,9 +1,10 @@
 <?php
-if (isset($_COOKIE["manager_name"]))
+
+if (isset($_COOKIE["manager_account"]))
 {
     $log_check = True;
     $conn=require_once "configure.php";
-    $cookie = $_COOKIE['manager_name'];
+    $cookie = $_COOKIE['manager_account'];
 }
 else
 {
