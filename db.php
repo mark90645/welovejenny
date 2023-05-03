@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>  
-    <div style="width:900px;margin:0 auto;color:purple"> 
+    <div style="width:1000px;margin:0 auto;color:purple"> 
     <h1 style="text-align:center;color:black;">最新資料表狀況</h1>
     <div class="a">  
         <?php
