@@ -2,6 +2,7 @@
 $conn=require_once("configure.php");
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $rand = rand(100000000, 999999999);
     $member_account=$_POST["member_account"];
     $member_name=$_POST["member_name"];
     $password=$_POST["password"];
@@ -13,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $check="SELECT * FROM regular_member WHERE member_account='".$member_account."'";
     if(mysqli_num_rows(mysqli_query($conn,$check))==0){
         $sql="INSERT INTO regular_member (member_id, member_name, member_account, password, birthday, gmail, phone, gender)
-            VALUES(NULL,'".$member_account."','".$member_account."','".$password."','".$birthday."','".$gmail."','".$phone."','".$gender."')";
+            VALUES('".$rand."','".$member_account."','".$member_account."','".$password."','".$birthday."','".$gmail."','".$phone."','".$gender."')";
         
         if(mysqli_query($conn, $sql)){
             header("location:log_in_page.php");
