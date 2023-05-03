@@ -1,5 +1,5 @@
 .box_1{
-    width:630px;
+    width:700px;
     height:450px;
     float:center;
     background-color: #fff0c9;
@@ -28,7 +28,7 @@
     color:purple;
 }
 .box_2 {
-    width:630px;
+    width:700px;
     margin:0 auto;
     background-color: rgb(153, 215, 248);
     padding:15px;

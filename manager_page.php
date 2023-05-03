@@ -45,27 +45,27 @@ else
                 <hr/>
                 <?php
                     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-                    //$link = require_once "configure.php";
                     $sql = "SELECT * FROM regular_member";
                     $result_1 = mysqli_query($link, $sql);
                     echo "<form action='' method='post'>";
                     echo "<table>";
-                    echo "<tr><th></th><th>會員ID</th><th>會員姓名</th><th>會員生日</th><th>會員信箱</th><th>會員性別</th></tr>";
+                    echo "<tr><th></th><th>會員ID</th><th>會員姓名</th><th>會員生日</th><th>會員信箱</th><th>手機號碼</th><th>會員性別</th></tr>";
                     if (mysqli_num_rows($result_1) > 0) {
                         while($row = mysqli_fetch_assoc($result_1)) {
                             $gender = $row["gender"] === "male" ? "男" : "女";
-                            echo "<tr><td><input type='checkbox' name='delete[]' value='" . $row["member_id"] . "'></td><td>" . $row["member_id"] . "</td><td>" . $row["member_name"] . "</td><td>" . $row["birthday"] ."</td><td>" . $row["gmail"] ."</td><td>" . $gender ."</td></tr>";
+                            echo "<tr><td><input type='checkbox' name='delete[]' value='" . $row["member_name"] . "'></td><td>" . $row["member_id"] . "</td><td>" . $row["member_name"] . "</td><td>" . $row["birthday"] ."</td><td>" . $row["gmail"] ."</td><td>". $row["phone"] ."</td><td>" . $gender ."</td></tr>";
                         }
                     } else {
-                        echo "<tr><td colspan='6'>沒有結果</td></tr>";
+                        echo "<tr><td colspan='7'>沒有結果</td></tr>";
                     }
                     echo "</table>";
+                    echo "<br/>";
                     echo "<input type='submit' value='刪除'>";
                     echo "</form>";
 
                     if(isset($_POST['delete'])){
-                        foreach ($_POST['delete'] as $id){
-                            $sql = "DELETE FROM regular_member WHERE member_id = '$id'";
+                        foreach ($_POST['delete'] as $name){
+                            $sql = "DELETE FROM regular_member WHERE member_name = '$name'";
                             mysqli_query($link, $sql);
                         }
                         echo '<script>alert("刪除成功！");</script>';
@@ -94,6 +94,8 @@ else
                     <p class = "input_bar">
                         會員信箱：<input type="text" name="gmail"></p>
                     <p class = "input_bar">
+                        會員手機：<input type="text" name="phone"></p>
+                    <p class = "input_bar">
                         會員性別：
                         <label><input type="radio" name="gender" value="male">男</label>
                         <label><input type="radio" name="gender" value="female">女</label></p>
@@ -112,6 +114,7 @@ else
                         $pw = $_POST['password'];
                         $birth = $_POST['birthday'];
                         $gmail = $_POST['gmail'];
+                        $phone = $_POST['phone'];
                         $gender = $_POST['gender'];
 
                         $query = "SELECT * FROM regular_member WHERE member_id='$id'";
@@ -121,7 +124,7 @@ else
                             echo '<script>alert("該會員已經存在或ID重複！");</script>';
                         }
                         else{ 
-                            $sql="INSERT INTO regular_member(member_id, member_name, member_account, password, birthday, gmail, gender) VALUES('$id','$name','$account','$pw','$birth','$gmail','$gender')";
+                            $sql="INSERT INTO regular_member(member_id, member_name, member_account, password, birthday, gmail, phone, gender) VALUES('$id','$name','$account','$pw','$birth','$gmail', '$phone','$gender')";
                             if(mysqli_query($link,$sql)){
                                 echo '<script>alert("新增成功！");</script>';
                                 echo '<script>alert("會員資料更新中！");</script>';
@@ -133,7 +136,9 @@ else
                     }
                 ?>
             </div>
-
+            <h2 style="text-align:center;">會員方案管理</h2>
+            <hr/>
+            <h2 style="text-align:center;">課程管理</h2>
         </div>
     </body>
 </html>
