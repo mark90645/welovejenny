@@ -13,9 +13,14 @@ body {
 }
 
 #index_bt {
+    position: absolute;
     border: none;
     background: none;
     font-size: 30px;
+    left: 20px;
+}
+#index_bt:hover {
+    color:#e8e8e8;
 }
 
 .bt {
