@@ -40,6 +40,21 @@
 }*/
 
 .pic {
+    position: absolute;
     width: 700px;
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+    z-index:3;
+    opacity: 0.1;
+}
+
+#pic_a {
+    top:250px;
+}
+
+#pic_a {
+    top:800px;
+}
+
+.sections{
+    z-index:10;
 }
