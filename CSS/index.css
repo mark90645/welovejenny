@@ -41,20 +41,45 @@
 
 .pic {
     position: absolute;
-    width: 700px;
+    width: 760px;
+    height:455px;
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
     z-index:3;
-    opacity: 0.1;
 }
 
 #pic_a {
-    top:250px;
+    top:150px;
 }
 
-#pic_a {
+#pic_b {
     top:800px;
 }
 
 .sections{
     z-index:10;
+}
+
+.base{
+    position: absolute;
+    width: 760px;
+    height: 455px;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: blanchedalmond;
+    z-index:2;
+}
+
+#base_1{
+    top:175px;
+    right:0px;
+}
+
+#base_2{
+    top:825px;
+    right:0px;
+}
+
+.adjust_index{
+    position: relative;
+    top:120px;
+    left:210px;
 }
