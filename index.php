@@ -44,12 +44,12 @@ else
             ?>
             </div>
             <div id = "section_1">
-                <img class = "pic" src = "./pics/0426.png"/>
+                <img class = "pic" id = "pic_a" src = "./pics/0426.png"/>
                 <p class = "text_a" id = "cat_text">健身房的照片(看要不要弄幻燈片)</p>
                 <input id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">
             </div>
             <div id = "section_2">
-                <img class = "pic" src = "./pics/0426.png"/>
+                <img class = "pic" id = "pic_b" src = "./pics/0426.png"/>
                 <p class = "text_b" id = "dog">汪汪隊出任務</p>
                 <p class = "text_b" id = "dog_text">幾張教練照片</p>
                 <input id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">

@@ -40,5 +40,6 @@
 }*/
 
 .pic {
-    width: 400px;
+    width: 700px;
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
 }
