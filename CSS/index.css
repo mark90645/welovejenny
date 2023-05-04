@@ -64,7 +64,7 @@
     width: 760px;
     height: 455px;
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-    background-color: blanchedalmond;
+    background-color: #DCAB6B;
     z-index:2;
 }
 
@@ -82,4 +82,16 @@
     position: absolute;
     top:120px;
     left:40%;
+}
+
+.bt_2{
+    border: none;
+    background-color: #D4C5C7;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.bt_2:hover{
+    background-color: #2D080A;
+    color: #D4C5C7;
 }
