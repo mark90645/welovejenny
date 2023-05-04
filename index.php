@@ -68,7 +68,9 @@ else
             </div>
         </div>
         <div class = "end">
-            <p>放一些聯絡資訊</p>
+            <p>聯絡資訊</p>
+            <input class = "contact_pic" id = "pic_c" type="button" onclick = "location.href = 'reserve_page.php'" style="background-image:url(圖片網址);height:30px;"><!--以下大改-->
+            <input class = "contact_pic" id = "pic_d" type="button" onclick = "location.href = 'reserve_page.php'"><img src = "./pics/instagram.png"></button>
         </div>
     </body>
 </html>

@@ -4,10 +4,10 @@
         <meta charset = "UTF-8"></meta><!--網頁編碼-->
         <title>會員資訊</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
-        <link rel = "stylesheet" href = "./CSS/index.css" />
+        <link rel = "stylesheet" href = "./CSS/member_info_page.css" />
     </head>
     <body>
-        <div id = "background">
+        <div class = "background">
             <div class = "banner">             
                 <input id = "index_bt" type="button" value="健身房" onclick = "location.href = 'index.php'">
                 <input class = "bt" id = "mem_info_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
