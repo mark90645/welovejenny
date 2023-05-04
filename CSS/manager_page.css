@@ -1,4 +1,4 @@
-/*.box_1{
+.box_1{
     width:700px;
     height:450px;
     float:center;
@@ -8,8 +8,8 @@
     border-radius: 20px;
     padding-left: 20px;
     display: flex; /* 彈性排版 */
-    /*flex-direction: column; /* 彈性方向：縱向*/
-    /*justify-content: center; 
+    flex-direction: column; /* 彈性方向：縱向*/
+    justify-content: center; 
     text-align: center;
     align-items: center;
     color:purple;
@@ -37,8 +37,4 @@
     align-items: center;
     border-radius: 15px;
     
-}*/
-
-.pic {
-    width: 400px;
 }

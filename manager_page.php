@@ -17,7 +17,7 @@ else
         <meta charset = "UTF-8"></meta><!--網頁編碼-->
         <title>管理者頁面</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
-        <link rel = "stylesheet" href = "./CSS/index.css" />
+        <link rel = "stylesheet" href = "./CSS/manager_page.css" />
     </head>
     <body>
         <div id = "background">
