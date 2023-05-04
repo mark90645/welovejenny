@@ -48,7 +48,6 @@ else
                 <div class = "base" id = "base_1">
                     <div class = "adjust_index">
                         <p class = "text_a" id = "cat_text">健身房的照片(看要不要弄幻燈片)</p>
-                        <input id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">
                         <p class = "text_a" id = "cat_text">方案內容介紹</p>
                         <p class = "text_a" id = "cat_text">A:時效:半年 介紹:抓資料庫的 價格:4799</p>
                         <p class = "text_a" id = "cat_text">B:時效:一年 介紹:抓資料庫的 價格:8999</p>

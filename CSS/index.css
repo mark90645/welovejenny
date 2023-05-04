@@ -78,8 +78,8 @@
     right:0px;
 }
 
-.adjust_index{
-    position: relative;
+.adjust_index{/*要修縮小後畫面*/
+    position: absolute;
     top:120px;
-    left:210px;
+    left:40%;
 }
