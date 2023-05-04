@@ -1,4 +1,4 @@
-.box_1{
+/*.box_1{
     width:700px;
     height:450px;
     float:center;
@@ -8,8 +8,8 @@
     border-radius: 20px;
     padding-left: 20px;
     display: flex; /* 彈性排版 */
-    flex-direction: column; /* 彈性方向：縱向*/
-    justify-content: center; 
+    /*flex-direction: column; /* 彈性方向：縱向*/
+    /*justify-content: center; 
     text-align: center;
     align-items: center;
     color:purple;
@@ -37,4 +37,68 @@
     align-items: center;
     border-radius: 15px;
     
+}*/
+
+.background {
+    padding-bottom: 1400px;
+}
+
+.pic {
+    position: absolute;
+    width: 760px;
+    height:455px;
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+    z-index:2;
+}
+.pic:hover{
+    opacity:0.5;
+}
+
+#pic_a {
+    top:150px;
+}
+
+#pic_b {
+    top:800px;
+}
+
+.sections{
+    z-index:10;
+}
+
+.base{
+    position: absolute;
+    width: 760px;
+    height: 455px;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: #DCAB6B;
+    z-index:3;
+}
+
+#base_1{
+    top:175px;
+    right:0px;
+}
+
+#base_2{
+    top:825px;
+    right:0px;
+}
+
+.adjust_index{/*要修縮小後畫面*/
+    position: absolute;
+    top:120px;
+    left:40%;
+}
+
+.bt_2{
+    border: none;
+    background-color: #D4C5C7;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.bt_2:hover{
+    background-color: #2D080A;
+    color: #D4C5C7;
 }

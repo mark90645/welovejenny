@@ -1,0 +1,40 @@
+.box_1{
+    width:700px;
+    height:450px;
+    float:center;
+    background-color: #fff0c9;
+    border-color: gray;
+    box-shadow: 0 2px 7px black;
+    border-radius: 20px;
+    padding-left: 20px;
+    display: flex; /* 彈性排版 */
+    flex-direction: column; /* 彈性方向：縱向*/
+    justify-content: center; 
+    text-align: center;
+    align-items: center;
+    color:purple;
+    margin:0 auto
+  }
+
+.box_1 table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    color:purple;
+}
+
+.box_1 th, .box_1 td {
+    border: 1px solid black;
+    padding: 5px;
+    color:purple;
+}
+.box_2 {
+    width:700px;
+    margin:0 auto;
+    background-color: rgb(153, 215, 248);
+    padding:15px;
+    justify-content: center; 
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;
+    
+}

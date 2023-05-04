@@ -17,12 +17,11 @@ else
         <meta charset = "UTF-8"></meta><!--網頁編碼-->
         <title>管理者頁面</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
-        <link rel = "stylesheet" href = "./CSS/index.css" />
+        <link rel = "stylesheet" href = "./CSS/manager_page.css" />
     </head>
     <body>
         <div id = "background">
             <div id = "banner">
-                <input id = "index_bt" style="font-size:34px;float:center;cursor:pointer"type="button" value="健身房" onclick = "location.href = 'index.php'">
                 <?php
             if ($log_check == 0)
             {

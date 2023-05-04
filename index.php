@@ -14,53 +14,63 @@ else
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset = "UTF-8"></meta><!--網頁編碼-->
+        <meta charset = "UTF-8"></meta>
         <title>健身房系統首頁</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
         <link rel = "stylesheet" href = "./CSS/index.css" />
     </head>
     <body>
-        <div id = "background">
-            <div id = "banner">
+        <div class = "background">
+            <div class = "banner">
                 <input id = "index_bt" type="button" value="健身房" onclick = "location.href = 'index.php'">
                 <?php
-            if ($log_check == 0)
-            {
+                if ($log_check == 0)
+                {
                 ?>
-                <input id = "log_bt" type="button" value="登入" onclick = "location.href = 'log_in_page.php'">
-                <input id = "sign_bt" type="button" value="註冊" onclick = "location.href = 'sign_up_page.php'">
-                <input id = "manager_bt" type="button" value="管理員登入" onclick = "location.href = 'manager_login_page.php'">
-                <input id = "mem_info_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
-            <?php
-            }
-            else
-            {
+                <input class = "bt" id = "log_bt" type="button" value="登入" onclick = "location.href = 'log_in_page.php'">
+                <input class = "bt" id = "sign_bt" type="button" value="註冊" onclick = "location.href = 'sign_up_page.php'">
+                <input class = "bt" id = "manager_bt" type="button" value="管理員登入" onclick = "location.href = 'manager_login_page.php'">
+                <input class = "bt" id = "mem_info_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
+                <?php
+                }
+                else
+                {
                 ?>
-                <input id = "mem_info_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
-                <input id = "logout_bt" type="button" value="登出" onclick = "location.href = 'log_out.php'">
-                <input id = "change_bt" type="button" value="修改密碼" onclick = "location.href = 'change_password.php'">
-            <?php
-            }
-            ?>
+                <input class = "bt" id = "mem_info_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
+                <input class = "bt" id = "logout_bt" type="button" value="登出" onclick = "location.href = 'log_out.php'">
+                <input class = "bt" id = "change_bt" type="button" value="修改密碼" onclick = "location.href = 'change_password.php'">
+                <?php
+                }
+                ?>
             </div>
-            <div id = "section_1">
-                <img id = "pic_a" src = "./pics/0426.png"/>
-                <p class = "text_a" id = "cat_text">健身房的照片(看要不要弄幻燈片)</p>
-                <input id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">
+            <div class = "sections" id = "section_1">
+                <img class = "pic" id = "pic_a" src = "./pics/0426.png"/>
+                <div class = "base" id = "base_1">
+                    <div class = "adjust_index">
+                        <p class = "text_a" id = "cat_text">健身房的照片(看要不要弄幻燈片)</p>
+                        <p class = "text_a" id = "cat_text">方案內容介紹</p>
+                        <p class = "text_a" id = "cat_text">A:時效:半年 介紹:抓資料庫的 價格:4799</p>
+                        <p class = "text_a" id = "cat_text">B:時效:一年 介紹:抓資料庫的 價格:8999</p>
+                        <p class = "text_a" id = "cat_text">C:時效:兩年 介紹:抓資料庫的 價格:12999</p>
+                        <input class = "bt_2" id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">
+                    </div>
+                </div>
             </div>
-            <div id = "section_2">
-                <img id = "pic_b" src = "./pics/0426.png"/>
-                <p class = "text_b" id = "dog">汪汪隊出任務</p>
-                <p class = "text_b" id = "dog_text">幾張教練照片</p>
-                <input id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
+            <div class = "sections" id = "section_2">
+                <img class = "pic" id = "pic_b" src = "./pics/unnatural.png"/>
+                <div class = "base" id = "base_2">
+                    <div class = "adjust_index">
+                        <p class = "text_b" id = "dog">汪汪隊出任務</p>
+                        <p class = "text_b" id = "dog_text">幾張教練照片</p>
+                        <input class = "bt_2" id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
+                    </div>
+                </div>
             </div>
-            <div id = "section_3">
-                <p class = "text_a" id = "cat_text">方案內容介紹</p>
-                <p class = "text_a" id = "cat_text">A:時效:半年 介紹:抓資料庫的 價格:4799</p>
-                <p class = "text_a" id = "cat_text">B:時效:一年 介紹:抓資料庫的 價格:8999</p>
-                <p class = "text_a" id = "cat_text">C:時效:兩年 介紹:抓資料庫的 價格:12999</p>
-                <input id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">
-            </div>
+        </div>
+        <div class = "end">
+            <p>聯絡資訊</p>
+            <input class = "contact_pic" id = "pic_c" type="button" onclick = "location.href = 'reserve_page.php'" style="background-image:url(圖片網址);height:30px;"><!--以下大改-->
+            <input class = "contact_pic" id = "pic_d" type="button" onclick = "location.href = 'reserve_page.php'"><img src = "./pics/instagram.png"></button>
         </div>
     </body>
 </html>
