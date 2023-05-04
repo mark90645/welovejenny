@@ -24,9 +24,9 @@ include "BookableCell.php";
  
 $booking = new Booking(
     'gym',
-    'localhost',
-    'root',
-    ''
+    '25.41.90.151:3306',
+    'share',
+    'ihaveabigdick'
 );
 
 $username = $_COOKIE["member_account"];

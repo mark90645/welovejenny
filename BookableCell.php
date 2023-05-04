@@ -34,6 +34,14 @@ class BookableCell
             return $cal->cellContent =
                 $this->openCell($cal->getCurrentDate());
         }
+
+        $numBookings = $this->getNumBookings($cal->getCurrentDate());
+        
+        if ($numBookings >= 1)
+        {
+            return $cal->cellContent =
+                $this->closeCell($cal->getCurrentDate());
+        }
     }
  
     public function routeActions()
@@ -49,14 +57,20 @@ class BookableCell
  
     private function openCell($date)
     {
-        return '<div class="open">' . $this->bookingForm($date) . '</div>';
+        return '<div class="open">' . $this->bookingForm($date) . $this->getNumBookings($date) . '/30</div>';
     }
  
     private function bookedCell($date)
     {
-        return '<div class="booked">' . $this->deleteForm($this->bookingId($date)) . '</div>';
+        return '<div class="booked">' . $this->deleteForm($this->bookingId($date))  . $this->getNumBookings($date) . '/30</div>';
+    }
+    
+    private function closeCell($date)
+    {
+        return '<div class="close">' . $this->deleteForm($this->bookingId($date)) . '</div>';
     }
  
+
     private function isDateBooked($date)
     {
         return in_array($date, $this->bookedDates());
@@ -114,5 +128,22 @@ class BookableCell
             '<input type="hidden" name="id" value="' . $id . '" />' .
             '<input class="submit" type="submit" value="Delete" />' .
             '</form>';
+    }
+
+    private function closeForm($id)
+    {
+        return
+            '<p>full</p>';
+    }
+
+    private function getNumBookings($date)
+    {
+        $count = 0;
+        foreach ($this->booking->index() as $record) {
+            if ($record['booking_date'] == $date) {
+                $count++;
+            }
+        }
+        return $count;
     }
 }
