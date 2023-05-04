@@ -62,5 +62,8 @@ else
                 <input id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">
             </div>
         </div>
+        <div class = "end">
+            <p>放一些聯絡資訊</p>
+        </div>
     </body>
 </html>
