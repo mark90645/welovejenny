@@ -19,13 +19,38 @@ body {
 }
 
 .bt {
+    position: absolute;
     border: none;
     background-color: #D4C5C7;
     padding: 5px 15px 5px 15px;
     border-radius: 5px;
     font-size: 15px;
-    margin: 0px 5px 0px 5px;
 }
 .bt:hover{
     background-color: #e8e8e8;
+}
+
+#log_bt {
+    right:200px;
+}
+
+#sign_bt {
+    right:127px;
+}
+
+#manager_bt {
+    right:10px;
+}
+
+#mem_info_bt {
+    right:180px;
+    top:50px;/*因為共用模板，這個之後再調回來*/
+}
+
+#logout_bt {
+    right:10px;
+}
+
+#change_bt {
+    right:80px;
 }

@@ -10,6 +10,7 @@
         <div id = "background">
             <div class = "banner">             
                 <input id = "index_bt" type="button" value="健身房" onclick = "location.href = 'index.php'">
+                <input class = "bt" id = "mem_info_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
                 <input class = "bt" id = "logout_bt" type="button" value="登出" onclick = "location.href = 'log_out.php'">
                 <input class = "bt" id = "change_bt" type="button" value="修改密碼" onclick = "location.href = 'change_password.php'">
             </div>
