@@ -44,7 +44,10 @@
     width: 760px;
     height:455px;
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
-    z-index:3;
+    z-index:2;
+}
+.pic:hover{
+    opacity:0.5;
 }
 
 #pic_a {
@@ -65,7 +68,7 @@
     height: 455px;
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
     background-color: #DCAB6B;
-    z-index:2;
+    z-index:3;
 }
 
 #base_1{
