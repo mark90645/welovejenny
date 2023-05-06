@@ -50,6 +50,7 @@
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
     z-index:2;
 }
+
 .pic:hover{
     opacity:0.5;
 }
@@ -101,4 +102,16 @@
 .bt_2:hover{
     background-color: #2D080A;
     color: #D4C5C7;
+}
+
+/*螢幕改動*/
+
+@media (min-width: 1300px){
+    .pic{
+        width: 960px;
+    }
+
+    .base{
+        width: 960px;
+    }
 }
