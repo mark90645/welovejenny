@@ -1,14 +1,21 @@
 <?php
+session_start();
 if (isset($_COOKIE["manager_account"]))
 {
     $log_check = True;
     $conn=require_once "configure.php";
     $cookie = $_COOKIE['manager_account'];
+    $sql = "SELECT manager_name FROM manager WHERE manager_account = '".$cookie."'";
+    $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    $result = mysqli_query($link,$sql);
+    $row = mysqli_fetch_assoc($result);
+    $manager_name = $row["manager_name"];
 }
 else
 {
     $log_check = False;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +37,7 @@ else
             else
             {
                 ?>
+                <h2>管理員：<?php echo $manager_name; ?><h2>
                 <p>連線成功</p>
                 <input id = "logout_bt" type="button" value="登出" onclick = "location.href = 'index.php'">
                 <input id = "change_bt" type="button" value="修改密碼" onclick = "location.href = 'manager_change_page.php'">
@@ -132,8 +140,7 @@ else
                         mysqli_close($conn);
                     }
                 ?>
-            </div>
-            <h2 style="text-align:center;">課程管理</h2>
+            </div>       
             <div class="box_1">
                 <?php
                     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -150,9 +157,10 @@ else
                         echo "<tr><td colspan='4'>沒有結果</td></tr>";
                     }
                 ?>
-            </div>
-            <hr/>
-            <h2 style="text-align:center;">會員方案管理</h2>
+                
+            </div>          
+            <h2 style="text-align:center;">課程管理</h2>
+            
         </div>
     </body>
 </html>
