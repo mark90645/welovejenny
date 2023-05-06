@@ -10,8 +10,11 @@ $password_hash=password_hash($password,PASSWORD_DEFAULT);
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $sql = "SELECT * FROM manager WHERE manager_account ='".$manager_account."'";
     $result=mysqli_query($conn,$sql);
-    if(mysqli_num_rows($result)==1 && $password==mysqli_fetch_assoc($result)["password"]){
-        setcookie("manager_account", $manager_account, time()+60*60*24*30);
+    if(mysqli_num_rows($result)==1 && $password==mysqli_fetch_assoc($result)["password"]){       
+        setcookie("manager_account", $manager_account, time()+60*60*24*30);   
+        session_start();    
+        $row = mysqli_fetch_assoc($result);        
+        $_SESSION["manager_name"] = $row["manager_name"];
         header("location:manager_page.php");
         exit;
     }else{
