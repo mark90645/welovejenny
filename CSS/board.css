@@ -79,7 +79,7 @@ body {
 .contact_pic{
     height:50px;
     width: 50px;
-    background-image: url(./pics/facebook.png);
+    background-image: url("https://www.flaticon.com/free-icons/instagram-logo");
 }
 
 #ig {
