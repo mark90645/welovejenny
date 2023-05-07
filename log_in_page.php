@@ -8,7 +8,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html><!--這頁尾端有一段空白未刪 記得找出來-->
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!--網頁編碼-->
@@ -24,11 +24,13 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                     <input class = "redirect" id = "log_part" type="button" value="登入頁面" onclick = "location.href = 'log_in_page.php'">
                     <input class = "redirect" id = "sign_part" type="button" value="註冊頁面" onclick = "location.href = 'sign_up_page.php'">
                 </div>
+                <img class = "pic" id = "pic_left" src = "./pics/dc_strange.jpg"/><!--我覺得可以學單一入口在左半邊弄個圖片-->
+                <h3 class = "title">健身房會員登入</h3>
                 <div id = "the_back_4">
                     <form method="post" action="log_procedure.php">
-                    <p class = "input_bar">
+                    <p class = "input_bar" id = "account_bar">
                         帳號：<input type="text" name="member_account"></p>
-                    <p class = "input_bar">
+                    <p class = "input_bar" id = "password_bar">
                         密碼：<input type="password" name="password"></p>
                     <input class = "bt" id = "log_in_bt" type="submit" value="我要登入" name = "submit">
                     <input class = "bt" id = "forget_bt" type="button" value="忘記密碼" onclick = "location.href = 'forget_page.php'">
