@@ -52,7 +52,16 @@ else
                         <p class = "text_a" id = "cat_text">A:時效:半年 介紹:抓資料庫的 價格:4799</p>
                         <p class = "text_a" id = "cat_text">B:時效:一年 介紹:抓資料庫的 價格:8999</p>
                         <p class = "text_a" id = "cat_text">C:時效:兩年 介紹:抓資料庫的 價格:12999</p>
-                        <input class = "bt_2" id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">
+                        <?php
+                        if($log_check == 0)
+                        {?>
+                        <?php
+                        }else{
+                        ?> 
+                        <input class = "bt_2" id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">                         
+                        <?php
+                        }    
+                        ?>
                     </div>
                 </div>
             </div>
@@ -69,8 +78,8 @@ else
         </div>
         <div class = "end">
             <p>聯絡資訊</p>
-            <input class = "contact_pic" id = "pic_c" type="button" onclick = "location.href = 'reserve_page.php'" style="background-image:url(圖片網址);height:30px;"><!--以下大改-->
-            <input class = "contact_pic" id = "pic_d" type="button" onclick = "location.href = 'reserve_page.php'"><img src = "./pics/instagram.png"></button>
+            <input class = "contact_pic" id = "pic_c" type="button" onclick = "location.href = 'reserve_page.php'"><!--這裡我不會把圖案變按鈕 CSS大神救我-->
+            <input class = "contact_pic" id = "pic_d" type="button" onclick = "location.href = 'reserve_page.php'"><img src = "./pics/instagram.png" id = "ig"></button>
         </div>
     </body>
 </html>

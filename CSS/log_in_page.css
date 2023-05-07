@@ -1,0 +1,28 @@
+.background {
+    padding-bottom: 512px;
+}
+
+#sign_part{
+    background-color: #2D080A;
+    color: #e8e8e8;
+}
+#sign_part:hover{
+    color: #DCAB6B;
+}
+
+#log_part:hover{
+    color: #DCAB6B;
+    background-color: white;
+}
+
+#log_in_bt{
+    left: 20px;
+}
+
+#forget_bt{
+    left: 140px;
+}
+
+#back_bt{
+    left: 260px;
+}

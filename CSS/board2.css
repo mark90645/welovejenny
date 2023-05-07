@@ -1,0 +1,29 @@
+.background {
+    background-color: rgb(255, 222, 156);
+}
+
+body {
+    margin: 0px;
+}
+
+.head{
+    background-color: #2D080A;
+}
+
+.bt {
+    position: absolute;
+    border: none;
+    background-color: #D4C5C7;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.bt:hover{
+    background-color: #e8e8e8;
+}
+
+.redirect{
+    height:40px;
+    width:80px;
+    border: none;
+}

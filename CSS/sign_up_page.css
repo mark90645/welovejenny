@@ -1,0 +1,17 @@
+.background {
+    padding-bottom: 512px;
+}
+
+#log_part{
+    background-color: #2D080A;
+    color: #e8e8e8;
+}
+#log_part:hover{
+    
+    color: #DCAB6B;
+}
+
+#sign_part:hover{
+    color: #DCAB6B;
+    background-color: white;
+}

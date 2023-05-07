@@ -50,7 +50,7 @@ function function_alert($message) {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!--網頁編碼-->
         <title>註冊</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
-        <link rel = "stylesheet" href = "./c_ss/log_pages.css" />
+        <link rel = "stylesheet" href = "./CSS/sign_up_page.css" />
         <script>
         function validateForm() {
             var x = document.forms["registerForm"]["password"].value;
@@ -71,8 +71,8 @@ function function_alert($message) {
             <div id = "top_bar"></div>
             <div class = "backstage" >
                 <div class = "head">
-                    <input id = "log_part" type="button" value="登 入" onclick = "location.href = 'log_in_page.php'">
-                    <input id = "sign_part" type="button" value="註 冊" onclick = "location.href = 'sign_up_page.php'">
+                    <input id = "log_part" type="button" value="登入頁面" onclick = "location.href = 'log_in_page.php'">
+                    <input id = "sign_part" type="button" value="註冊頁面" onclick = "location.href = 'sign_up_page.php'">
                 </div>
                 <div id = "the_back_4">
                     <form name="registerForm" method="post" action="sign_up_page.php" onsubmit="return validateForm()">
@@ -93,9 +93,9 @@ function function_alert($message) {
                         <p class = "input_bar">
                             輸入性別：<input type="radio" name="gender"  value = "male">男
                             <input type="radio" name="gender"  value = "female">女</p>
-                        <input id = "sign_up_bt" type="submit" value="我要註冊" name = "submit">
-                        <input id = "to_log" type="button" value="我有帳號了！" onclick = "location.href = 'log_in_page.php'">
-                        <input id = "back_bt" type="button" value="訪客瀏覽" onclick = "location.href = 'index.php'">
+                        <input class = "bt" id = "sign_up_bt" type="submit" value="我要註冊" name = "submit">
+                        <input class = "bt" id = "to_log" type="button" value="我有帳號了！" onclick = "location.href = 'log_in_page.php'">
+                        <input class = "bt" id = "back_bt" type="button" value="訪客瀏覽" onclick = "location.href = 'index.php'">
                     </form>
                 </div>
             </div>
