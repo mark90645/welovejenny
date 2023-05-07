@@ -148,6 +148,22 @@ div.booked {
     text-align: center;
     line-height: inherit;
 }
+
+div.close {
+    background: #666666;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 22px;
+}
+
+.full_text
+{
+    background: #666666;
+}
  
 .submit {
     box-shadow:inset 0px 1px 0px 0px #ffffff;

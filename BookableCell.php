@@ -25,25 +25,20 @@ class BookableCell
  
     public function update(Calendar $cal)
     {
-        if ($this->isDateBooked($cal->getCurrentDate())) {
-            return $cal->cellContent =
-                $this->bookedCell($cal->getCurrentDate());
-        }
- 
-        if (!$this->isDateBooked($cal->getCurrentDate())) {
-            return $cal->cellContent =
-                $this->openCell($cal->getCurrentDate());
-        }
+        $date = $cal->getCurrentDate();
 
-        $numBookings = $this->getNumBookings($cal->getCurrentDate());
-        
-        if ($numBookings >= 1)
-        {
-            return $cal->cellContent =
-                $this->closeCell($cal->getCurrentDate());
+        if ($this->isDateBooked($date)) {
+            // 如果已經被使用者預訂，就顯示已預訂狀態
+            return $cal->cellContent = $this->bookedCell($date);
+        } else if ($this->isDateFull($date)) {
+            // 如果已經額滿，就顯示已額滿狀態
+            return $cal->cellContent = $this->closeCell($date);
+        } else {
+            // 如果還沒被預訂且還沒額滿，就顯示可預訂狀態
+            return $cal->cellContent = $this->openCell($date);
         }
     }
- 
+
     public function routeActions()
     {
         if (isset($_POST['delete'])) {
@@ -67,7 +62,14 @@ class BookableCell
     
     private function closeCell($date)
     {
-        return '<div class="close">' . $this->deleteForm($this->bookingId($date)) . '</div>';
+        $username = $_COOKIE["member_account"];
+            if ($this->isDateBookedByUser($date, $username)) {
+            // 如果現在使用者已經預訂該日期，就顯示已預訂狀態
+            return '<div class="booked">' . $this->deleteForm($this->bookingId($date))  . $this->getNumBookings($date) . '/30</div>';
+        } else {
+            // 如果現在使用者還沒預訂該日期，就顯示已額滿狀態
+            return '<div class="close">已額滿</div>';
+        }
     }
  
 
@@ -133,7 +135,7 @@ class BookableCell
     private function closeForm($id)
     {
         return
-            '<p>full</p>';
+            "<div class='full_text'></div>";
     }
 
     private function getNumBookings($date)
@@ -146,4 +148,28 @@ class BookableCell
         }
         return $count;
     }
+    
+    private function isDateBookedByUser($date, $user_id) {
+        // 假設 $bookings 是一個包含所有預訂的陣列
+        foreach ($this->booking->index() as $booking) {
+          if ($booking['booking_date'] == $date && $booking['member_account'] == $user_id) {
+            return true;
+          }
+        }
+        return false;
+      }
+      
+    private function isDateFull($date) {
+        // 假設 $bookings 是一個包含所有預訂的陣列
+        $count = 0;
+        foreach ($this->booking->index() as $booking) {
+          if ($booking['booking_date'] == $date) {
+            $count++;
+          }
+        }
+        return $count >= 30; // 假設最多只能預訂 30 個人
+      }
 }
+
+
+
