@@ -44,4 +44,4 @@ echo $calendar->show();
 </body>
 </html>
 
-<?php echo htmlspecialchars($_COOKIE["member_account"]);?> booked <?php echo $booking->countBookingDaysByUsername($_COOKIE["member_account"]) . " days.\n"; ?>
+<?php echo "you booked " . $booking->countBookingDaysByUsername($_COOKIE["member_account"]) . " days.\n"; ?>
