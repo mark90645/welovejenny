@@ -18,7 +18,6 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     </head>
     <body>
         <div class = "background" >
-            <div id = "top_bar"></div>
             <div class = "backstage" >
                 <div class = "head">
                     <input class = "redirect" id = "log_part" type="button" value="登入頁面" onclick = "location.href = 'log_in_page.php'">

@@ -49,7 +49,7 @@ function function_alert($message) {
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!--網頁編碼-->
         <title>註冊</title>
-        <link rel = "stylesheet" href = "./CSS/board.css" />
+        <link rel = "stylesheet" href = "./CSS/board2.css" />
         <link rel = "stylesheet" href = "./CSS/sign_up_page.css" />
         <script>
         function validateForm() {
@@ -68,12 +68,12 @@ function function_alert($message) {
     </head>
     <body>
         <div class = "background" >
-            <div id = "top_bar"></div>
             <div class = "backstage" >
                 <div class = "head">
-                    <input id = "log_part" type="button" value="登入頁面" onclick = "location.href = 'log_in_page.php'">
-                    <input id = "sign_part" type="button" value="註冊頁面" onclick = "location.href = 'sign_up_page.php'">
+                    <input class = "redirect" id = "log_part" type="button" value="登入頁面" onclick = "location.href = 'log_in_page.php'">
+                    <input class = "redirect" id = "sign_part" type="button" value="註冊頁面" onclick = "location.href = 'sign_up_page.php'">
                 </div>
+                <img class = "pic" id = "pic_left" src = "./pics/dc_strange.jpg"/>
                 <div id = "the_back_4">
                     <form name="registerForm" method="post" action="sign_up_page.php" onsubmit="return validateForm()">
                         <p class = "input_bar">
