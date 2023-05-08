@@ -16,7 +16,7 @@
             </div>
             <div id = "section_1">
                 <h2>這裡會有個頭貼</h2>
-                <img style="width:200px"alt="BMW LOGO" id = "head_pic" src = "./pics/BMW_logo.png">
+                <img style="width:200px"alt="memberpic" id = "head_pic" src = "./pics/memberhead.png">
             </div>
             <div id = "section_2">
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>         
