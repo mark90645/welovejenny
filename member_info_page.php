@@ -1,3 +1,22 @@
+<?php
+session_start();
+if (isset($_COOKIE["member_account"]))
+{
+    $log_check = True;
+    $conn=require_once "configure.php";
+    $cookie = $_COOKIE['member_account'];
+    $sql = "SELECT member_name FROM regular_member WHERE member_account = '".$cookie."'";
+    $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    $result = mysqli_query($link,$sql);
+    $row = mysqli_fetch_assoc($result);
+    $member_name = $row["member_name"];
+}
+else
+{
+    $log_check = False;
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,8 +34,8 @@
                 <input class = "bt" id = "change_bt" type="button" value="修改密碼" onclick = "location.href = 'change_password.php'">
             </div>
             <div id = "section_1">
-                <h2>這裡會有個頭貼</h2>
                 <img style="width:200px"alt="memberpic" id = "head_pic" src = "./pics/memberhead.png">
+                <h2>歡迎，<?php echo $member_name; ?></h2>
             </div>
             <div id = "section_2">
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>         
