@@ -47,11 +47,8 @@ else
                 <img class = "pic" id = "pic_a" src = "./pics/0426.png"/>
                 <div class = "base" id = "base_1">
                     <div class = "adjust_index">
-                        <p class = "text_a" id = "cat_text">健身房的照片(看要不要弄幻燈片)</p>
-                        <p class = "text_a" id = "cat_text">方案內容介紹</p>
-                        <p class = "text_a" id = "cat_text">A:時效:半年 介紹:抓資料庫的 價格:4799</p>
-                        <p class = "text_a" id = "cat_text">B:時效:一年 介紹:抓資料庫的 價格:8999</p>
-                        <p class = "text_a" id = "cat_text">C:時效:兩年 介紹:抓資料庫的 價格:12999</p>
+                        <p class = "text_a" id = "cat_text"><b>健身房的照片(看要不要弄幻燈片)</b></p>
+                        <p class = "text_a" id = "cat_text"><b>方案內容介紹</b></p>                     
                         <?php
                         if($log_check == 0)
                         {?>
@@ -69,6 +66,20 @@ else
                 <img class = "pic" id = "pic_b" src = "./pics/unnatural.png"/>
                 <div class = "base" id = "base_2">
                     <div class = "adjust_index">
+                    <?php
+                        $conn=require_once "configure.php";
+                        $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                        $sql = "SELECT * FROM plan_detail";
+                        $result_plan = mysqli_query($link, $sql);
+                        if (mysqli_num_rows($result_plan) > 0) {
+                            while($row = mysqli_fetch_assoc($result_plan)) {
+                                echo "<p>".$row["plan_id"]." : "."<span>".$row["price"]."</span>"."</p>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='4'>沒有結果</td></tr>";
+                        }
+                        mysqli_close($link);
+                    ?>
                         <p class = "text_b" id = "dog">汪汪隊出任務</p>
                         <p class = "text_b" id = "dog_text">幾張教練照片</p>
                         <input class = "bt_2" id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
