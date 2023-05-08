@@ -10,6 +10,7 @@ if (isset($_COOKIE["manager_account"]))
     $result = mysqli_query($link,$sql);
     $row = mysqli_fetch_assoc($result);
     $manager_name = $row["manager_name"];
+    mysqli_close($conn);
 }
 else
 {
