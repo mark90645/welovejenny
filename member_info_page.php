@@ -37,12 +37,12 @@ else
                 <img style="width:200px"alt="memberpic" id = "head_pic" src = "./pics/memberhead.png">
                 <h2>歡迎，<?php echo $member_name; ?></h2>
             </div>
-            <div id = "section_2">
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>         
+            <div id = "section_2">       
+                    <input class = "bt" id = "back_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
+                    <br><br>
                 <p class = "text_a" id = "class">已預約xxxx/xx/xx的課程</p>
                 <p class = "text_a" id = "plan">目前正使用...方案</p>
                 <br/><br/><br/>
-                <img style="width:300px"alt="Gurobi最帥" id = "pic_a" src = "./pics/0426.png">
             </div>
         </div>
     </body>
