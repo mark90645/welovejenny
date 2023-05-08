@@ -189,3 +189,13 @@ div.close {
     position:relative;
     top:1px;
 }
+
+.prev_page i
+{
+position: absolute;
+color: #59CD90;
+font-size: 400px;
+bottom: 1%;
+right: 4%;
+cursor: pointer;
+}
