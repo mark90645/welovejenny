@@ -55,7 +55,8 @@ else
                         <?php
                         }else{
                         ?> 
-                        <input class = "bt_2" id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">                         
+                        <input class = "bt_2" id = "reserve_bt" type="button" value="課程預約" onclick = "location.href = 'reserve_page.php'">
+                        <input class = "bt_2" id = "reserve_bt" type="button" value="方案選擇" onclick = "location.href = 'plan_choose.php'">                         
                         <?php
                         }    
                         ?>
