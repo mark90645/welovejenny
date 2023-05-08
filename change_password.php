@@ -3,8 +3,8 @@
     <head>
         <meta charset = "UTF-8"></meta><!--網頁編碼-->
         <title>修改密碼</title>
-        <link rel = "stylesheet" href = "./c_ss/page.css" />
-        <link rel = "stylesheet" href = "./c_ss/change.css" />
+        <link rel = "stylesheet" href = "./CSS/board2.css" />
+        <link rel = "stylesheet" href = "./CSS/change_password.css" />
         <script>
         function validateCheck() {
             var y = document.forms["changeForm"]["new_password"].value;
@@ -23,7 +23,6 @@
     </head>
     <body>
         <div class = "background" >
-            <div id = "top_bar"></div>
             <div class = "backstage">
                 <div id = "the_back_4">
                     <form name="changeForm" method="post" action="change_password_procedure.php" onsubmit="return validateCheck()">

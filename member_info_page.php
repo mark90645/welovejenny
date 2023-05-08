@@ -20,7 +20,7 @@ else
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset = "UTF-8"></meta><!--網頁編碼-->
+        <meta charset = "UTF-8"></meta>
         <title>會員資訊</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
         <link rel = "stylesheet" href = "./CSS/member_info_page.css" />
