@@ -1,5 +1,6 @@
 .background {
-    padding-bottom: 512px;
+    margin: 0px;
+    padding:0px;
 }
 
 #log_part{
@@ -14,3 +15,59 @@
     color: #DCAB6B;
     background-color: white;
 }
+
+.input_bar{
+    position: absolute;
+    left: 800px;
+}
+
+#gmail_bar{
+    top:160px;
+}
+
+#name_bar{
+    top:200px;
+}
+
+#account_bar{
+    top:240px;
+}
+
+#password_bar{
+    top:280px;
+}
+
+#check_bar{
+    top:320px;
+}
+
+#birth_bar{
+    top:360px;
+}
+
+#phone_bar{
+    top:400px;
+}
+
+#gender_bar{
+    top:440px;
+}
+
+.bt{
+    position: absolute;
+    padding: 7px 17px 7px 17px;
+    top:500px
+}
+
+#sign_up_bt{
+    left:800px;
+}
+
+#to_log_bt{
+    left:900px;
+}
+
+#back_bt{
+    left:1030px;
+}
+

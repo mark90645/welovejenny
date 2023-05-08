@@ -76,25 +76,25 @@ function function_alert($message) {
                 <img class = "pic" id = "pic_left" src = "./pics/dc_strange.jpg"/>
                 <div id = "the_back_4">
                     <form name="registerForm" method="post" action="sign_up_page.php" onsubmit="return validateForm()">
-                        <p class = "input_bar">
+                        <p class = "input_bar"  id = "gmail_bar">
                             輸入gmail：<input type="text" name="gmail"></p>
-                        <p class = "input_bar">
+                        <p class = "input_bar" id = "name_bar">
                             輸入名稱：<input type="text" name="member_name"></p>
-                        <p class = "input_bar">
+                        <p class = "input_bar" id = "account_bar">
                             輸入帳號：<input type="text" name="member_account"></p>
-                        <p class = "input_bar">
+                        <p class = "input_bar"  id = "password_bar">
                             輸入密碼：<input type="password" name="password"></p>
-                        <p class = "input_bar">
+                        <p class = "input_bar" id = "check_bar">
                             再次輸入密碼：<input type="password" name="password_check"></p>
-                        <p class = "input_bar">
+                        <p class = "input_bar" id = "birth_bar">
                             輸入生日：<input type="date" name="birthday"></p>
-                        <p class = "input_bar">
+                        <p class = "input_bar" id = "phone_bar">
                             輸入電話：<input type="text" name="phone"></p>
-                        <p class = "input_bar">
+                        <p class = "input_bar"  id = "gender_bar">
                             輸入性別：<input type="radio" name="gender"  value = "male">男
                             <input type="radio" name="gender"  value = "female">女</p>
                         <input class = "bt" id = "sign_up_bt" type="submit" value="我要註冊" name = "submit">
-                        <input class = "bt" id = "to_log" type="button" value="我有帳號了！" onclick = "location.href = 'log_in_page.php'">
+                        <input class = "bt" id = "to_log_bt" type="button" value="我有帳號了！" onclick = "location.href = 'log_in_page.php'">
                         <input class = "bt" id = "back_bt" type="button" value="訪客瀏覽" onclick = "location.href = 'index.php'">
                     </form>
                 </div>
