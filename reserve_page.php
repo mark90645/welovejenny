@@ -13,7 +13,8 @@ else
 
 <html>
 <head>
-    <link href="./CSS/calendar.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./CSS/calendar.css?v=<?php echo time(); ?>" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
 <?php
@@ -41,7 +42,9 @@ $bookableCell->routeActions();
  
 echo $calendar->show();
 ?>
+<?php echo "you booked " . $booking->countBookingDaysByUsername($_COOKIE["member_account"]) . " days.\n"; ?>
+    <div class="prev_page" onclick="javascript:location.href='./index.php'">
+        <i class="bi bi-arrow-left"></i>
+    </div>
 </body>
 </html>
-
-<?php echo "you booked " . $booking->countBookingDaysByUsername($_COOKIE["member_account"]) . " days.\n"; ?>
