@@ -67,6 +67,7 @@ else
                 <div class = "base" id = "base_2">
                     <div class = "adjust_index">
                     <?php
+                        $conn=require_once "configure.php";
                         $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                         $sql = "SELECT * FROM plan_detail";
                         $result_plan = mysqli_query($link, $sql);
