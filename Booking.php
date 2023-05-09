@@ -6,6 +6,8 @@ class Booking
     private $dbh;
  
     private $bookingsTableName = 'bookings';
+
+    private $class;
  
     /**
      * Booking constructor.
@@ -13,8 +15,9 @@ class Booking
      * @param string $host
      * @param string $databaseUsername
      * @param string $databaseUserPassword
+     * @param string $class
      */
-    public function __construct($database, $host, $databaseUsername, $databaseUserPassword)
+    public function __construct($database, $host, $databaseUsername, $databaseUserPassword, $class)
     {
         try {
  
@@ -27,6 +30,7 @@ class Booking
         } catch (PDOException $e) {
             die($e->getMessage());
         }
+        $this->class = $class;
     }
 
     public function index()
@@ -38,7 +42,7 @@ class Booking
     public function add(DateTimeImmutable $bookingDate)
     {
         $statement = $this->dbh->prepare(
-            'INSERT INTO ' . $this->bookingsTableName . ' (booking_date, member_account) VALUES (:bookingDate, :username)'
+            'INSERT INTO ' . $this->bookingsTableName . ' (booking_date, member_account, class_type) VALUES (:bookingDate, :username, :class)'
         );
     
         if (false === $statement) {
@@ -48,7 +52,7 @@ class Booking
         if (false === $statement->execute([
                 ':bookingDate' => $bookingDate->format('Y-m-d'),
                 ':username' => $_COOKIE["member_account"],
-            ])) {
+                ':class' => $this->class])) {
             throw new Exception(implode(' ', $statement->errorInfo()));
         }
     }

@@ -18,10 +18,10 @@ else
 </head>
 <body>
     <div class="switch">
-        <div class="right" onclick="javascript:location.href='./reserve_page2.php'">
+        <div class="right" onclick="javascript:location.href='./reserve_page3.php'">
             <i class="bi bi-arrow-right"></i>
         </div>
-        <div class="left" onclick="javascript:location.href='./reserve_page3.php'">
+        <div class="left" onclick="javascript:location.href='./reserve_page.php'">
             <i class="bi bi-arrow-left"></i>
         </div>
     </div>
@@ -36,14 +36,14 @@ $booking = new Booking(
     '25.41.90.151:3306',
     'share',
     'ihaveabigdick',
-    '1'
+    '2'
 );
 
 $username = $_COOKIE["member_account"];
  
-$bookableCell = new BookableCell($booking, $username, '1');
+$bookableCell = new BookableCell($booking, $username, '2');
  
-$calendar = new Calendar('1');
+$calendar = new Calendar('2');
  
 $calendar->attachObserver('showCell', $bookableCell);
  

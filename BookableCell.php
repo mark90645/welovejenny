@@ -10,32 +10,35 @@ class BookableCell
     private $currentURL;
     
     private $username;
- 
+    
+    private $class;
     /**
      * BookableCell constructor.
      * @param $booking
      * @param $username
+     * @param $class
      */
-    public function __construct(Booking $booking, $username)
+    public function __construct(Booking $booking, $username, $class)
     {
         $this->booking = $booking;
         $this->currentURL = htmlentities($_SERVER['REQUEST_URI']);
         $this->username = $username;
+        $this->class = $class;
     }
  
-    public function update(Calendar $cal)
+    public function update(Calendar $cal, $class)
     {
         $date = $cal->getCurrentDate();
 
-        if ($this->isDateBooked($date)) {
+        if ($this->isDateBooked($date, $class)) {
             // 如果已經被使用者預訂，就顯示已預訂狀態
-            return $cal->cellContent = $this->bookedCell($date);
-        } else if ($this->isDateFull($date)) {
+            return $cal->cellContent = $this->bookedCell($date, $class);
+        } else if ($this->isDateFull($date, $class)) {
             // 如果已經額滿，就顯示已額滿狀態
-            return $cal->cellContent = $this->closeCell($date);
+            return $cal->cellContent = $this->closeCell($date, $class);
         } else {
             // 如果還沒被預訂且還沒額滿，就顯示可預訂狀態
-            return $cal->cellContent = $this->openCell($date);
+            return $cal->cellContent = $this->openCell($date, $class);
         }
     }
 
@@ -50,22 +53,22 @@ class BookableCell
         }
     }
  
-    private function openCell($date)
+    private function openCell($date, $class)
     {
-        return '<div class="open">' . $this->bookingForm($date) . $this->getNumBookings($date) . '/30</div>';
+        return '<div class="open">' . $this->bookingForm($date, $class) . $this->getNumBookings($date, $class) . '/30</div>';
     }
  
-    private function bookedCell($date)
+    private function bookedCell($date, $class)
     {
-        return '<div class="booked">' . $this->deleteForm($this->bookingId($date))  . $this->getNumBookings($date) . '/30</div>';
+        return '<div class="booked">' . $this->deleteForm($this->bookingId($date, $class))  . $this->getNumBookings($date, $class) . '/30</div>';
     }
     
-    private function closeCell($date)
+    private function closeCell($date, $class)
     {
         $username = $_COOKIE["member_account"];
-            if ($this->isDateBookedByUser($date, $username)) {
+            if ($this->isDateBookedByUser($date, $username, $class)) {
             // 如果現在使用者已經預訂該日期，就顯示已預訂狀態
-            return '<div class="booked">' . $this->deleteForm($this->bookingId($date))  . $this->getNumBookings($date) . '/30</div>';
+            return '<div class="booked">' . $this->deleteForm($this->bookingId($date, $class))  . $this->getNumBookings($date, $class) . '/30</div>';
         } else {
             // 如果現在使用者還沒預訂該日期，就顯示已額滿狀態
             return '<div class="close">已額滿</div>';
@@ -73,27 +76,27 @@ class BookableCell
     }
  
 
-    private function isDateBooked($date)
+    private function isDateBooked($date, $class)
     {
-        return in_array($date, $this->bookedDates());
+        return in_array($date, $this->bookedDates($class)) && $class == $this->class;
     }
  
-    private function bookedDates()
+    private function bookedDates($class)
     {
         $records = $this->booking->index();
         $bookedDates = [];
         foreach ($records as $record) {
-            if ($record['member_account'] === $this->username) {
+            if ($record['member_account'] === $this->username && $record['class_type'] == $class) {
                 $bookedDates[] = $record['booking_date'];
             }
         }
         return $bookedDates;
     }
  
-    private function bookingId($date)
+    private function bookingId($date, $class)
     {
-        $booking = array_filter($this->booking->index(), function ($record) use ($date) {
-            return $record['booking_date'] == $date && $record['member_account'] === $this->username;
+        $booking = array_filter($this->booking->index(), function ($record) use ($date, $class) {
+            return $record['booking_date'] == $date && $record['member_account'] === $this->username && $record['class_type'] == $class;
         });
  
         $result = array_shift($booking);
@@ -138,32 +141,32 @@ class BookableCell
             "<div class='full_text'></div>";
     }
 
-    private function getNumBookings($date)
+    private function getNumBookings($date, $class)
     {
         $count = 0;
         foreach ($this->booking->index() as $record) {
-            if ($record['booking_date'] == $date) {
+            if ($record['booking_date'] == $date && $record['class_type'] == $class) {
                 $count++;
             }
         }
         return $count;
     }
     
-    private function isDateBookedByUser($date, $user_id) {
+    private function isDateBookedByUser($date, $user_id, $class) {
         // 假設 $bookings 是一個包含所有預訂的陣列
         foreach ($this->booking->index() as $booking) {
-          if ($booking['booking_date'] == $date && $booking['member_account'] == $user_id) {
+          if ($booking['booking_date'] == $date && $booking['member_account'] == $user_id && $booking['class_type'] == $class) {
             return true;
           }
         }
         return false;
       }
       
-    private function isDateFull($date) {
+    private function isDateFull($date, $class) {
         // 假設 $bookings 是一個包含所有預訂的陣列
         $count = 0;
         foreach ($this->booking->index() as $booking) {
-          if ($booking['booking_date'] == $date) {
+          if ($booking['booking_date'] == $date && $booking['class_type'] == $class) {
             $count++;
           }
         }

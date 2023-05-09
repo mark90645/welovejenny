@@ -2,13 +2,16 @@
  
 class Calendar
 {
+    private $class;
  
     /**
      * Constructor
+     * @param $class
      */
-    public function __construct()
+    public function __construct($class)
     {
         $this->naviHref = htmlentities($_SERVER['PHP_SELF']);
+        $this->class = $class;
     }
  
     /********************* PROPERTY ********************/
@@ -38,11 +41,11 @@ class Calendar
     * @return void
     * @access public
     */
-    public function notifyObserver($type)
+    public function notifyObserver($type, $class)
     {
         if (isset($this->observers[$type])) {
             foreach ($this->observers[$type] as $observer) {
-                $observer->update($this);
+                $observer->update($this, $class);
             }
         }
     }
@@ -59,7 +62,7 @@ class Calendar
      *
      * @param boolean
      * @return              void
-     * @author              The-Di-Lab <thedilab@gmail.com>
+     * @author              Me
      * @access              public
      */
     public function setSundayFirst($bool = true)
@@ -222,7 +225,7 @@ class Calendar
         $this->cellContent = $this->currentDay;
  
         //observer
-        $this->notifyObserver('showCell');
+        $this->notifyObserver('showCell', $this->class);
  
         return $this->cellContent;
     }
