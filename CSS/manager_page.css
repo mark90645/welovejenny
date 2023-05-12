@@ -1,6 +1,6 @@
 .box_1{
     width:700px;
-    height:450px;
+    height:800px;
     float:center;
     background-color: #fff0c9;
     border-color: gray;
@@ -35,6 +35,25 @@
     justify-content: center; 
     text-align: center;
     align-items: center;
-    border-radius: 15px;
-    
+    border-radius: 15px;  
+}
+.box_3 {
+    width:800px;
+    margin:0 auto;
+    background-color: rgb(240, 149, 214);
+    padding:15px;
+    justify-content: center; 
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;  
+}
+.box_4 {
+    width:800px;
+    margin:0 auto;
+    background-color: rgb(146, 247, 159);
+    padding:15px;
+    justify-content: center; 
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;  
 }

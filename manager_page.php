@@ -46,6 +46,13 @@ else
             }
             ?>
             </div>
+            <h2 style="cursor:pointer;text-align:center"onclick="reload()">重整頁面</h2>
+            <script>
+                function reload(){                  
+                    location.href = 'manager_page.php';
+                }
+            </script>
+            <!-- 會員資料總覽 -->
             <div style="color:red;text-align:center"class="box_1">
                 <h3 style="color:blue">會員總覽</h3>
                 <hr/>
@@ -141,12 +148,14 @@ else
                         mysqli_close($conn);
                     }
                 ?>
-            </div>       
+            </div>   
+            <!-- 課程管理總覽     -->
             <div class="box_1">
                 <?php
                     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                     $sql = "SELECT bookings.id, bookings.booking_date, bookings.member_account, regular_member.member_name, regular_member.phone FROM bookings JOIN regular_member ON bookings.member_account = regular_member.member_account";
                     $result_1 = mysqli_query($link, $sql);
+                    echo "<h2 style='text-align:center;'>課程管理</h2>";
                     echo "<form action='' method='post'>";
                     echo "<table>";
                     echo "<tr><th>預定編號</th><th>會員帳號名稱</th><th>會員姓名</th><th>會員電話</th><th>課程預定日期</th></tr>";
@@ -157,11 +166,81 @@ else
                     } else {
                         echo "<tr><td colspan='5'>沒有結果</td></tr>";
                     }
+                    echo "</table>";
+                    echo "</form>";
                 ?>
                 
-            </div>          
-            <h2 style="text-align:center;">課程管理</h2>
+            </div>  
+            <!-- 方案管理總覽 -->
+            <div class="box_3">
+            <h2 style="text-align:center;">方案管理</h2>
+            </div>
+            <!-- 匯入批量資料 -->
+            <div class="box_4">
+                <form method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+                    <label for="csvfile">請選擇CSV檔案以匯入資料：</label>
+                    <input type="file" name="csvfile" id="csvfile" required>
+                    <input type="submit" value="匯入會員資料">
+                </form>
+
+                <script>
+                    function validateForm() {
+                        var fileInput = document.getElementById("csvfile");
+                        if (fileInput.files.length === 0) {
+                            alert("請選擇要匯入的CSV檔案！");
+                            return false; 
+                        }
+                        return true;
+                    }
+                </script>
+                <?php
+                    $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                        $file = $_FILES["csvfile"]["tmp_name"];
+                        $handle = fopen($file, "r");
+                        $fileName = $_FILES["csvfile"]["name"];
+                        $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+                        if ($fileExt !== 'csv') {
+                            echo '<script>alert("請選擇一個CSV檔案！");</script>';
+                            fclose($handle);
+                            exit();
+                        }
+
+                        fgetcsv($handle);
+
+                        $success = false;
+
+                        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                            $id = $data[0];
+                            $name = $data[1];
+                            $account = $data[2];
+                            $pw = $data[3];
+                            $birth = $data[4];
+                            $gmail = $data[5];
+                            $phone = $data[6];
+                            $gender = $data[7];
+
+                            $sql = "INSERT INTO regular_member(member_id, member_name, member_account, password, birthday, gmail, phone, gender) VALUES('$id','$name','$account','$pw','$birth','$gmail', '$phone','$gender')";
+                            if(mysqli_query($link,$sql)){
+                                $success = true;                             
+                            }else{
+                                $fail = true;
+                            }
+                        }
+                        fclose($handle);
+                        if($success){
+                            echo '<script>alert("新增成功！");</script>';
+                        }
+                    
+                        if($fail){
+                            echo '<script>alert("無法新增資料！😭😭");</script>';
+                        }
+                    }
+                ?>
+            </div>
+            
             
         </div>
+        
     </body>
 </html>
