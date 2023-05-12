@@ -51,9 +51,9 @@ else
              <span id="previous">＜</span>
              <span id="next">＞</span>
              <div id="slider" class="slider">
-             <img src="./pics/coach_a.jpg" width=40% height=40% />
-             <img src="./pics/coach_aa.jpg" width=100% height=150% />
-             <img src="./pics/coach_aaa.jpg"width=40% height=40% />
+             <img src="./pics/coach_a.jpg"  />
+             <img src="./pics/coach_aa.jpg"  />
+             <img src="./pics/coach_aaa.jpg" />
              <img src="./pics/coach_aaaa.jpg" />
              <img src="https://fakeimg.pl/600x300/00ffff/" />
             </div>
