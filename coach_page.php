@@ -19,9 +19,11 @@ else
         <link rel = "stylesheet" href = "./CSS/board.css" />
         <link rel = "stylesheet" href = "./CSS/coach_page.css" />
     </head>
+
     <body>
-        <div class = "background" >
+     <div class = "background" >
         <div class = "banner">
+        
                 <input id = "index_bt" type="button" value="健身房" onclick = "location.href = 'index.php'">
                 <?php
             if ($log_check == 0)
@@ -43,6 +45,91 @@ else
             }
             ?>
             </div>
+            <p>A_Grade</p>
+             <section>
+             <div class="container">
+             <span id="previous">＜</span>
+             <span id="next">＞</span>
+             <div id="slider" class="slider">
+             <img src="./pics/coach_a.jpg" width=40% height=40% />
+             <img src="./pics/coach_aa.jpg" width=100% height=150% />
+             <img src="./pics/coach_aaa.jpg"width=40% height=40% />
+             <img src="./pics/coach_aaaa.jpg" />
+             <img src="https://fakeimg.pl/600x300/00ffff/" />
+            </div>
+        <ul id="dots" class="dots">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+        </ul>
+      </div>
+     
+</section>
+
+
+  <script>
+    const nextEl = document.getElementById("next");
+  const previousEl = document.getElementById("previous");
+  const sliderEl = document.getElementById("slider");
+  const dots = document.getElementById("dots");
+  const imgCounts = sliderEl.children.length;
+  nextEl.addEventListener("click", () => (slideProxy.index += 1));
+  previousEl.addEventListener("click", () => (slideProxy.index -= 1));
+  setClickEventToDots();
+  window.onresize = debounce(calculateWidth);
+  const slideProps = { index: 0 };
+  const slideHandler = {
+    set(obj, prop, value) {
+      if (prop === "index") {
+        if (value < 0 || value >= imgCounts) return;
+        setDotToInactive();
+        obj[prop] = value;
+        calculateWidth();
+        setActiveDot();
+      }
+    },
+  };
+  const slideProxy = new Proxy(slideProps, slideHandler);
+  setActiveDot();
+  function calculateWidth() {
+    const imgWidth = sliderEl.offsetWidth;
+    const recomputedWidth = slideProps.index * imgWidth;
+    sliderEl.scrollLeft = recomputedWidth;
+  }
+  function setDotToInactive() {
+    const { index } = slideProps
+    dots.children[index].classList.remove('dot--active')
+  }
+  function setActiveDot() {
+    const { index } = slideProps
+    dots.children[index].classList.add('dot--active')
+  }
+  function setClickEventToDots() {
+    for (let i = 0; i < dots.children.length; i++) {
+      const li = dots.children[i]
+      li.addEventListener('click', () => {
+        slideProxy.index = i
+      })
+    }
+  }
+  function debounce(func, timeout = 100) {
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        func.apply(this, args);
+      }, timeout);
+    };
+  }
+    </script>
+
+</div>
         </div>
+        <br>
+        <div calss="intro_A">
+        <span style="font-size:18px;">姓名:小狐狸</span>
+</div>
     </body>
 </html>
