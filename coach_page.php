@@ -70,7 +70,7 @@ else
 
             <br>
         <div id="A_photo">
-        <img src="./pics/Mickey.png" width=300/>
+        <img src="./pics/Mickey.png" width=250/>
         </div>
         <div class="intro_A">
         <span style="font-size:28px;font-weight:bold;">初級教練(1)</span>
@@ -84,7 +84,7 @@ else
         </div>
 
         <div id="B_photo">
-        <img src="./pics/2.png" width=300/>
+        <img src="./pics/2.png" width=250/>
         </div>
         <div class="intro_B">
         <span style="font-size:28px;font-weight:bold;">初級教練(2)</span>
@@ -95,6 +95,12 @@ else
         <br>
         <span style="font-size:20px;font-style:oblique;">專長:</span>
         <span style="font-size:20px;">當社長</span>
+        </div>
+        <div id="C_photo">
+        <img src="./pics/3.png" width=250/>
+        </div>
+        <div id="E_photo">
+        <img src="./pics/5.png" width=250/>
         </div>
         
 

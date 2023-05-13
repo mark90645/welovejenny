@@ -83,25 +83,38 @@
     z-index: 1;
     position: absolute;
     top: 150px;
-    left: 75px;
+    left: 50px;
   }
 
   .intro_A {
     background-color: rgb(255, 142, 22);
     position: absolute;
-    top: 160px;
-    left: 430px;
+    top: 150px;
+    left: 315px;
   }
   #B_photo {
     z-index: 1;
     position: absolute;
-    top: 500px;
-    left: 75px;
+    top: 150px;
+    right: 340px;
   }
 
   .intro_B {
     background-color: rgb(255, 142, 22);
     position: absolute;
-    top: 500px;
-    left: 430px;
+    top: 150px;
+    right: 180px;
+  }
+
+  #C_photo {
+    z-index: 1;
+    position: absolute;
+    top: 450px;
+    left: 50px;
+  }
+  #E_photo {
+    z-index: 1;
+    position: absolute;
+    top: 750px;
+    left: 50px;
   }
