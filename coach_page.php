@@ -69,12 +69,34 @@ else
             </section>
 
             <br>
-        <div class="intro_A">
-        <img src="./pics/Mickey.png" width=200/>
-        <p><strong>初級教練</p>
-        <span style="font-size:18px;">姓名:Mickey</span>
-        
+        <div id="A_photo">
+        <img src="./pics/Mickey.png" width=300/>
         </div>
+        <div class="intro_A">
+        <span style="font-size:28px;font-weight:bold;">初級教練(1)</span>
+        <br>
+        <br>
+        <span style="font-size:20px;font-style:oblique;">姓名:</span>
+        <span style="font-size:20px;">Mickey</span>
+        <br>
+        <span style="font-size:20px;font-style:oblique;">專長:</span>
+        <span style="font-size:20px;">家教</span>
+        </div>
+
+        <div id="B_photo">
+        <img src="./pics/2.png" width=300/>
+        </div>
+        <div class="intro_B">
+        <span style="font-size:28px;font-weight:bold;">初級教練(2)</span>
+        <br>
+        <br>
+        <span style="font-size:20px;font-style:oblique;">姓名:</span>
+        <span style="font-size:20px;">Cuber</span>
+        <br>
+        <span style="font-size:20px;font-style:oblique;">專長:</span>
+        <span style="font-size:20px;">當社長</span>
+        </div>
+        
 
       </div>
   

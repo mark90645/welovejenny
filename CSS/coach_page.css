@@ -13,7 +13,7 @@
   
   .container {
     position: absolute;
-    top: 300px;
+    top: 3000px;
     left: 100px;
     padding: 10px;
     background: #ffaf95;
@@ -79,9 +79,29 @@
     background-color: gray;
   }
 
+  #A_photo {
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+    left: 75px;
+  }
+
   .intro_A {
+    background-color: rgb(255, 142, 22);
+    position: absolute;
+    top: 160px;
+    left: 430px;
+  }
+  #B_photo {
     z-index: 1;
     position: absolute;
     top: 500px;
-    left: 400px;
+    left: 75px;
+  }
+
+  .intro_B {
+    background-color: rgb(255, 142, 22);
+    position: absolute;
+    top: 500px;
+    left: 430px;
   }
