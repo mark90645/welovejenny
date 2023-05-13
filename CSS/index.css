@@ -40,7 +40,7 @@
 }*/
 
 .background {
-    padding-bottom: 1400px;
+    padding-bottom: 2000px;
 }
 
 .pic {
@@ -63,6 +63,10 @@
     top:800px;
 }
 
+#pic_c {
+    top:1450px;
+}
+
 .sections{
     z-index:10;
 }
@@ -83,6 +87,11 @@
 
 #base_2{
     top:825px;
+    right:0px;
+}
+
+#base_3{
+    top:1475px;
     right:0px;
 }
 

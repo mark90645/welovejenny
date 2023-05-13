@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!--網頁編碼-->
-        <title>管理員登入</title>
+        <title>管理員登入頁面</title>
         <link rel = "stylesheet" href = "./CSS/board2.css" />
         <link rel = "stylesheet" href = "./CSS/manager_login_page.css" />
     </head>
@@ -10,7 +10,7 @@
         <div class = "background" >
             <div class = "backstage" >
             <div class = "head">
-                    <input class = "redirect" id = "manager_login_part" type="button" value="修改密碼" onclick = "location.href = 'change_password.php'">
+                    <input class = "redirect" id = "manager_login_part" type="button" value="管理員登入頁面" onclick = "location.href = 'change_password.php'">
                 </div>
                 <div id = "the_back_4">
                     <form method="post" action="manager_log_procedure.php">

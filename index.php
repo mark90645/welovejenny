@@ -47,6 +47,15 @@ else
                 <img class = "pic" id = "pic_a" src = "./pics/0426.png"/>
                 <div class = "base" id = "base_1">
                     <div class = "adjust_index">
+                        <p class = "text_a" id = "cat_text"><b>健身房的照片</b></p>
+                        <p class = "text_a" id = "cat_text"><b>還有一些簡介</b></p>                     
+                    </div>
+                </div>
+            </div>
+            <div class = "sections" id = "section_2">
+                <img class = "pic" id = "pic_b" src = "./pics/unnatural.png"/>
+                <div class = "base" id = "base_2">
+                    <div class = "adjust_index">
                         <p class = "text_a" id = "cat_text"><b>健身房的照片(看要不要弄幻燈片)</b></p>
                         <p class = "text_a" id = "cat_text"><b>方案內容介紹</b></p>                     
                         <?php
@@ -63,9 +72,9 @@ else
                     </div>
                 </div>
             </div>
-            <div class = "sections" id = "section_2">
-                <img class = "pic" id = "pic_b" src = "./pics/unnatural.png"/>
-                <div class = "base" id = "base_2">
+            <div class = "sections" id = "section_3">
+                <img class = "pic" id = "pic_c" src = "./pics/paper_town.png"/>
+                <div class = "base" id = "base_3">
                     <div class = "adjust_index">
                     <?php
                         $conn=require_once "configure.php";

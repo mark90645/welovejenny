@@ -1,24 +1,25 @@
 .background {
     margin: 0px;
-    padding-bottom:516px;
+    padding-bottom:562px;
 }
 
-#change_password_part{
+#manager_login_part{
+    width:120px;
     background-color: #2D080A;
     color: white;
     font-size: 15px;
 }
 
-#change_password_part:hover{
+#manager_login_part:hover{
     color: #DCAB6B;
 }
 
-#change_bt{
-    top: 160px;
+#log_in_bt{
+    top: 100px;
     left: 20px;
 }
 
 #back_bt{
-    top: 160px;
+    top: 100px;
     left: 130px;
 }
