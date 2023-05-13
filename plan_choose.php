@@ -20,15 +20,15 @@ else
     <head>
         <meta charset = "UTF-8"></meta><!--網頁編碼-->
         <title>選擇方案</title>
-        <!-- <link rel = "stylesheet" href = "./CSS/board.css" />
-        <link rel = "stylesheet" href = "./CSS/manager_page.css" /> -->
+        <link rel = "stylesheet" href = "./CSS/board.css" />
+        <link rel = "stylesheet" href = "./CSS/plan_choose.css" />
     </head>
-    <body style="width: 800px;margin:0 auto;text-align:center;">
-        <h1>健身房方案選擇
-        <span>
+    <body>
+        <div class = "banner">
+            <input id = "index_bt" type="button" value="健身房" onclick = "location.href = 'index.php'">
+            <h1 class = "text">健身房方案選擇</h1>
+        </div>
         <input class = "bt" id = "logout_bt" type="button" value="回上一頁" onclick = "location.href = 'index.php'">
-        </span>
-        </h1>
         <div>
             <h3 style="color:#e620a4"><?php echo $member_name; ?>，您好，請選擇以下健身方案</h3>
             <?php
