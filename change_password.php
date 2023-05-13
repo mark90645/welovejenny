@@ -24,6 +24,9 @@
     <body>
         <div class = "background" >
             <div class = "backstage">
+                <div class = "head">
+                    <input class = "redirect" id = "change_password_part" type="button" value="修改密碼" onclick = "location.href = 'change_password.php'">
+                </div>
                 <div id = "the_back_4">
                     <form name="changeForm" method="post" action="change_password_procedure.php" onsubmit="return validateCheck()">
                         <p class = "input_bar">
@@ -34,8 +37,8 @@
                             輸入新密碼：<input type="password" name="new_password"></p>
                         <p class = "input_bar">
                             再次輸入新密碼：<input type="password" name="password_check"></p>
-                        <input id = "change_bt" type="submit" value="我要修改" name = "submit">
-                        <input id = "back_bt" type="button" value="返回瀏覽" onclick = "location.href = 'index.php'">
+                        <input class = "bt" id = "change_bt" type="submit" value="我要修改" name = "submit">
+                        <input class = "bt" id = "back_bt" type="button" value="返回瀏覽" onclick = "location.href = 'index.php'">
                     </form>
                 </div>
             </div>
