@@ -44,10 +44,11 @@ else
             <?php
             }
             ?>
-            </div>
-            <p>A_Grade</p>
+       </div>
+
+           
              <section>
-             <div class="container">
+            <div class="container">
              <span id="previous">＜</span>
              <span id="next">＞</span>
              <div id="slider" class="slider">
@@ -56,19 +57,27 @@ else
              <img src="./pics/coach_aaa.jpg" />
              <img src="./pics/coach_aaaa.jpg" />
              <img src="https://fakeimg.pl/600x300/00ffff/" />
+             </div>
+             <ul id="dots" class="dots">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              </ul>
             </div>
-        <ul id="dots" class="dots">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-        </ul>
+            </section>
+
+            <br>
+        <div class="intro_A">
+        <img src="./pics/Mickey.png" width=200/>
+        <p><strong>初級教練</p>
+        <span style="font-size:18px;">姓名:Mickey</span>
+        
+        </div>
+
       </div>
-     
-</section>
-
-
+  
   <script>
     const nextEl = document.getElementById("next");
   const previousEl = document.getElementById("previous");
@@ -125,11 +134,6 @@ else
   }
     </script>
 
-</div>
-        </div>
-        <br>
-        <div calss="intro_A">
-        <span style="font-size:18px;">姓名:小狐狸</span>
-</div>
+       
     </body>
 </html>
