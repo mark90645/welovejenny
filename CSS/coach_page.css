@@ -112,6 +112,12 @@
     top: 450px;
     left: 50px;
   }
+  #D_photo {
+    z-index: 1;
+    position: absolute;
+    top: 450px;
+    right: 340px;
+  }
   #E_photo {
     z-index: 1;
     position: absolute;

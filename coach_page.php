@@ -99,6 +99,9 @@ else
         <div id="C_photo">
         <img src="./pics/3.png" width=250/>
         </div>
+        <div id="D_photo">
+        <img src="./pics/4.png" width=250/>
+        </div>
         <div id="E_photo">
         <img src="./pics/5.png" width=250/>
         </div>
