@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta charset = "UTF-8"></meta><!--網頁編碼-->
-        <title>修改密碼</title>
+        <title>修改個人資料</title>
         <link rel = "stylesheet" href = "./CSS/board2.css" />
         <link rel = "stylesheet" href = "./CSS/change_password.css" />
         <script>
@@ -36,7 +36,7 @@
         <div class = "background" >
             <div class = "backstage">
                 <div class = "head">
-                    <input class = "redirect" id = "change_password_part" type="button" value="修改密碼" onclick = "location.href = 'change_password.php'">
+                    <input class = "redirect" id = "change_password_part" type="button" value="修改個人資料" onclick = "location.href = 'change_password.php'">
                 </div>
                 <div id = "the_back_4">
                     <form name="changeForm" method="post" action="change_password_procedure.php" onsubmit="return validateCheck()">
