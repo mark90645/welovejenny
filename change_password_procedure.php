@@ -1,8 +1,8 @@
 <?php
 $conn=require_once("configure.php");
 session_start();
-
-    $member_account=$_POST["member_account"];
+    $cookie = $_COOKIE['member_account'];
+    $member_account=$cookie;
     $old_password=$_POST["old_password"];
     $new_password=$_POST["new_password"];
     $check = mysqli_query($conn,"SELECT `password` FROM regular_member WHERE `member_account` = '".$member_account."'");
