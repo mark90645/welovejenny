@@ -10,7 +10,6 @@ if (isset($_COOKIE["member_account"]))
     $result = mysqli_query($link,$sql);
     $row = mysqli_fetch_assoc($result);
     $member_name = $row["member_name"];
-    $member_account=$row["member_account"];
 }
 else
 {
@@ -40,7 +39,14 @@ else
             </div>
             <div id = "section_2">       
                     <input class = "bt" id = "back_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
-                    <br><br>
+                    <br>
+                    <br>
+                    <input class = "bt" id = "back_bt" type="button" value="預約課程" onclick = "location.href = 'reserve_page.php'">
+                    <br>
+                    <br>
+                    <input class = "bt" id = "back_bt" type="button" value="方案選擇" onclick = "location.href = 'plan_choose.php'">
+                    <br>
+                    <br>
             <?php
                 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                 $sql = "SELECT * FROM plan_choose WHERE member_name = '$member_name'";
@@ -67,30 +73,32 @@ else
                 }
                 mysqli_close($link);           
             ?>
-            <?php
-                $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-                $sql = "SELECT * FROM bookings WHERE member_account = '$member_account'";
-                $result = mysqli_query($link, $sql);
-                if(mysqli_num_rows($result) == 0){
-                    echo "<h3 style='color:blue;'>您現在沒有預約任何課程！</h3>";
-                }else{
-                    $row = mysqli_fetch_assoc($result);
-                    $bookdate = $row["booking_date"];
-                    $type = $row["class_type"];
-                    if($type=="yoga"){
-                        echo "<h3 style='color:blue;'>已為您預約".$bookdate."的瑜珈課程</h3>";
-                    }
-                    if($type=="yoga"){
-                        echo "<h3 style='color:blue;'>已為您預約".$bookdate."的瑜珈課程</h3>";
-                    }
-                    if($type=="yoga"){
-                        echo "<h3 style='color:blue;'>已為您預約".$bookdate."的瑜珈課程</h3>";
-                    }
-                    }
-                    
-                mysqli_close($link);           
-            ?>
+                <div id = "section_3"> 
+                    <?php
+                        $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                        $sql = "SELECT booking_date, class_type
+                        FROM bookings
+                        WHERE member_account = '".$cookie."'";
+                        $result = mysqli_query($link, $sql);
+
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $bookdate = $row['booking_date'];
+                                $type = $row['class_type'];
+                                if ($type == "yoga") {
+                                    echo "<h3 style='color:blue;'>已為您預約".$bookdate."的瑜珈課程</h3>";
+                                } elseif ($type == "bike") {
+                                    echo "<h3 style='color:blue;'>已為您預約".$bookdate."的飛輪課程</h3>";
+                                } elseif ($type == "aerobic") {
+                                    echo "<h3 style='color:blue;'>已為您預約".$bookdate."的有氧舞蹈課程</h3>";
+                                }else{
+                                    echo "<h3 style='color:blue;'>您現在沒有預約任何課程！</h3>";
+                                }
+                            }
+                            
+                        mysqli_close($link);           
+                    ?>
                 <br/><br/><br/>
+                </div>
             </div>
         </div>
     </body>

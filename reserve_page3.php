@@ -53,7 +53,7 @@ $bookableCell->routeActions();
 echo $calendar->show();
 ?>
 <?php echo "you booked " . $booking->countBookingDaysByUsername($_COOKIE["member_account"]) . " days.\n"; ?>
-    <div class="prev_page" onclick="javascript:location.href='./index.php'">
+    <div class="prev_page" onclick="javascript:location.href='./member_info_page.php'">
         <i class="bi bi-arrow-left"></i>
     </div>
 </body>
