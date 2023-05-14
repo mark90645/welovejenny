@@ -44,12 +44,25 @@ else
                 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                 $sql = "SELECT * FROM plan_choose WHERE member_name = '$member_name'";
                 $result = mysqli_query($link, $sql);
+                $DateAndTime = date('Y-m-d h:i:s a', time()); 
+                $new=strtotime("+6 Months");
+                $advance=strtotime("+1 Years");
+                $master=strtotime("+2 Years");
+                echo "<h3>現在時間：".$DateAndTime."</h3>";
                 if(mysqli_num_rows($result) == 0){
                     echo "<h3 style='color:blue;'>您現在沒有選擇任何方案！</h3>";
                 }else{
                     $row = mysqli_fetch_assoc($result);
                     $plan = $row["plan_id"];
-                    echo "<h3 style='color:blue;'>目前已選「".$plan."」，時限到".$plan."</h3>";
+                    if($plan=="新手方案"){
+                    echo "<h3 style='color:blue;'>目前已選「".$plan."」，時限到".date('Y-m-d', $new)."</h3>";
+                    }
+                    if($plan=="進階方案"){
+                    echo "<h3 style='color:blue;'>目前已選「".$plan."」，時限到".date('Y-m-d', $advance)."</h3>";
+                    }
+                    if($plan=="選手級達人"){
+                    echo "<h3 style='color:blue;'>目前已選「".$plan."」，時限到".date('Y-m-d', $master)."</h3>";
+                    }
                 }
                 mysqli_close($link);           
             ?>

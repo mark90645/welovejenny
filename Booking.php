@@ -41,19 +41,29 @@ class Booking
 
     public function add(DateTimeImmutable $bookingDate)
     {
-        $statement = $this->dbh->prepare(
-            'INSERT INTO ' . $this->bookingsTableName . ' (booking_date, member_account, class_type) VALUES (:bookingDate, :username, :class)'
-        );
-    
-        if (false === $statement) {
-            throw new Exception('Invalid prepare statement');
+        $haveplan = $this->dbh->prepare('SELECT * FROM plan_choose WHERE member_account = ' . $_COOKIE["member_account"]);
+        if ($haveplan === true)
+        {
+            $statement = $this->dbh->prepare(
+                'INSERT INTO ' . $this->bookingsTableName . ' (booking_date, member_account, class_type) VALUES (:bookingDate, :username, :class)'
+            );
+        
+            if (false === $statement) {
+                throw new Exception('Invalid prepare statement');
+            }
+        
+            if (false === $statement->execute([
+                    ':bookingDate' => $bookingDate->format('Y-m-d'),
+                    ':username' => $_COOKIE["member_account"],
+                    ':class' => $this->class])) {
+                throw new Exception(implode(' ', $statement->errorInfo()));
+            }
         }
-    
-        if (false === $statement->execute([
-                ':bookingDate' => $bookingDate->format('Y-m-d'),
-                ':username' => $_COOKIE["member_account"],
-                ':class' => $this->class])) {
-            throw new Exception(implode(' ', $statement->errorInfo()));
+        else
+        {
+            echo "<script>
+            alert('您需要先選擇方案!');
+            </script>";
         }
     }
 
