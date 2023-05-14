@@ -55,7 +55,7 @@ else
                         <label><input type="radio" name="plan" value="進階方案">進階方案</label>
                     </div>
                     <div class = "blocks" id = "block_3">
-                        <label><input type="radio" name="plan" value="達人方案">選手級達人</label>
+                        <label><input type="radio" name="plan" value="達人方案">達人方案</label>
                     </div>
                 </div>
                 </p>
