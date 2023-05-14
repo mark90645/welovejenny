@@ -29,6 +29,7 @@ else
             <h1 class = "text">健身房方案選擇</h1>
         </div>
         <input class = "bt" id = "logout_bt" type="button" value="回上一頁" onclick = "location.href = 'index.php'">
+        <input class = "bt" id = "mem_info_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
         <div>
             <h3 style="color:#e620a4"><?php echo $member_name; ?>，您好，請選擇以下健身方案</h3>
             <?php
