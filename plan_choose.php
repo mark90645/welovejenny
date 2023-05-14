@@ -54,7 +54,7 @@ else
             <input id = "log_in_bt" type="submit" value="確認方案" name = "submit">
             <input id = "log_in_bt" type="submit" value="清空我的方案" name = "clear">
             <br/><br/>
-            <input class = "bt" id = "logout_bt" type="button" value="提交方案" onclick="Updating();">
+            <input class = "bt" id = "logout_bt" type="button" value="更新頁面" onclick="Updating();">
         </form>
         <script>
             function Updating(){
