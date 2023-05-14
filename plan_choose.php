@@ -51,7 +51,7 @@ else
             預計選擇方案：
             <label><input type="radio" name="plan" value="新手方案">新手方案</label>
             <label><input type="radio" name="plan" value="進階方案">進階方案</label>
-            <label><input type="radio" name="plan" value="選手級達人">選手級達人</label></p>
+            <label><input type="radio" name="plan" value="達人方案">達人方案</label></p>
             <input id = "log_in_bt" type="submit" value="確認方案" name = "submit">
             <input id = "log_in_bt" type="submit" value="清空我的方案" name = "clear">
             <br/><br/>

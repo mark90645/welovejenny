@@ -7,6 +7,7 @@ session_start();
     $new_password=$_POST["new_password"];
     $check = mysqli_query($conn,"SELECT `password` FROM regular_member WHERE `member_account` = '".$member_account."'");
     $a=mysqli_fetch_row($check);
+
     if($a[0] == $old_password) {
         $change_password = "UPDATE regular_member SET `password`= '".$new_password."' WHERE `member_account`= '".$member_account."'";
         $result=mysqli_query($conn,$change_password);
