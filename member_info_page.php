@@ -40,8 +40,20 @@ else
             <div id = "section_2">       
                     <input class = "bt" id = "back_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
                     <br><br>
+            <?php
+                $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                $sql = "SELECT * FROM plan_choose WHERE member_name = '$member_name'";
+                $result = mysqli_query($link, $sql);
+                if(mysqli_num_rows($result) == 0){
+                    echo "<h3 style='color:blue;'>您現在沒有選擇任何方案！</h3>";
+                }else{
+                    $row = mysqli_fetch_assoc($result);
+                    $plan = $row["plan_id"];
+                    echo "<h3 style='color:blue;'>目前已選「".$plan."」，時限到".$plan."</h3>";
+                }
+                mysqli_close($link);           
+            ?>
                 <p class = "text_a" id = "class">已預約xxxx/xx/xx的課程</p>
-                <p class = "text_a" id = "plan">目前正使用...方案</p>
                 <br/><br/><br/>
             </div>
         </div>
