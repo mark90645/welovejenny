@@ -51,7 +51,9 @@ else
                 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                 $sql = "SELECT * FROM plan_choose WHERE member_name = '$member_name'";
                 $result = mysqli_query($link, $sql);
-                $DateAndTime = date('Y-m-d h:i:s a', time()); 
+                $now=strtotime("+6 Hours");
+                $DateAndTime = date('Y-m-d h:i:s a', $now); 
+    
                 $new=strtotime("+6 Months");
                 $advance=strtotime("+1 Years");
                 $master=strtotime("+2 Years");
@@ -67,7 +69,7 @@ else
                     if($plan=="進階方案"){
                     echo "<h3 style='color:blue;'>目前已選「".$plan."」，時限到".date('Y-m-d', $advance)."</h3>";
                     }
-                    if($plan=="選手級達人"){
+                    if($plan=="達人方案"){
                     echo "<h3 style='color:blue;'>目前已選「".$plan."」，時限到".date('Y-m-d', $master)."</h3>";
                     }
                 }
