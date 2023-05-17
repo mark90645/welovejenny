@@ -49,13 +49,31 @@ else
                 <p class = "input_bar">
                 <div class = "adjust">
                     <div class = "blocks" id = "block_1">
-                        <label><input type="radio" name="plan" value="新手方案">新手方案</label>
+                        <label class = "labels" id = "rookie"><input class = "check_bt" type="radio" name="plan" value="新手方案">新手方案</label>
+                        <div class = "line"></div>
+                        <p class = "text2">針對初學者而設計的</p>
+                        <p class = "text2">暢享所有健身器材</p>
+                        <p class = "text2">自由參加各式課程</p>
+                        <p class = "text2">半年會員時長</p>
                     </div>
                     <div class = "blocks" id = "block_2">
-                        <label><input type="radio" name="plan" value="進階方案">進階方案</label>
+                        <label class = "labels" id = "advance"><input class = "check_bt" type="radio" name="plan" value="進階方案">進階方案</label>
+                        <div class = "line"></div>
+                        <p class = "text2">針對有基礎者而設計的</p>
+                        <p class = "text2">暢享所有健身器材</p>
+                        <p class = "text2">自由參加各式課程</p>
+                        <p class = "text2">一年會員時長</p>
+                        <p class = "text2">專屬健身教練</p>
                     </div>
                     <div class = "blocks" id = "block_3">
-                        <label><input type="radio" name="plan" value="達人方案">達人方案</label>
+                        <label class = "labels" id = "master"><input class = "check_bt" type="radio" name="plan" value="達人方案">達人方案</label>
+                        <div class = "line"></div>
+                        <p class = "text2">針對專業用戶設計的</p>
+                        <p class = "text2">暢享所有健身器材</p>
+                        <p class = "text2">自由參加各式課程</p>
+                        <p class = "text2">兩年會員時長</p>
+                        <p class = "text2">專屬健身教練</p>
+                        <p class = "text2">相關比賽參賽權</p>
                     </div>
                 </div>
                 </p>
