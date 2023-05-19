@@ -21,7 +21,8 @@ else
     </head>
     <body>
         <div class = "background">
-            <div class = "banner">
+            <div>
+            <img   id="gym_head_pic" src = "./pics/gym_head.jpg"/>
                 <input id = "index_bt" type="button" value="健身房" onclick = "location.href = 'index.php'">
                 <?php
                 if ($log_check == 0)
@@ -42,16 +43,11 @@ else
                 }
                 ?>
             </div>
-            <div class = "sections" id = "section_1">
-                <img class = "pic" id = "pic_a" src = "./pics/0426.png"/>
-                <div class = "base" id = "base_1">
-                    <div class = "adjust_index">
-                        <p class = "text_a" id = "cat_text"><b>健身房的照片</b></p>
-                        <p class = "text_a" id = "cat_text"><b>還有一些簡介</b></p>                     
-                    </div>
-                </div>
-            </div>
-            <div class = "sections" id = "section_2">
+            <div class="color-lump"></div>
+            <div class="color-lump-2"></div>
+            <div class="color-lump-3"></div>
+            
+            <!-- <div class = "sections" id = "section_2">
                 <img class = "pic" id = "pic_b" src = "./pics/unnatural.png"/>
                 <div class = "base" id = "base_2">
                     <div class = "adjust_index">
@@ -70,8 +66,8 @@ else
                         ?>
                     </div>
                 </div>
-            </div>
-            <div class = "sections" id = "section_3">
+            </div> -->
+            <!-- <div class = "sections" id = "section_3">
                 <img class = "pic" id = "pic_c" src = "./pics/paper_town.png"/>
                 <div class = "base" id = "base_3">
                     <div class = "adjust_index">
@@ -94,8 +90,9 @@ else
                         <input class = "bt_2" id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
+
         <div class = "end">
             <p>聯絡資訊</p>
             <input class = "contact_pic" id = "pic_c" type="button" onclick = "location.href = 'reserve_page.php'"><!--這裡我不會把圖案變按鈕 CSS大神救我-->
