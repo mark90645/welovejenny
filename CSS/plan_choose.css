@@ -19,16 +19,26 @@ body{
 }
 
 .blocks {
+    position: absolute;
     margin: 0px 20px 0px 20px;
     height:360px;
     width:240px;
     background-color: lightgray;
-    border-radius: 15px 15px 15px 15px;
-    z-index: 0;
+    border-radius: 15px;
+    z-index: -10;
 }
 
 #block_1{
-    margin-left: 230px;
+    top:0px;
+    left:225px;
+}
+#block_2{
+    top:0px;
+    left:285px;
+}
+#block_3{
+    top:0px;
+    left:345px;
 }
 
 .check_bt{
@@ -37,7 +47,6 @@ body{
 
 .labels{
     position: relative;
-    top:20px;
     padding-top:20px;
     padding-bottom: 314px;
     padding-left: 60px;
@@ -45,8 +54,13 @@ body{
     font-size: 20px;
     z-index: 20;
 }
-.labels:hover ~ .blocks {
-    background-color: aqua;
+
+.labels:hover input ~ .blocks {  
+    background-color: gray;  
+}  
+    
+.labels input:checked ~ .blocks {  
+    background-color: blue;  
 }
 
 .line{
@@ -56,12 +70,15 @@ body{
     width:170px;
     height:1px;
     background-color: black;
+    z-index: 20;
 }
 .text2{
     position: relative;
+    width:50%;
     top:40px;
     left:50px;
-    text-align:left;
+    text-align:left;    
+    z-index: 20;
 }
 
 .bt {
@@ -69,7 +86,7 @@ body{
     height:40px;
     top:580px;
     border-radius: 10px;
-    z-index: 20;
+    z-index: 0;
 }
 
 #confirm_bt{
