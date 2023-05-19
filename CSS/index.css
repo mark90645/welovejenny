@@ -40,7 +40,7 @@
 }*/
 
 .background {
-    padding-bottom: 2000px;
+    padding-bottom: 600px;
 }
 
 .pic {
@@ -116,21 +116,21 @@
 #gym_head_pic{
     margin:0;
     padding:0;
-    max-width: 100%;
-    height: 948px;
+    height: 600px;;
+    width:100%;
     object-fit: cover;
     object-position: center;
-    opacity: 70%;
+    opacity: 90%;
 }
 
 .color-lump{
-    width: 420px;
-    height: 800px;
+    width: 100%;
+    height: 400px;
     background-color: #91f7ae;
     position: absolute;
     top:400px;
     left:0px;
-    z-index: 10;
+    z-index: 20;
 }
 
 .color-lump:hover{
@@ -138,22 +138,22 @@
     color: #D4C5C7;
 }
 .color-lump-2{
-    width: 420px;
-    height: 800px;
+    width: 50%;
+    height: 400px;
     background-color: #fc9ad6;
     position: absolute;
-    top:400px;
-    left:420px;
+    top:800px;
+    left:0px;
     z-index: 10;
 }
 
 .color-lump-3{
-    width: 420px;
-    height: 800px;
+    width: 50%;
+    height: 400px;
     background-color: #626bd5;
     position: absolute;
-    top:400px;
-    left:840px;
+    top:800px;
+    right:0px;
     z-index: 10;
 }
 
