@@ -39,10 +39,68 @@ else
             </div>
             <div id = "section_2">       
                     <input class = "bt" id = "back_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
-                    <br><br>
-                <p class = "text_a" id = "class">已預約xxxx/xx/xx的課程</p>
-                <p class = "text_a" id = "plan">目前正使用...方案</p>
+                    <br>
+                    <br>
+                    <input class = "bt" id = "back_bt" type="button" value="預約課程" onclick = "location.href = 'reserve_page.php'">
+                    <br>
+                    <br>
+                    <input class = "bt" id = "back_bt" type="button" value="方案選擇" onclick = "location.href = 'plan_choose.php'">
+                    <br>
+                    <br>
+            <?php
+                $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                $sql = "SELECT * FROM plan_choose WHERE member_name = '$member_name'";
+                $result = mysqli_query($link, $sql);
+                $now=strtotime("+6 Hours");
+                $DateAndTime = date('Y-m-d h:i:s a', $now); 
+    
+                $new=strtotime("+6 Months");
+                $advance=strtotime("+1 Years");
+                $master=strtotime("+2 Years");
+                echo "<h3>現在時間：".$DateAndTime."</h3>";
+                if(mysqli_num_rows($result) == 0){
+                    echo "<h3 style='color:blue;'>您現在沒有選擇任何方案！</h3>";
+                }else{
+                    $row = mysqli_fetch_assoc($result);
+                    $plan = $row["plan_id"];
+                    if($plan=="新手方案"){
+                    echo "<h3 style='color:blue;'>目前已選「".$plan."」，時限到".date('Y-m-d', $new)."</h3>";
+                    }
+                    if($plan=="進階方案"){
+                    echo "<h3 style='color:blue;'>目前已選「".$plan."」，時限到".date('Y-m-d', $advance)."</h3>";
+                    }
+                    if($plan=="達人方案"){
+                    echo "<h3 style='color:blue;'>目前已選「".$plan."」，時限到".date('Y-m-d', $master)."</h3>";
+                    }
+                }
+                mysqli_close($link);           
+            ?>
+                <div id = "section_3"> 
+                    <?php
+                        $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                        $sql = "SELECT booking_date, class_type
+                        FROM bookings
+                        WHERE member_account = '".$cookie."'";
+                        $result = mysqli_query($link, $sql);
+
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $bookdate = $row['booking_date'];
+                                $type = $row['class_type'];
+                                if ($type == "yoga") {
+                                    echo "<h3 style='color:blue;'>已為您預約".$bookdate."的瑜珈課程</h3>";
+                                } elseif ($type == "bike") {
+                                    echo "<h3 style='color:blue;'>已為您預約".$bookdate."的飛輪課程</h3>";
+                                } elseif ($type == "aerobic") {
+                                    echo "<h3 style='color:blue;'>已為您預約".$bookdate."的有氧舞蹈課程</h3>";
+                                }else{
+                                    echo "<h3 style='color:blue;'>您現在沒有預約任何課程！</h3>";
+                                }
+                            }
+                            
+                        mysqli_close($link);           
+                    ?>
                 <br/><br/><br/>
+                </div>
             </div>
         </div>
     </body>

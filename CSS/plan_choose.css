@@ -4,8 +4,86 @@ body{
     text-align:center;
 }
 
+.background {
+    padding-bottom: 68px;
+}
+
 .text{
     position: absolute;
     left:42%;
     color: white;
+}
+
+.adjust{
+    display: flex;
+}
+
+.blocks {
+    margin: 0px 20px 0px 20px;
+    height:360px;
+    width:240px;
+    background-color: lightgray;
+    border-radius: 15px 15px 15px 15px;
+    z-index: 0;
+}
+
+#block_1{
+    margin-left: 230px;
+}
+
+.check_bt{
+    opacity: 0.5;
+}
+
+.labels{
+    position: relative;
+    top:20px;
+    padding-top:20px;
+    padding-bottom: 314px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 20px;
+    z-index: 20;
+}
+.labels:hover ~ .blocks {
+    background-color: aqua;
+}
+
+.line{
+    position: relative;
+    top:35px;
+    left:35px;
+    width:170px;
+    height:1px;
+    background-color: black;
+}
+.text2{
+    position: relative;
+    top:40px;
+    left:50px;
+    text-align:left;
+}
+
+.bt {
+    width:120px;
+    height:40px;
+    top:580px;
+    border-radius: 10px;
+    z-index: 20;
+}
+
+#confirm_bt{
+    left:30%;
+}
+
+#clear_bt{
+    left:40%;
+}
+
+#back_bt{
+    left:50%;
+}
+
+#update_bt{
+    left:60%;
 }

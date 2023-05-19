@@ -17,6 +17,7 @@ else
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
+    <p>CLASS: aerobic</p>
     <div class="switch">
         <div class="right" onclick="javascript:location.href='./reserve_page.php'">
             <i class="bi bi-arrow-right"></i>
@@ -36,14 +37,14 @@ $booking = new Booking(
     '25.41.90.151:3306',
     'share',
     'ihaveabigdick',
-    '3'
+    'aerobic'
 );
 
 $username = $_COOKIE["member_account"];
  
-$bookableCell = new BookableCell($booking, $username, '3');
+$bookableCell = new BookableCell($booking, $username, 'aerobic');
  
-$calendar = new Calendar('3');
+$calendar = new Calendar('aerobic');
  
 $calendar->attachObserver('showCell', $bookableCell);
  
@@ -52,7 +53,7 @@ $bookableCell->routeActions();
 echo $calendar->show();
 ?>
 <?php echo "you booked " . $booking->countBookingDaysByUsername($_COOKIE["member_account"]) . " days.\n"; ?>
-    <div class="prev_page" onclick="javascript:location.href='./index.php'">
+    <div class="prev_page" onclick="javascript:location.href='./member_info_page.php'">
         <i class="bi bi-arrow-left"></i>
     </div>
 </body>

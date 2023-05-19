@@ -24,45 +24,74 @@ else
         <link rel = "stylesheet" href = "./CSS/plan_choose.css" />
     </head>
     <body>
-        <div class = "banner">
-            <input id = "index_bt" type="button" value="健身房" onclick = "location.href = 'index.php'">
-            <h1 class = "text">健身房方案選擇</h1>
-        </div>
-        <input class = "bt" id = "logout_bt" type="button" value="回上一頁" onclick = "location.href = 'index.php'">
-        <div>
-            <h3 style="color:#e620a4"><?php echo $member_name; ?>，您好，請選擇以下健身方案</h3>
-            <?php
-                $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-                $sql = "SELECT * FROM plan_choose WHERE member_name = '$member_name'";
-                $result = mysqli_query($link, $sql);
-                if(mysqli_num_rows($result) == 0){
-                    echo "<h3 style='color:blue;'>您現在沒有選擇任何方案！</h3>";
-                }else{
-                    $row = mysqli_fetch_assoc($result);
-                    $plan = $row["plan_id"];
-                    echo "<h3 style='color:blue;'>您現在選擇的方案為「".$plan."」</h3>";
+        <div class = "background">
+            <div class = "banner">
+                <input id = "index_bt" type="button" value="健身房" onclick = "location.href = 'index.php'">
+                <h1 class = "text">健身房方案選擇</h1>
+            </div>
+            <div>
+                <h3 style="color:#e620a4"><?php echo $member_name; ?>，您好，請選擇以下健身方案</h3>
+                <?php
+                    $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                    $sql = "SELECT * FROM plan_choose WHERE member_name = '$member_name'";
+                    $result = mysqli_query($link, $sql);
+                    if(mysqli_num_rows($result) == 0){
+                        echo "<h3 style='color:blue;'>您現在沒有選擇任何方案！</h3>";
+                    }else{
+                        $row = mysqli_fetch_assoc($result);
+                        $plan = $row["plan_id"];
+                        echo "<h3 style='color:blue;'>您現在選擇的方案為「".$plan."」</h3>";
+                    }
+                    mysqli_close($link);           
+                ?>
+            </div>
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                <p class = "input_bar">
+                <div class = "adjust">
+                    <div class = "blocks" id = "block_1">
+                        <label class = "labels" id = "rookie"><input class = "check_bt" type="radio" name="plan" value="新手方案">新手方案</label>
+                        <div class = "line"></div>
+                        <p class = "text2">針對初學者而設計的</p>
+                        <p class = "text2">暢享所有健身器材</p>
+                        <p class = "text2">自由參加各式課程</p>
+                        <p class = "text2">半年會員時長</p>
+                    </div>
+                    <div class = "blocks" id = "block_2">
+                        <label class = "labels" id = "advance"><input class = "check_bt" type="radio" name="plan" value="進階方案">進階方案</label>
+                        <div class = "line"></div>
+                        <p class = "text2">針對有基礎者而設計的</p>
+                        <p class = "text2">暢享所有健身器材</p>
+                        <p class = "text2">自由參加各式課程</p>
+                        <p class = "text2">一年會員時長</p>
+                        <p class = "text2">專屬健身教練</p>
+                    </div>
+                    <div class = "blocks" id = "block_3">
+                        <label class = "labels" id = "master"><input class = "check_bt" type="radio" name="plan" value="達人方案">達人方案</label>
+                        <div class = "line"></div>
+                        <p class = "text2">針對專業用戶設計的</p>
+                        <p class = "text2">暢享所有健身器材</p>
+                        <p class = "text2">自由參加各式課程</p>
+                        <p class = "text2">兩年會員時長</p>
+                        <p class = "text2">專屬健身教練</p>
+                        <p class = "text2">相關比賽參賽權</p>
+                    </div>
+                </div>
+                </p>
+                <div class = "adjust">
+                    <input class = "bt" id = "confirm_bt" type="submit" value="確認方案" name = "submit">
+                    <input class = "bt" id = "clear_bt" type="submit" value="清空我的方案" name = "clear">
+                    <input class = "bt" id = "back_bt" type="button" value="回首頁" onclick = "location.href = 'index.php'">
+                    <input class = "bt" id = "update_bt" type="button" value="更新頁面" onclick="Updating();">
+                </div>
+            </form>
+            <script>
+                function Updating(){
+                    var message = "方案資料更新中，請稍後！";
+                    alert(message);
+                    location.href = 'plan_choose.php';
                 }
-                mysqli_close($link);           
-            ?>
+            </script>
         </div>
-        <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
-        <p class = "input_bar">
-            預計選擇方案：
-            <label><input type="radio" name="plan" value="新手方案">新手方案</label>
-            <label><input type="radio" name="plan" value="進階方案">進階方案</label>
-            <label><input type="radio" name="plan" value="選手級達人">選手級達人</label></p>
-            <input id = "log_in_bt" type="submit" value="確認方案" name = "submit">
-            <input id = "log_in_bt" type="submit" value="清空我的方案" name = "clear">
-            <br/><br/>
-            <input class = "bt" id = "logout_bt" type="button" value="更新頁面" onclick="Updating();">
-        </form>
-        <script>
-            function Updating(){
-                var message = "方案資料更新中，請稍後！";
-                alert(message);
-                location.href = 'plan_choose.php';
-            }
-        </script>
         <!-- 選擇方案 -->
         <?php
             if(isset($_POST['submit'])){
