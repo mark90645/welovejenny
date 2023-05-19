@@ -126,7 +126,7 @@
 .color-lump{
     width: 100%;
     height: 400px;
-    background-color: #91f7ae;
+    background-color: #92b79d;
     position: absolute;
     top:400px;
     left:0px;
@@ -134,27 +134,34 @@
 }
 
 .color-lump:hover{
-    background-color: #c4ffd5;
+    background-color: #d3ecda;
     color: #D4C5C7;
 }
 .color-lump-2{
     width: 50%;
     height: 400px;
-    background-color: #fc9ad6;
+    background-color: #ecbe96;
     position: absolute;
     top:800px;
     left:0px;
     z-index: 10;
 }
-
+.color-lump-2:hover{
+    background-color:  #eecfb4;
+    color: #D4C5C7;
+}
 .color-lump-3{
     width: 50%;
     height: 400px;
-    background-color: #626bd5;
+    background-color: #f59d9d;
     position: absolute;
     top:800px;
     right:0px;
     z-index: 10;
+}
+.color-lump-3:hover{
+    background-color:  #f9b0b0;
+    color: #D4C5C7;
 }
 
 
