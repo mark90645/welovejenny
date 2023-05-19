@@ -76,7 +76,7 @@
     width: 760px;
     height: 455px;
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-    background-color: #DCAB6B;
+    background-color: #f1d1a8;
     z-index:3;
 }
 
@@ -86,12 +86,12 @@
 }
 
 #base_2{
-    top:825px;
+    top:620px;
     right:0px;
 }
 
 #base_3{
-    top:1475px;
+    top:1065px;
     right:0px;
 }
 
@@ -112,6 +112,51 @@
     background-color: #2D080A;
     color: #D4C5C7;
 }
+
+#gym_head_pic{
+    margin:0;
+    padding:0;
+    max-width: 100%;
+    height: 948px;
+    object-fit: cover;
+    object-position: center;
+    opacity: 70%;
+}
+
+.color-lump{
+    width: 420px;
+    height: 800px;
+    background-color: #91f7ae;
+    position: absolute;
+    top:400px;
+    left:0px;
+    z-index: 10;
+}
+
+.color-lump:hover{
+    background-color: #c4ffd5;
+    color: #D4C5C7;
+}
+.color-lump-2{
+    width: 420px;
+    height: 800px;
+    background-color: #fc9ad6;
+    position: absolute;
+    top:400px;
+    left:420px;
+    z-index: 10;
+}
+
+.color-lump-3{
+    width: 420px;
+    height: 800px;
+    background-color: #626bd5;
+    position: absolute;
+    top:400px;
+    left:840px;
+    z-index: 10;
+}
+
 
 /*螢幕改動*/
 
