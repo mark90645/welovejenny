@@ -20,25 +20,14 @@ body{
 
 .blocks {
     position: relative;
+    top:-45px;
+    left:0px;
     margin: 0px;
     height:360px;
     width:240px;
     background-color: lightgray;
     border-radius: 15px;
     z-index: -10;
-}
-
-#block_1{
-    top:-40px;
-    left:0px;
-}
-#block_2{
-    top:-40px;
-    left:0px;
-}
-#block_3{
-    top:-40px;
-    left:0px;
 }
 
 .check_bt{
