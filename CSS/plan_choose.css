@@ -69,50 +69,41 @@ body{
 }
 
 .labels:hover input ~ .blocks {  
-    background-color: gray;  
+    background-color: rgb(184, 184, 184);  
 }
-.labels:hover{  
-    color: white;  
-} 
     
 .labels input:checked ~ .blocks {  
-    background-color: blue;  
+    background-color: #2D080A;  
+}
+.labels:has( input:checked){  
+    color: white;  
+}
+.labels input:checked ~ .line {  
+    background-color: white;  
+}
+.labels input:checked ~ .text2 {  
+    color: white;  
 }
 
 .line{
     position: relative;
-    top:50px;
+    top:-340px;
+    left:40px;
     width:170px;
     height:0.5px;
     background-color: black;
     z-index: 20;
 }
-#line_a{
-    left:300px;
-}
-#line_b{
-    left:390px;
-}
-#line_c{
-    left:480px;
-}
 
 .text2{
     position: relative;
     width:100%;
-    top:55px;
-    text-align:left; 
-    line-height: 160%;   
+    top:-330px;
+    left: 50px;
+    text-align:left;
+    font-size: 15px;
+    line-height: 140%;   
     z-index: 20;
-}
-.text2a{
-    left:305px;
-}
-.text2b{
-    left:395px;
-}
-.text2c{
-    left:485px;
 }
 
 .bt {
