@@ -43,29 +43,6 @@
     padding-bottom: 600px;
 }
 
-.pic {
-    position: absolute;
-    width: 760px;
-    height:455px;
-    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
-    z-index:2;
-}
-
-.pic:hover{
-    opacity:0.5;
-}
-
-#pic_a {
-    top:150px;
-}
-
-#pic_b {
-    top:800px;
-}
-
-#pic_c {
-    top:1450px;
-}
 
 .sections{
     z-index:10;
@@ -78,22 +55,9 @@
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
     background-color: #f1d1a8;
     z-index:3;
-}
+} 
 
-#base_1{
-    top:175px;
-    right:0px;
-}
 
-#base_2{
-    top:620px;
-    right:0px;
-}
-
-#base_3{
-    top:1065px;
-    right:0px;
-}
 
 .adjust_index{/*要修縮小後畫面*/
     position: absolute;
@@ -101,12 +65,14 @@
     left:40%;
 }
 
+
 .bt_2{
     border: none;
     background-color: #D4C5C7;
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
     font-size: 20px;
+    
 }
 .bt_2:hover{
     background-color: #2D080A;
@@ -130,7 +96,7 @@
     position: absolute;
     top:400px;
     left:0px;
-    z-index: 20;
+    z-index: 1;
 }
 
 .color-lump:hover{
@@ -144,7 +110,7 @@
     position: absolute;
     top:800px;
     left:0px;
-    z-index: 10;
+    z-index: 1;
 }
 .color-lump-2:hover{
     background-color:  #eecfb4;
@@ -157,7 +123,7 @@
     position: absolute;
     top:800px;
     right:0px;
-    z-index: 10;
+    z-index: 1;
 }
 .color-lump-3:hover{
     background-color:  #f9b0b0;

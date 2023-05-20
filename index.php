@@ -44,14 +44,7 @@ else
                 ?>
             </div>
             <div class="color-lump"></div>
-            <div class="color-lump-2"></div>
-            <div class="color-lump-3"></div>
-            
-            <!-- <div class = "sections" id = "section_2">
-                <img class = "pic" id = "pic_b" src = "./pics/unnatural.png"/>
-                <div class = "base" id = "base_2">
-                    <div class = "adjust_index">
-                        <p class = "text_a" id = "cat_text"><b>健身房的照片(看要不要弄幻燈片)</b></p>
+            <div class="color-lump-2"> <div class = "adjust_index">
                         <p class = "text_a" id = "cat_text"><b>方案內容介紹</b></p>                     
                         <?php
                         if($log_check == 0)
@@ -64,13 +57,9 @@ else
                         <?php
                         }    
                         ?>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class = "sections" id = "section_3">
-                <img class = "pic" id = "pic_c" src = "./pics/paper_town.png"/>
-                <div class = "base" id = "base_3">
-                    <div class = "adjust_index">
+                    </div></div>
+            <div class="color-lump-3">
+            <div class = "adjust_index">
                     <?php
                         $conn=require_once "configure.php";
                         $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -89,8 +78,11 @@ else
                         <p class = "text_b" id = "dog_text">幾張教練照片</p>
                         <input class = "bt_2" id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
                     </div>
-                </div>
-            </div> -->
+            </div>
+            
+             
+
+           
         </div>
 
         <div class = "end">
