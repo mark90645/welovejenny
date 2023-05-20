@@ -26,7 +26,6 @@ else
     <body>
         <div class = "background">
             <div class = "banner">
-                <input id = "index_bt" type="button" value="健身房" onclick = "location.href = 'index.php'">
                 <h1 class = "text">健身房方案選擇</h1>
             </div>
             <div>
