@@ -28,18 +28,18 @@ else
             <div class = "banner">
                 <h1 class = "text">健身房方案選擇</h1>
             </div>
-            <div>
-                <h3 style="color:#e620a4"><?php echo $member_name; ?>，您好，請選擇以下健身方案</h3>
+            <div class = "side_block">
+                <h3 class = "side_text"><?php echo $member_name; ?>，您好<br>請選擇健身方案</h3>
                 <?php
                     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                     $sql = "SELECT * FROM plan_choose WHERE member_name = '$member_name'";
                     $result = mysqli_query($link, $sql);
                     if(mysqli_num_rows($result) == 0){
-                        echo "<h3 style='color:blue;'>您現在沒有選擇任何方案！</h3>";
+                        echo "<h3 class = 'side_text'>您沒有選擇任何方案！</h3>";
                     }else{
                         $row = mysqli_fetch_assoc($result);
                         $plan = $row["plan_id"];
-                        echo "<h3 style='color:blue;'>您現在選擇的方案為「".$plan."」</h3>";
+                        echo "<h3 class = 'side_text'>您現在選擇的方案為<br>「".$plan."」</h3>";
                     }
                     mysqli_close($link);           
                 ?>
