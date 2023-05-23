@@ -44,20 +44,6 @@ body {
     background-color: #e8e8e8;
 }
 
- #log_bt {
-    top: 150px;
-    left: 200px;
-} 
-
- #sign_bt {
-    top: 150px;
-    left: 300px;
-} 
-
- #manager_bt {
-    top: 150px;
-    left: 400px;
-} 
 
  #mem_info_bt {
     top: 200px;

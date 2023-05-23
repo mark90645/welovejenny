@@ -23,7 +23,7 @@ else
         <div class = "background">
             <div>
             <img   id="gym_head_pic" src = "./pics/gym_head.jpg"/>
-                <input id = "index_bt" type="button" value="健身房" onclick = "location.href = 'index.php'">
+                <input id = "index_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
                 <?php
                 if ($log_check == 0)
                 {
@@ -43,9 +43,12 @@ else
                 }
                 ?>
             </div>
-            <div class="color-lump"></div>
+            <div class="color-lump">
+            <input class = "bt_2" id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">                    
+            </div>
             <div class="color-lump-2"> <div class = "adjust_index">
-                        <p class = "text_a" id = "cat_text"><b>方案內容介紹</b></p>                     
+                        <p class = "text_a" id = "cat_text"><b>方案內容介紹</b></p> 
+                        <input class = "bt_2" id = "reserve_bt" type="button" value="方案簡介" onclick = "location.href = 'plan_choose.php'">                    
                         <?php
                         if($log_check == 0)
                         {?>

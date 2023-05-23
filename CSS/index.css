@@ -48,6 +48,21 @@
     z-index:10;
 }
 
+#log_bt {
+    top: 150px;
+    left: 200px;
+} 
+
+ #sign_bt {
+    top: 150px;
+    left: 300px;
+} 
+
+ #manager_bt {
+    top: 150px;
+    left: 400px;
+} 
+
 .base{
     position: absolute;
     width: 760px;
@@ -72,6 +87,7 @@
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
     font-size: 20px;
+    align-items: center;
     
 }
 .bt_2:hover{
@@ -129,6 +145,8 @@
     background-color:  #f9b0b0;
     color: #D4C5C7;
 }
+
+
 
 
 /*螢幕改動*/

@@ -10,6 +10,21 @@
   section {
     margin: 0 10px;
   }
+
+  #log_bt {
+    top: 25px;
+    left: 200px;
+} 
+
+ #sign_bt {
+    top: 25px;
+    left: 300px;
+} 
+
+ #manager_bt {
+    top: 25px;
+    left: 400px;
+} 
   
   .container {
     position: absolute;
@@ -39,6 +54,10 @@
     max-width: 100%;
     object-fit: contain;
     border-radius: 0.7rem;
+  }
+
+  img:hover{
+    opacity: 80%;
   }
   
   #previous,
@@ -88,6 +107,7 @@
 
   .intro_A {
     background-color: rgb(255, 142, 22);
+    
     position: absolute;
     top: 150px;
     left: 315px;
@@ -96,14 +116,14 @@
     z-index: 1;
     position: absolute;
     top: 150px;
-    right: 340px;
+    right: 380px;
   }
 
   .intro_B {
     background-color: rgb(255, 142, 22);
     position: absolute;
     top: 150px;
-    right: 180px;
+    right: 65px;
   }
 
   #C_photo {
@@ -112,11 +132,19 @@
     top: 450px;
     left: 50px;
   }
+
+  .intro_C {
+    background-color: rgb(255, 142, 22);
+    position: absolute;
+    top: 450px;
+    left: 315px;
+  }
+
   #D_photo {
     z-index: 1;
     position: absolute;
     top: 450px;
-    right: 340px;
+    right: 380px;
   }
   #E_photo {
     z-index: 1;
