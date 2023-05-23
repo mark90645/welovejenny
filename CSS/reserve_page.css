@@ -1,6 +1,27 @@
 .prev_page{
     position: relative;
+    top:-70px;
+    left:1060px;
     width:40px;
     height:40px;
     background-color: aquamarine;
 }
+
+.right{
+    position: absolute;
+    top:250px;
+    right:260px;
+    width:40px;
+    height:40px;
+    background-color:cadetblue;
+}
+
+.left{
+    position: absolute;
+    top:250px;
+    left:260px;
+    width:40px;
+    height:40px;
+    background-color:cadetblue;
+}
+
