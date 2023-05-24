@@ -30,9 +30,9 @@ else
         <div class = "line" id = "line2"></div>
         <input class = "bt_2 go_page" id = "aerobic_bt" type="button" value="有 氧 課 程" onclick = "location.href = 'reserve_page3.php'">
         <div class = "line" id = "line3"></div>
-        <input class = "bt_2 back_page" id = "info_bt" type="button" value="會 員 資 訊" onclick = "location.href = 'reserve_page2.php'">
+        <input class = "bt_2 back_page" id = "info_bt" type="button" value="會 員 資 訊" onclick = "location.href = 'member_info_page.php'">
         <div class = "line" id = "line4"></div>
-        <input class = "bt_2 back_page" id = "index_bt" type="button" value="回 到 首 頁" onclick = "location.href = 'reserve_page3.php'">
+        <input class = "bt_2 back_page" id = "index_bt" type="button" value="回 到 首 頁" onclick = "location.href = 'index.php'">
     </div>
 <?php
 include "Calendar.php";
