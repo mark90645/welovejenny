@@ -55,12 +55,12 @@ class BookableCell
  
     private function openCell($date, $class)
     {
-        return '<div class="open">' . $this->bookingForm($date, $class) . $this->getNumBookings($date, $class) . '/30</div>';
+        return '<div class="open">' . '<p class="date">' . substr($date, -2) . '</p>' . $this->bookingForm($date, $class) . $this->getNumBookings($date, $class) . '/30</div>';    
     }
  
     private function bookedCell($date, $class)
     {
-        return '<div class="booked">' . $this->deleteForm($this->bookingId($date, $class))  . $this->getNumBookings($date, $class) . '/30</div>';
+        return '<div class="booked">' . '<p class="date">' . substr($date, -2) . '</p>' . $this->deleteForm($this->bookingId($date, $class))  . $this->getNumBookings($date, $class) . '/30</div>';
     }
     
     private function closeCell($date, $class)
@@ -68,7 +68,7 @@ class BookableCell
         $username = $_COOKIE["member_account"];
             if ($this->isDateBookedByUser($date, $username, $class)) {
             // 如果現在使用者已經預訂該日期，就顯示已預訂狀態
-            return '<div class="booked">' . $this->deleteForm($this->bookingId($date, $class))  . $this->getNumBookings($date, $class) . '/30</div>';
+            return '<div class="booked">' . '<p class="date">' . substr($date, -2) . '</p>' . $this->deleteForm($this->bookingId($date, $class))  . $this->getNumBookings($date, $class) . '/30</div>';
         } else {
             // 如果現在使用者還沒預訂該日期，就顯示已額滿狀態
             return '<div class="close">已額滿</div>';
@@ -128,7 +128,7 @@ class BookableCell
     private function deleteForm($id)
     {
         return
-            '<form onsubmit="return confirm(\'Are you sure to cancel?\');" method="post" action="' . $this->currentURL . '">' .
+            '<form onsubmit="return confirm(\'確定取消預約?\');" method="post" action="' . $this->currentURL . '">' .
             '<input type="hidden" name="delete" />' .
             '<input type="hidden" name="id" value="' . $id . '" />' .
             '<input class="submit" type="submit" value="Delete" />' .

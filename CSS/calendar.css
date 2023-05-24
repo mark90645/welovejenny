@@ -129,7 +129,14 @@ li div form {
     position: absolute;
     bottom: 2px;
 }
- 
+
+.date
+{
+    margin-top: -20px;
+    font-size: 14px;
+}
+
+
 div.open {
     background: #eaeaea;
     width: 100%;
@@ -139,7 +146,10 @@ div.open {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    line-height: 10px;
+    font-size: 24px;
 }
+
  
 div.booked {
     background: #df9c8a;
@@ -151,6 +161,8 @@ div.booked {
     flex-direction: column;
     text-align: center;
     line-height: inherit;
+    line-height: 10px;
+    font-size: 24px;
 }
 
 div.close {
@@ -164,6 +176,8 @@ div.close {
     flex-direction: column;
     text-align: center;
     font-size: 22px;
+    line-height: 10px;
+    font-size: 24px;
 }
 
 .full_text
