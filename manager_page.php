@@ -58,22 +58,22 @@ else
                 <hr/>
                 <?php
                     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-                    $sql = "SELECT * FROM regular_member";
+                    $sql = "SELECT regular_member.member_id, regular_member.member_name, regular_member.member_account, password, birthday, gmail, phone, gender, plan_id FROM regular_member LEFT JOIN plan_choose ON regular_member.member_id = plan_choose.member_id";
                     $result_1 = mysqli_query($link, $sql);
                     echo "<form action='' method='post'>";
                     echo "<table>";
-                    echo "<tr><th></th><th>會員ID</th><th>會員姓名</th><th>會員生日</th><th>會員信箱</th><th>手機號碼</th><th>會員性別</th></tr>";
+                    echo "<tr><th></th><th>會員ID</th><th>會員姓名</th><th>會員生日</th><th>會員信箱</th><th>手機號碼</th><th>會員性別</th><th>選擇的方案</th></tr>";
                     if (mysqli_num_rows($result_1) > 0) {
                         while($row = mysqli_fetch_assoc($result_1)) {
                             $gender = $row["gender"] === "male" ? "男" : "女";
-                            echo "<tr><td><input type='checkbox' name='delete[]' value='" . $row["member_name"] . "'></td><td>" . $row["member_id"] . "</td><td>" . $row["member_name"] . "</td><td>" . $row["birthday"] ."</td><td>" . $row["gmail"] ."</td><td>". $row["phone"] ."</td><td>" . $gender ."</td></tr>";
+                            echo "<tr><td><input class='check' type='checkbox' name='delete[]' value='" . $row["member_name"] . "'></td><td>" . $row["member_id"] . "</td><td>" . $row["member_name"] . "</td><td>" . $row["birthday"] ."</td><td>" . $row["gmail"] ."</td><td>". $row["phone"] ."</td><td>" . $gender ."</td><td>". $row["plan_id"] ."</td></tr>";
                         }
                     } else {
-                        echo "<tr><td colspan='7'>沒有結果</td></tr>";
+                        echo "<tr><td colspan='8'>沒有結果</td></tr>";
                     }
                     echo "</table>";
                     echo "<br/>";
-                    echo "<input type='submit' value='刪除'>";
+                    echo "<input class='delete' type='submit' value='刪除'>";
                     echo "</form>";
 
                     if(isset($_POST['delete'])){
@@ -174,6 +174,30 @@ else
             <!-- 方案管理總覽 -->
             <div class="box_3">
             <h2 style="text-align:center;">方案管理</h2>
+            <?php
+                $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                $sql = "SELECT 
+                            plan_id, 
+                            COUNT(*) AS count
+                        FROM 
+                            plan_choose
+                        WHERE 
+                            plan_id IN ('新手方案', '進階方案', '達人方案')
+                        GROUP BY plan_id;";
+                $result_1 = mysqli_query($link, $sql);
+                echo "<form action='' method='post'>";
+                    echo "<table>";
+                    echo "<tr><th>方案名稱</th><th>選擇此方案的人數</th></tr>";
+                    if (mysqli_num_rows($result_1) > 0) { 
+                        while($row = mysqli_fetch_assoc($result_1)) {           
+                        echo "<tr><td>". $row["plan_id"] . "</td><td>" . $row["count"] ."</td></tr>";              
+                        }
+                    } else {
+                        echo "<tr><td colspan='2'>沒有結果</td></tr>";
+                    }
+                    echo "</table>";
+                    echo "</form>";
+            ?>
             </div>
             <!-- 匯入批量資料 -->
             <div class="box_4">
