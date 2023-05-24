@@ -145,6 +145,69 @@
     background-color:  #f9b0b0;
     color: #D4C5C7;
 }
+.container {
+    position: absolute;
+    top: 60px;
+    left: 120px;
+    padding: 10px;
+    background: #ffaf95;
+    margin: 15px auto;
+    border-radius: 1rem;
+    z-index: 1;
+    width: 80%;
+    height: 70%;
+  }
+  
+  .slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+#previous,
+#next {
+  cursor: pointer;
+  position: absolute;
+  border-radius: 16px;
+  background: #002369;
+  color: #fff;
+  padding: 15px;
+  top: calc(50% - 25px);
+  left: -20px;
+}
+
+
+
+
+#next {
+  left: unset;
+  right: -20px;
+}
+
+.dots {
+  margin-top: 5px;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.dots li {
+  width: 10px;
+  height: 10px;
+  background-color: silver;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+li.dot--active {
+  background-color: gray;
+}
 
 
 
