@@ -52,8 +52,13 @@ else
                     location.href = 'manager_page.php';
                 }
             </script>
+            <button onclick="showPageA('box_1')">页面1</button>
+            <button onclick="showPageB('box_2')">页面2</button>
+            <button onclick="showPageA('box_3')">页面3</button>
+            <button onclick="showPageB('box_4')">页面4</button>
+            <button onclick="showPageB('box_5')">页面5</button>
             <!-- 會員資料總覽 -->
-            <div style="color:red;text-align:center"class="box_1">
+            <div style="color:red;text-align:center"class="boxes box_1" id = "box_1">
                 <h3 style="color:blue">會員總覽</h3>
                 <hr/>
                 <?php
@@ -86,11 +91,9 @@ else
                     }
                     mysqli_close($link);
                 ?>
-
-
             </div>
             <!-- 手動新增區 -->
-            <div class="box_2"> 
+            <div class="boxes box_2" id = "box_2"> 
                 <h3>新增會員資料</h3>
                 <div id = "the_back_4">
                     <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
@@ -150,7 +153,7 @@ else
                 ?>
             </div>   
             <!-- 課程管理總覽     -->
-            <div class="box_1">
+            <div class="boxes box_3" id = "box_3">
                 <?php
                     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                     $sql = "SELECT bookings.id, bookings.booking_date, bookings.member_account, regular_member.member_name, regular_member.phone FROM bookings JOIN regular_member ON bookings.member_account = regular_member.member_account";
@@ -172,7 +175,7 @@ else
                 
             </div>  
             <!-- 方案管理總覽 -->
-            <div class="box_3">
+            <div class="boxes box_4"  id = "box_4">
             <h2 style="text-align:center;">方案管理</h2>
             <?php
                 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -200,7 +203,7 @@ else
             ?>
             </div>
             <!-- 匯入批量資料 -->
-            <div class="box_4">
+            <div class="boxes box_5"  id = "box_5">
                 <form method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
                     <label for="csvfile">請選擇CSV檔案以匯入資料：</label>
                     <input type="file" name="csvfile" id="csvfile" required>
@@ -266,5 +269,22 @@ else
             
         </div>
         
+        <script>
+            function showPageA(boxId) {
+                var boxes = document.getElementsByClassName('boxes');
+                for (var i = 0; i < boxes.length; i++) {
+                    boxes[i].style.display = 'none';
+                }
+                document.getElementById(boxId).style.display = 'block';
+            }
+            function showPageB(boxId) {
+                var boxes = document.getElementsByClassName('boxes');
+                for (var i = 0; i < boxes.length; i++) {
+                    boxes[i].style.display = 'none';
+                }
+                document.getElementById(boxId).style.display = 'flex';
+            }
+        </script>
+
     </body>
 </html>
