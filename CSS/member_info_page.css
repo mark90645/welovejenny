@@ -1,0 +1,19 @@
+
+#back_bt1{
+    position: absolute;
+    top:20px;
+    right:50px;
+}
+#back_bt2{
+    position: absolute;
+    top:20px;
+    right:200px;
+}
+
+#section_2{
+    background-color:  #92b79d;
+    position: absolute;
+    top:180px;
+    left:300px;
+
+}

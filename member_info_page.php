@@ -28,25 +28,20 @@ else
     <body>
         <div class = "background">
             <div class = "banner">             
-                <input id = "index_bt" type="button" value="健身房" onclick = "location.href = 'index.php'">
-                <input class = "bt" id = "mem_info_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
-                <input class = "bt" id = "logout_bt" type="button" value="登出" onclick = "location.href = 'log_out.php'">
-                <input class = "bt" id = "change_bt" type="button" value="修改密碼" onclick = "location.href = 'change_password.php'">
+                <input id = "index_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
             </div>
             <div id = "section_1">
                 <img style="width:200px"alt="memberpic" id = "head_pic" src = "./pics/memberhead.png">
                 <h2>歡迎，<?php echo $member_name; ?></h2>
             </div>
-            <div id = "section_2">       
-                    <input class = "bt" id = "back_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
+            
+                    <input class = "bt" id = "back_bt1" type="button" value="預約課程" onclick = "location.href = 'reserve_page.php'">
                     <br>
                     <br>
-                    <input class = "bt" id = "back_bt" type="button" value="預約課程" onclick = "location.href = 'reserve_page.php'">
+                    <input class = "bt" id = "back_bt2" type="button" value="方案選擇" onclick = "location.href = 'plan_choose.php'">
                     <br>
                     <br>
-                    <input class = "bt" id = "back_bt" type="button" value="方案選擇" onclick = "location.href = 'plan_choose.php'">
-                    <br>
-                    <br>
+             <div id = "section_2">     
             <?php
                 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                 $sql = "SELECT * FROM plan_choose WHERE member_name = '$member_name'";
@@ -75,6 +70,7 @@ else
                 }
                 mysqli_close($link);           
             ?>
+            </div>
                 <div id = "section_3"> 
                     <?php
                         $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);

@@ -25,6 +25,21 @@
     top: 25px;
     left: 400px;
 } 
+#mem_info_bt {
+  top: 25px;
+  left: 300px;
+}/*因為共用模板，這個之後再調回來*/
+
+
+#logout_bt {
+  top: 25px;
+  left: 200px;
+}
+
+#change_bt {
+  top: 25px;
+  left: 450px;
+}
   
 
   img {
