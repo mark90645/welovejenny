@@ -116,7 +116,7 @@
 }
 
 .color-lump:hover{
-    background-color: #d3ecda;
+    background-color: #b4cabb;
     color: #D4C5C7;
 }
 .color-lump-2{
@@ -150,7 +150,7 @@
     top: 60px;
     left: 120px;
     padding: 10px;
-    background: #ffaf95;
+    background: #dcdbdb;
     margin: 15px auto;
     border-radius: 1rem;
     z-index: 1;

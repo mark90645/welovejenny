@@ -65,7 +65,6 @@ else
 
             <div class="color-lump-2"> <div class = "adjust_index">
                         <p class = "text_a" id = "cat_text"><b>方案內容介紹</b></p> 
-                        <input class = "bt_2" id = "reserve_bt" type="button" value="方案簡介" onclick = "location.href = 'plan_choose.php'">                    
                         <?php
                         if($log_check == 0)
                         {?>
