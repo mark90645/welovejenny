@@ -18,14 +18,21 @@ else
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"> -->
 </head>
 <body>
-    <p>CLASS: bike</p>
-    <div class="switch">
-        <div class="right" onclick="javascript:location.href='./reserve_page3.php'">
-            <i class="bi bi-arrow-right"></i>
-        </div>
-        <div class="left" onclick="javascript:location.href='./reserve_page.php'">
-            <i class="bi bi-arrow-left"></i>
-        </div>
+    <div class = "head_adjust"></div>
+    <div class = "title_box">
+        <p class = "title">目前課程: </p>
+        <p class = "title2">飛輪</p>
+    </div>
+    <div class = "change_box">
+        <input class = "bt_2 go_page" id = "yoga_bt" type="button" value="瑜 珈 課 程" onclick = "location.href = 'reserve_page.php'">
+        <div class = "line" id = "line1"></div>
+        <input class = "bt_2 go_page" id = "bike_bt" type="button" value="飛 輪 課 程" onclick = "location.href = 'reserve_page2.php'">
+        <div class = "line" id = "line2"></div>
+        <input class = "bt_2 go_page" id = "aerobic_bt" type="button" value="有 氧 課 程" onclick = "location.href = 'reserve_page3.php'">
+        <div class = "line" id = "line3"></div>
+        <input class = "bt_2 back_page" id = "info_bt" type="button" value="會 員 資 訊" onclick = "location.href = 'reserve_page2.php'">
+        <div class = "line" id = "line4"></div>
+        <input class = "bt_2 back_page" id = "index_bt" type="button" value="回 到 首 頁" onclick = "location.href = 'reserve_page3.php'">
     </div>
 <?php
 include "Calendar.php";
@@ -53,7 +60,11 @@ $bookableCell->routeActions();
  
 echo $calendar->show();
 ?>
-<?php echo "you booked " . $booking->countBookingDaysByUsername($_COOKIE["member_account"]) . " days.\n"; ?>
-<input class = "bt" id = "back_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
+<div class = "info_box">
+    <div class = "info_text">
+        <?php echo "已預約 " . $booking->countBookingDaysByUsername($_COOKIE["member_account"]) . " 天\n"; ?>
+    </div>
+</div>
+<img class = "motion_pic" src="./pics/bike.png" />
 </body>
 </html>
