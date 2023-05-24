@@ -14,7 +14,8 @@ div#calendar div.box {
     left: 0px;
     width: 100%;
     height: 40px;
-    background-color: #3FA7D6;
+    background-color: #2D080A;
+    border-radius: 8px 8px 0px 0px;
 }
  
 div#calendar div.header {
@@ -53,8 +54,9 @@ div#calendar div.header a.next {
  
 /*******************************Calendar Content Cells*********************************/
 div#calendar div.box-content {
-    border: 1px solid #3FA7D6;
+    border: 1px solid #2D080A;
     border-top: none;
+    border-radius: 0px 0px 8px 8px;
 }
  
 div#calendar ul.label {
@@ -102,7 +104,7 @@ div#calendar ul.dates li {
     width: 80px;
     height: 80px;
     font-size: 25px;
-    background-color: #FFF;
+    background-color: none;
     color: #000;
     text-align: center;
     position: relative;
@@ -127,37 +129,55 @@ li div form {
     position: absolute;
     bottom: 2px;
 }
- 
+
+.date
+{
+    margin-top: -20px;
+    font-size: 14px;
+}
+
+
 div.open {
-    background: #59CD90;
+    background: #eaeaea;
     width: 100%;
     height: 100%;
     display: flex;
+    border-radius: 8px;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    line-height: 10px;
+    font-size: 24px;
 }
+
  
 div.booked {
-    background: #D36135;
+    background: #df9c8a;
     width: 100%;
     height: 100%;
     display: flex;
+    border-radius: 8px;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     line-height: inherit;
+    line-height: 10px;
+    font-size: 24px;
 }
 
 div.close {
-    background: #666666;
+    background: #363636;
+    color: #eaeaea;
     width: 100%;
     height: 100%;
     display: flex;
+    border-radius: 8px;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     font-size: 22px;
+    line-height: 10px;
+    font-size: 24px;
 }
 
 .full_text

@@ -1,5 +1,5 @@
 .box_1{
-    width:700px;
+    width:1000px;
     height:800px;
     float:center;
     background-color: #fff0c9;
@@ -28,7 +28,7 @@
     color:purple;
 }
 .box_2 {
-    width:700px;
+    width:1000px;
     margin:0 auto;
     background-color: rgb(153, 215, 248);
     padding:15px;
@@ -40,12 +40,23 @@
 .box_3 {
     width:800px;
     margin:0 auto;
-    background-color: rgb(240, 149, 214);
+    background-color: rgb(241, 191, 227);
     padding:15px;
     justify-content: center; 
     text-align: center;
     align-items: center;
     border-radius: 15px;  
+}
+.box_3 table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    color:rgb(55, 2, 2);
+}
+
+.box_3 th, .box_3 td {
+    border: 1px solid black;
+    padding: 5px;
+    color:rgb(55, 2, 2);
 }
 .box_4 {
     width:800px;
@@ -57,3 +68,31 @@
     align-items: center;
     border-radius: 15px;  
 }
+.delete{
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: rgb(234, 189, 130);
+    cursor: pointer;
+    border-color: rgb(234, 189, 130);
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.check {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .check:checked {
+    background-color: #e73535;
+  }
+  
+  
