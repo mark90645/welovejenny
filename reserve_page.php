@@ -20,12 +20,8 @@ else
 <body>
     <p>CLASS: yoga</p>
     <div class="switch">
-        <div class="right" onclick="javascript:location.href='./reserve_page2.php'">
-            <i class="bi bi-arrow-right"></i>
-        </div>
-        <div class="left" onclick="javascript:location.href='./reserve_page3.php'">
-            <i class="bi bi-arrow-left"></i>
-        </div>
+        <div class="right" onclick="javascript:location.href='./reserve_page2.php'"></div>
+        <div class="left" onclick="javascript:location.href='./reserve_page3.php'"></div>
     </div>
 <?php
 include "Calendar.php";
@@ -54,8 +50,6 @@ $bookableCell->routeActions();
 echo $calendar->show();
 ?>
 <?php echo "you booked " . $booking->countBookingDaysByUsername($_COOKIE["member_account"]) . " days.\n"; ?>
-    <div class="prev_page" onclick="javascript:location.href='./member_info_page.php'">
-        <i class="bi bi-arrow-left"></i>
-    </div>
+<input class = "bt" id = "back_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
 </body>
 </html>
