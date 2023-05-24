@@ -1,15 +1,21 @@
-.prev_page{
+#back_bt{
     position: relative;
-    top:-70px;
-    left:1060px;
-    width:40px;
-    height:40px;
-    background-color: aquamarine;
+    top:-30px;
+    left:940px;
+    border: none;
+    background-color: #D4C5C7;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    z-index: 10;
+}
+#back_bt:hover{
+    background-color: #e8e8e8;
 }
 
 .right{
     position: absolute;
-    top:250px;
+    top:280px;
     right:260px;
     width:40px;
     height:40px;
@@ -18,7 +24,7 @@
 
 .left{
     position: absolute;
-    top:250px;
+    top:280px;
     left:260px;
     width:40px;
     height:40px;
