@@ -25,6 +25,7 @@ body {
     position: absolute;
     top: 20px;
     left:30px;
+    color: #D4C5C7;
 }
 
 #index_bt:hover {
@@ -46,17 +47,19 @@ body {
 
 
  #mem_info_bt {
-    top: 200px;
+    top: 150px;
     left: 300px;
 }/*因為共用模板，這個之後再調回來*/
  
 
 #logout_bt {
-    right:10px;
+    top: 150px;
+    left: 200px;
 }
 
 #change_bt {
-    right:80px;
+    top: 150px;
+    left: 450px;
 }
 
 

@@ -55,9 +55,11 @@ else
              <img src="https://i.pinimg.com/564x/d1/12/46/d112468ed2e1a0d8f5e0c60b6a1af042.jpg" />
              <img src="https://i.pinimg.com/564x/e8/38/22/e838229f1592b1552866c4f1857dbee2.jpg" />
              </div>
+
              <ul id="dots" class="dots">
               <li></li>
               <li></li>
+
               </ul>
             </div>
             </section>                 

@@ -46,14 +46,14 @@
                             用戶ID：<?php echo $id;?></p>
                         <p class = "input_bar">
                             帳號名稱：<?php echo $cookie;?></p>
-                        <p class = "input_bar">
+                        <p class = "input_bar">	
                             手機號碼：<?php echo $phone;?>&nbsp&nbsp</p>
                         <p class = "input_bar">
                             生日：  <?php echo $birth;?></p>
                         <p class = "input_bar">
-                            輸入舊密碼：<input type="password" name="old_password"placeholder="請輸入舊密碼"></p>
+                            輸入舊密碼：	&nbsp;&nbsp;&nbsp;&nbsp;&ensp;	<input type="password" name="old_password"placeholder="請輸入舊密碼"></p>
                         <p class = "input_bar">
-                            輸入新密碼：<input type="password" name="new_password"placeholder="請輸入新密碼(8位以上)"></p>
+                            輸入新密碼：&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;<input type="password" name="new_password"placeholder="請輸入新密碼(8位以上)"></p>
                         <p class = "input_bar">
                             再次輸入新密碼：<input type="password" name="password_check"placeholder="確認密碼"></p>
                         <!-- 之後要改CSS排版 -->
