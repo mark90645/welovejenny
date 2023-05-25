@@ -1,3 +1,61 @@
+#side_box{
+    position: fixed;
+    top:80px;
+    left:30px;
+    width:12%;
+    height:25%;
+    background-color: lightsteelblue;
+}
+.side_text{
+    padding-left: 20%;
+    margin: 0px;
+}
+.subject{
+    font-size: 150%;
+}
+.object{
+    font-size: 80%;
+    margin-top: 10%;
+}
+
+.side_line{
+    position: relative;
+    width:60%;
+    height: 0.5px;
+    left:20%;
+    background-color: #000000;
+    margin: 5% 0% 5% 0%;
+}
+
+.side_bt{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+}
+._bt{
+    border: none;
+    top:0%;
+    left: 0px;
+    width: 50%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+#logout_bt {
+    
+}
+#change_bt {
+
+}
+
+.change_page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+
 .boxes {
     display: none;
 }

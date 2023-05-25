@@ -29,22 +29,26 @@ else
     </head>
     <body>
         <div id = "background">
-            <div id = "banner">
+            <div id = "side_box">
                 <?php
-            if ($log_check == 0)
-            {
-                header("location:index.php");
-            }
-            else
-            {
+                if ($log_check == 0)
+                {
+                    header("location:index.php");
+                }
+                else
+                {
                 ?>
-                <h2>管理員：<?php echo $manager_name; ?><h2>
-                <p>連線成功</p>
-                <input id = "logout_bt" type="button" value="登出" onclick = "location.href = 'index.php'">
-                <input id = "change_bt" type="button" value="修改密碼" onclick = "location.href = 'manager_change_page.php'">
-            <?php
-            }
-            ?>
+                    <p class = "side_text object">管理員：</p>
+                    <p class = "side_text subject"><?php echo $manager_name; ?></p>
+                    <p class = "side_text object">連線成功</p>
+                    <div class = "side_line"></div>
+                    <div class = "side_bt">
+                        <input class = "_bt" id = "logout_bt" type="button" value="登出" onclick = "location.href = 'index.php'">
+                        <input class = "_bt" id = "change_bt" type="button" value="修改密碼" onclick = "location.href = 'manager_change_page.php'">
+                    </div>
+                <?php
+                }
+                ?>
             </div>
             <h2 style="cursor:pointer;text-align:center"onclick="reload()">重整頁面</h2>
             <script>
@@ -52,11 +56,13 @@ else
                     location.href = 'manager_page.php';
                 }
             </script>
-            <button onclick="showPageA('box_1')">页面1</button>
-            <button onclick="showPageB('box_2')">页面2</button>
-            <button onclick="showPageA('box_3')">页面3</button>
-            <button onclick="showPageB('box_4')">页面4</button>
-            <button onclick="showPageB('box_5')">页面5</button>
+            <div class = "change_page">
+                <button onclick="showPageA('box_1')">页面1</button>
+                <button onclick="showPageB('box_2')">页面2</button>
+                <button onclick="showPageA('box_3')">页面3</button>
+                <button onclick="showPageB('box_4')">页面4</button>
+                <button onclick="showPageB('box_5')">页面5</button>
+            </div>
             <!-- 會員資料總覽 -->
             <div style="color:red;text-align:center"class="boxes box_1" id = "box_1">
                 <h3 style="color:blue">會員總覽</h3>
@@ -275,14 +281,14 @@ else
                 for (var i = 0; i < boxes.length; i++) {
                     boxes[i].style.display = 'none';
                 }
-                document.getElementById(boxId).style.display = 'block';
+                document.getElementById(boxId).style.display = 'flex';
             }
             function showPageB(boxId) {
                 var boxes = document.getElementsByClassName('boxes');
                 for (var i = 0; i < boxes.length; i++) {
                     boxes[i].style.display = 'none';
                 }
-                document.getElementById(boxId).style.display = 'flex';
+                document.getElementById(boxId).style.display = 'block';
             }
         </script>
 
