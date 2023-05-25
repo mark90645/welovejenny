@@ -45,7 +45,7 @@ else
             </div>
 
             <div class="color-lump">          
-            <div class="slideshow-container">s
+            <div class="slideshow-container">
               <div class="mySlides fade">
               <img src="https://i.pinimg.com/564x/c2/6a/87/c26a87129b59737f8c3435091810816a.jpg" style="width:100%;height:100%; margin-top:-10%">
               </div>
@@ -117,8 +117,9 @@ else
             </div>
 
 
-            <div class="color-lump-2"> <div class = "adjust_index">
-                        <p class = "text_a" id = "cat_text"><b>方案內容介紹</b></p> 
+            <div class="color-lump-2"> 
+                <div class = "adjust_index_2">
+                        <p id = "text_2"><b>方案內容</b></p> 
                         <?php
                         if($log_check == 0)
                         {?>
@@ -130,10 +131,7 @@ else
                         <?php
                         }    
                         ?>
-                    </div></div>
-            <div class="color-lump-3">
-            <div class = "adjust_index">
-                    <?php
+                        <?php
                         $conn=require_once "configure.php";
                         $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                         $sql = "SELECT * FROM plan_detail";
@@ -147,9 +145,32 @@ else
                         }
                         mysqli_close($link);
                     ?>
-                        <p class = "text_b" id = "dog">汪汪隊出任務</p>
-                        <p class = "text_b" id = "dog_text">幾張教練照片</p>
-                        <input class = "bt_2" id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
+                </div>
+            </div>
+
+            <div class="color-lump-3">
+            <div class = "adjust_index_3">
+            <input class = "bt_2" id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
+            <br>
+            <div class="tabs">
+            <ul class="tabs__list">
+            <li class="tabs__tab">
+            <input class="tabs__input" type="radio" id="tab-0" name="tab-group" checked>
+             <label for="tab-0" class="tabs__label" tabindex="0" role="button">新手方案</label>
+            <div class="tabs__content">
+            Hi
+             </div>
+             </li>
+             <li class="tabs__tab">
+           <input class="tabs__input" type="radio" id="tab-1" name="tab-group">
+           <label for="tab-1" class="tabs__label" tabindex="0" role="button">進階方案</label>
+           <div class="tabs__content">
+           Tab 1 content
+          </div>
+         </li>
+        </ul>
+        </div>
+                        
                     </div>
             </div>
             
