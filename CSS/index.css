@@ -171,8 +171,8 @@
   
   .slideshow-container {
   position: relative;
-  margin-left: 400px;
-  margin-right: 400px;
+  margin-left: 25%;
+  margin-right: 25%;
   height: 95%;
   border-radius: 10%;
   overflow: hidden;
