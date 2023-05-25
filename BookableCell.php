@@ -170,7 +170,7 @@ class BookableCell
             $count++;
           }
         }
-        return $count >= 30; // 假設最多只能預訂 30 個人
+        return $count >= 3; // 假設最多只能預訂 30 個人
       }
 }
 

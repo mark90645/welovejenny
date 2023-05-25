@@ -45,7 +45,7 @@ else
             </div>
 
             <div class="color-lump">          
-            <div class="slideshow-container">s
+            <div class="slideshow-container">
               <div class="mySlides fade">
               <img src="https://i.pinimg.com/564x/c2/6a/87/c26a87129b59737f8c3435091810816a.jpg" style="width:100%;height:100%; margin-top:-10%">
               </div>
@@ -117,8 +117,9 @@ else
             </div>
 
 
-            <div class="color-lump-2"> <div class = "adjust_index">
-                        <p class = "text_a" id = "cat_text"><b>方案內容介紹</b></p> 
+            <div class="color-lump-2"> 
+                <div class = "adjust_index_2">
+                        <p id = "text_2"><b>方案內容</b></p> 
                         <?php
                         if($log_check == 0)
                         {?>
@@ -130,10 +131,7 @@ else
                         <?php
                         }    
                         ?>
-                    </div></div>
-            <div class="color-lump-3">
-            <div class = "adjust_index">
-                    <?php
+                        <?php
                         $conn=require_once "configure.php";
                         $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                         $sql = "SELECT * FROM plan_detail";
@@ -147,9 +145,40 @@ else
                         }
                         mysqli_close($link);
                     ?>
-                        <p class = "text_b" id = "dog">汪汪隊出任務</p>
-                        <p class = "text_b" id = "dog_text">幾張教練照片</p>
-                        <input class = "bt_2" id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
+                </div>
+            </div>
+
+            <div class="color-lump-3">
+            <div class = "adjust_index_3">
+            <input class = "bt_2" id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
+            <br>
+            <br>
+            <div class="tabs">
+            <ul class="tabs__list">
+            <li class="tabs__tab">
+            <input class="tabs__input" type="radio" id="tab-0" name="tab-group" checked>
+             <label for="tab-0" class="tabs__label" tabindex="0" role="button">新手方案</label>
+            <div class="tabs__content">
+            這個方案是針對初學者而設計的。在半年的計畫內，您將得到健身教練的協助，讓您更了解運動的方法與技巧，以及如何更好地達到自己的健身目標。此外，您可以享受到健身房內的各項設施，包括器械設備、瑜珈、舞蹈、有氧運動等，並且可以參加由健身房舉辦的各種健身課程。
+             </div>
+             </li>
+             <li class="tabs__tab">
+           <input class="tabs__input" type="radio" id="tab-1" name="tab-group">
+           <label for="tab-1" class="tabs__label" tabindex="0" role="button">進階方案</label>
+           <div class="tabs__content">
+           這個方案是針對那些已經有一定運動基礎，且希望長期投資自己身體的人而設計的。在一年的計畫內，您可以享受到健身房內各項設施的使用權，同時也可以參加健身房舉辦的各種健身課程。此外，我們也為您安排了專屬的健身教練，讓您可以更有效率地達成自己的健身目標。
+          </div>
+         </li>
+         <li class="tabs__tab">
+           <input class="tabs__input" type="radio" id="tab-2" name="tab-group">
+           <label for="tab-2" class="tabs__label" tabindex="0" role="button">達人方案</label>
+           <div class="tabs__content">
+           這個方案是針對那些對健身非常投入，且希望持續挑戰自己的人而設計的。在兩年的計畫內，您可以享受到健身房內各項設施的使用權，同時也可以參加健身房舉辦的各種健身課程。此外，我們也為您安排了專屬的健身教練，讓您可以更有效率地達成自己的健身目標。同時，我們也會定期為您舉辦健身比賽或挑戰賽，讓您有機會和其他健身達人切磋技藝，提升自己的健身水平。
+          </div>
+         </li>
+        </ul>
+        </div>
+                        
                     </div>
             </div>
             
