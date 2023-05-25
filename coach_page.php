@@ -51,7 +51,7 @@ else
         <img class="coach_photo" src="./pics/Mickey.png" width=250/>
         </div>
         <div class="intro_A">
-          <p >初級教練:Mickey</p>
+          <p >初級教練:Mickey(瑜珈)</p>
           <br>
         <div style="width:300px;height: 200px; overflow:scroll  ; background:rgba(238,207,180,1);">
         大家好！我是你們的健身教練。很高興有機會與你們一起努力追求健康和健美的目標。
@@ -74,12 +74,12 @@ else
         <img class="coach_photo" src="./pics/2.png" width=250/>
         </div>
         <div class="intro_B">
-        <p >初級教練:Cuber</p>
+        <p >初級教練:Cuber(瑜珈)</p>
           <br>
         <div style="width:300px;height: 200px; overflow:scroll  ; background:rgba(238,207,180,1);">
         大家好！我是你們的健身教練。很高興有機會與你們一起努力追求健康和健美的目標。
 
-我叫Mickey，是一位經驗豐富的健身教練。我在這個領域已經工作了1年，並且擁有相關的專業證書和執照。
+我叫Cuber，是一位經驗豐富的健身教練。我在這個領域已經工作了1年，並且擁有相關的專業證書和執照。
 
 我的熱情和興趣於健身運動始於多年前。我相信健康的身體是一個健康心靈的基石。通過適當的運動和訓練，我們可以提高體力、增強肌肉力量、改善體能和塑造更健美的身材。我致力於幫助每位學員實現他們的健身目標，並且享受健身過程中的樂趣和成就感。
 
@@ -97,7 +97,7 @@ else
         </div>
 
         <div class="intro_C">
-        <p >初級教練:Marker</p>
+        <p >初級教練:Marker(飛輪)</p>
           <br>
         <div style="width:300px;height: 200px; overflow:scroll  ; background:rgba(238,207,180,1);">
         大家好！我是你們的健身教練。很高興有機會與你們一起努力追求健康和健美的目標。
@@ -121,7 +121,7 @@ else
         </div>
 
         <div class="intro_D">
-        <p >初級教練:陳班長</p>
+        <p >初級教練:陳班長(有氧)</p>
           <br>
         <div style="width:300px;height: 200px; overflow:scroll  ; background:rgba(238,207,180,1);">
         大家好！我是你們的健身教練。很高興有機會與你們一起努力追求健康和健美的目標。
@@ -144,7 +144,7 @@ else
         <img class="coach_photo" src="./pics/5.png" width=250/>
         </div>
         <div class="intro_E">
-        <p >初級教練:</p>
+        <p >初級教練:黃教練(飛輪)</p>
           <br>
         <div style="width:300px;height: 200px; overflow:scroll  ; background:rgba(238,207,180,1);">
         大家好！我是你們的健身教練。很高興有機會與你們一起努力追求健康和健美的目標。
