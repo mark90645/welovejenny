@@ -45,7 +45,7 @@ else
             </div>
 
             <div class="color-lump">          
-            <div class="slideshow-container">
+            <div class="slideshow-container">s
               <div class="mySlides fade">
               <img src="https://i.pinimg.com/564x/c2/6a/87/c26a87129b59737f8c3435091810816a.jpg" style="width:100%;height:100%">
               </div>
