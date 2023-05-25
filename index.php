@@ -47,30 +47,30 @@ else
             <div class="color-lump">          
             <div class="slideshow-container">s
               <div class="mySlides fade">
-              <img src="https://i.pinimg.com/564x/c2/6a/87/c26a87129b59737f8c3435091810816a.jpg" style="width:100%;height:100%">
+              <img src="https://i.pinimg.com/564x/c2/6a/87/c26a87129b59737f8c3435091810816a.jpg" style="width:100%;height:100%; margin-top:-10%">
               </div>
 
               <div class="mySlides fade">
-              <img src="https://i.pinimg.com/564x/d1/d0/05/d1d0058fc64a07acba52c9bbfd2da7b5.jpg" style="width:100%;height:100%">
+              <img src="https://i.pinimg.com/564x/d1/d0/05/d1d0058fc64a07acba52c9bbfd2da7b5.jpg" style="width:100%;height:100%; margin-top:-10%">
               </div>
 
               <div class="mySlides fade">
-              <img src="https://i.pinimg.com/564x/a0/e5/f6/a0e5f6bc70cf643be31be521f560885e.jpg" style="width:100%;height:100%">
+              <img src="https://i.pinimg.com/564x/a0/e5/f6/a0e5f6bc70cf643be31be521f560885e.jpg" style="width:100%;height:100%; margin-top:-10%">
               </div>
 
               <div class="mySlides fade">
-              <img src="https://i.pinimg.com/564x/d1/12/46/d112468ed2e1a0d8f5e0c60b6a1af042.jpg" style="width:100%;height:100%">
+              <img src="https://i.pinimg.com/564x/d1/12/46/d112468ed2e1a0d8f5e0c60b6a1af042.jpg" style="width:100%;height:100%; margin-top:-10%">
               </div>
 
               <div class="mySlides fade">
-              <img src="https://i.pinimg.com/564x/e8/38/22/e838229f1592b1552866c4f1857dbee2.jpg" style="width:100%;height:100%">
+              <img src="https://i.pinimg.com/564x/e8/38/22/e838229f1592b1552866c4f1857dbee2.jpg" style="width:100%;height:100%; margin-top:-10%">
               </div>
 
               <a class="prev" onclick="plusSlides(-1)">❮</a>
               <a class="next" onclick="plusSlides(1)">❯</a>
 
               </div>
-       
+                <br>
 
             <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span> 
