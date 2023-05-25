@@ -13,18 +13,23 @@
 .subject{
     font-size: 150%;
 }
-.object{
+.object1{
     font-size: 80%;
     margin-top: 10%;
+}
+.object2{
+    font-size: 80%;
+    margin: 5% 0% 10% 0%;
 }
 
 .side_line{
     position: relative;
-    width:80%;
+    width:90%;
     height: 0.5px;
-    left:10%;
+    left:5%;
     background-color: #000000;
-    margin: 5% 0% 5% 0%;
+    margin: 5% 0% 0% 0%;
+    z-index: 20;
 }
 
 .side_bt{
@@ -39,8 +44,8 @@
     top:550%;
     left: 0px;
     width: 50%;
-    padding-top: 11%;
-    padding-bottom: 11%;
+    padding-top: 13%;
+    padding-bottom: 13%;
     background-color: lightsteelblue;
 }
 ._bt:hover{
