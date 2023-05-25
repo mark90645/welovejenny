@@ -246,15 +246,17 @@
   .prev, .next,.text {font-size: 11px}
   }
 
-
+/*標籤頁的css*/
   .tabs {
     background-color: #eee;
     height: 200px;
-    width: 200px;
+    width: 400px;
+    left:50%
   }
   
   .tabs__list {
     border-bottom: 1px solid black;
+    background-color: #92b79d;
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -286,10 +288,12 @@
   .tabs__input:focus,
   .tabs__input:hover {
     color: red;
+    text-shadow: black 0.1em 0.1em 0.2em;
   }
   
   .tabs__input:checked+label {
-    color: red;
+    color: rgb(255, 255, 255);
+    text-shadow: black 0.1em 0.1em 0.2em
   }
   
   .tabs__input:checked~.tabs__content {
