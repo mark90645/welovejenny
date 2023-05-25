@@ -57,11 +57,11 @@ else
                 }
             </script>
             <div class = "change_page">
-                <button onclick="showPageA('box_1')">页面1</button>
-                <button onclick="showPageB('box_2')">页面2</button>
-                <button onclick="showPageA('box_3')">页面3</button>
-                <button onclick="showPageB('box_4')">页面4</button>
-                <button onclick="showPageB('box_5')">页面5</button>
+                <button class = "change_bt" id = "cbt_1" onclick="showPageA('box_1')">页面1</button>
+                <button class = "change_bt" id = "cbt_2" onclick="showPageB('box_2')">页面2</button>
+                <button class = "change_bt" id = "cbt_3" onclick="showPageA('box_3')">页面3</button>
+                <button class = "change_bt" id = "cbt_4" onclick="showPageB('box_4')">页面4</button>
+                <button class = "change_bt" id = "cbt_5" onclick="showPageB('box_5')">页面5</button>
             </div>
             <!-- 會員資料總覽 -->
             <div style="color:red;text-align:center"class="boxes box_1" id = "box_1">
@@ -276,14 +276,14 @@ else
         </div>
         
         <script>
-            function showPageA(boxId) {
+            function showPageA(boxId, btID) {
                 var boxes = document.getElementsByClassName('boxes');
                 for (var i = 0; i < boxes.length; i++) {
                     boxes[i].style.display = 'none';
                 }
                 document.getElementById(boxId).style.display = 'flex';
             }
-            function showPageB(boxId) {
+            function showPageB(boxId, btID) {
                 var boxes = document.getElementsByClassName('boxes');
                 for (var i = 0; i < boxes.length; i++) {
                     boxes[i].style.display = 'none';

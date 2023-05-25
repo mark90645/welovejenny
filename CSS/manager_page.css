@@ -58,19 +58,28 @@
     justify-content: center; 
     align-items: center;
 }
+.change_bt{
+    width: 13%;
+    padding: 1% 0% 1% 0%;
+    border: none;
+    border-radius: 10px 10px 0px 0px;
+}
+.change_bt:hover{
+    background-color: lightgray;
+}
 
 .boxes {
     display: none;
 }
 
 .box_1{
-    width:1000px;
+    width:63.4%;
     height:800px;
     float:center;
     background-color: #fff0c9;
     border-color: gray;
     box-shadow: 0 2px 7px black;
-    border-radius: 20px;
+    border-radius: 0px 0px 20px 20px;
     padding-left: 20px;
     display: flex; /* 彈性排版 */
     flex-direction: column; /* 彈性方向：縱向*/
