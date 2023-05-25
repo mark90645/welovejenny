@@ -55,11 +55,11 @@ else
               </div>
 
               <div class="mySlides fade">
-              <img src="https://i.pinimg.com/564x/a0/e5/f6/a0e5f6bc70cf643be31be521f560885e.jpg" style="width:100%;height:100%; margin-top:-10%">
+              <img src="https://i.pinimg.com/564x/a0/e5/f6/a0e5f6bc70cf643be31be521f560885e.jpg" style="width:100%;height:100%; margin-top:-5%">
               </div>
 
               <div class="mySlides fade">
-              <img src="https://i.pinimg.com/564x/d1/12/46/d112468ed2e1a0d8f5e0c60b6a1af042.jpg" style="width:100%;height:100%; margin-top:-10%">
+              <img src="https://i.pinimg.com/564x/d1/12/46/d112468ed2e1a0d8f5e0c60b6a1af042.jpg" style="width:100%;height:100%; margin-top:-5%">
               </div>
 
               <div class="mySlides fade">
