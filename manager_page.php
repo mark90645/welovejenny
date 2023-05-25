@@ -57,11 +57,11 @@ else
                 }
             </script>
             <div class = "change_page">
-                <button class = "change_bt" id = "cbt_1" onclick="showPageA('box_1')">页面1</button>
-                <button class = "change_bt" id = "cbt_2" onclick="showPageB('box_2')">页面2</button>
-                <button class = "change_bt" id = "cbt_3" onclick="showPageA('box_3')">页面3</button>
-                <button class = "change_bt" id = "cbt_4" onclick="showPageB('box_4')">页面4</button>
-                <button class = "change_bt" id = "cbt_5" onclick="showPageB('box_5')">页面5</button>
+                <button class = "change_bt" id = "cbt_1" onclick="showPageA('box_1')">會員總覽</button>
+                <button class = "change_bt" id = "cbt_2" onclick="showPageB('box_2')">新增會員資料</button>
+                <button class = "change_bt" id = "cbt_3" onclick="showPageA('box_3')">課程管理</button>
+                <button class = "change_bt" id = "cbt_4" onclick="showPageB('box_4')">方案管理</button>
+                <button class = "change_bt" id = "cbt_5" onclick="showPageB('box_5')">批量匯入資料</button>
             </div>
             <!-- 會員資料總覽 -->
             <div style="color:red;text-align:center"class="boxes box_1" id = "box_1">
@@ -94,6 +94,7 @@ else
                         }
                         echo '<script>alert("刪除成功！");</script>';
                         echo '<script>alert("會員資料更新中！");</script>';
+                        echo '<script>location.href = "manager_page.php";</script>';
                     }
                     mysqli_close($link);
                 ?>
