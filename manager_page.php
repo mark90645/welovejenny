@@ -29,6 +29,9 @@ else
     </head>
     <body>
         <div id = "background">
+            <img class = "background_pic" src="./pics/gym_pic.png" />
+            <div class = "background_box"></div>
+            <div class = "margins"></div>
             <div id = "side_box">
                 <?php
                 if ($log_check == 0)
@@ -41,6 +44,7 @@ else
                     <p class = "side_text object1">管理員：</p>
                     <p class = "side_text subject"><?php echo $manager_name; ?></p>
                     <p class = "side_text object2">連線成功</p>
+                    <p class = "refresh side_text object3" onclick="reload()">重整頁面</p>
                     <div class = "side_line"></div>
                     <div class = "side_bt">
                         <input class = "_bt" id = "logout_bt" type="button" value="登出" onclick = "location.href = 'index.php'">
@@ -50,7 +54,6 @@ else
                 }
                 ?>
             </div>
-            <h2 style="cursor:pointer;text-align:center"onclick="reload()">重整頁面</h2>
             <script>
                 function reload(){                  
                     location.href = 'manager_page.php';
@@ -272,8 +275,7 @@ else
                     }
                 ?>
             </div>
-            
-            
+            <div class = "margins"></div>
         </div>
         
         <script>

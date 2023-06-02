@@ -1,9 +1,36 @@
+.background_pic{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -100;
+}
+
+.background_box{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #676767;
+    opacity: 0.6;
+    z-index: -99;
+}
+
+.margins{
+    width: 95vw;
+    height: 5vh;
+    background-color: none;
+    opacity: 0;
+}
+
+.refresh{
+    margin: 0px;
+}
+
 #side_box{
     position: fixed;
     top:80px;
     left:30px;
     width:12%;
-    height:25%;
+    height:29%;
     background-color: lightsteelblue;
 }
 .side_text{
@@ -20,6 +47,16 @@
 .object2{
     font-size: 80%;
     margin: 5% 0% 10% 0%;
+}
+.object3{
+    font-size: 80%;
+    padding: 10% 0% 10% 20%;
+    cursor:pointer;
+    text-align:left;
+}
+.object3:hover{
+    background-color: white;
+    color: rgb(58, 92, 94);
 }
 
 .side_line{
@@ -41,7 +78,7 @@
 }
 ._bt{
     border: none;
-    top:550%;
+    top:0%;
     left: 0px;
     width: 50%;
     padding-top: 13%;
