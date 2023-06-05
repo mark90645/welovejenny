@@ -68,7 +68,7 @@ else
             </div>
             <!-- 會員資料總覽 -->
             <div style="color:red;text-align:center"class="boxes box_1" id = "box_1">
-                <h3 style="color:blue">會員總覽</h3>
+                <h3>會員總覽</h3>
                 <hr/>
                 <?php
                     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
