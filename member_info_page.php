@@ -30,43 +30,70 @@ else
             <div class = "banner">             
                 <input id = "index_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
             </div>
-            <div id="section_1">
-                <?php
-                $headPicPath = "./pics/memberhead.png"; // 預設圖片路徑
-                if(isset($_FILES['photo'])){
-                    $file = $_FILES['photo'];
+            <?php
+            // 檢查是否有上傳檔案
+            if(isset($_FILES['photo'])){
+                $file = $_FILES['photo'];
 
-                    // 檢查檔案大小
-                    if($file['size'] <= 5 * 1024 * 1024){
-                        // 檢查檔案類型（可根據需求修改）
-                        $allowedTypes = ['image/jpeg', 'image/png'];
-                        if(in_array($file['type'], $allowedTypes)){
-                            // 設定儲存路徑（可根據需求修改）
-                            $uploadDir = './pics/';
-                            $fileName = uniqid() . '_' . $file['name'];
-                            $filePath = $uploadDir . $fileName;
+                // 檢查檔案大小
+                if($file['size'] <= 5 * 1024 * 1024){
+                    // 檢查檔案類型（可根據需求修改）
+                    $allowedTypes = ['image/jpeg', 'image/png'];
+                    if(in_array($file['type'], $allowedTypes)){
+                        // 設定儲存路徑（可根據需求修改）
+                        $uploadDir = './pics/';
+                        $fileName = uniqid() . '_' . $file['name'];
+                        $filePath = $uploadDir . $fileName;
 
-                            if(move_uploaded_file($file['tmp_name'], $filePath)){
+                        if(move_uploaded_file($file['tmp_name'], $filePath)){
+                            // 檔案上傳成功
+                            echo '<script>alert("檔案上傳成功！");</script>';
 
-                                $headPicPath = $filePath; // 更新圖片路徑
-                            } else {
-                                echo '<script>alert("檔案上傳失敗");</script>';;
-                            }
+                            // 儲存圖片路徑到檔案
+                            file_put_contents('uploaded_image_path.txt', $filePath);
                         } else {
-                            echo '<script>alert("不允許的檔案類型");</script>';;
+                            echo '<script>alert("檔案上傳失敗！");</script>';
                         }
                     } else {
-                        echo '<script>alert("檔案大小超過5MB！");</script>';;
+                        echo '<script>alert("不允許的檔案類型！");</script>';
                     }
+                } else {
+                    echo '<script>alert("檔案大小過大！請使用小於5MB的圖片");</script>';
                 }
-                ?>
+            }
+
+            // 讀取圖片路徑
+            $headPicPath = file_get_contents('uploaded_image_path.txt');
+            if(empty($headPicPath)){
+                $headPicPath = "./pics/memberhead.png"; // 預設圖片路徑
+            }
+            // 清空圖片按鈕邏輯
+            if(isset($_POST['clear'])){
+                $headPicPath = "./pics/memberhead.png"; // 設定為預設圖片路徑
+                file_put_contents('uploaded_image_path.txt', ''); // 清空圖片路徑檔案
+            }
+            else{
+                // 讀取圖片路徑
+                $headPicPath = file_get_contents('uploaded_image_path.txt');
+                if(empty($headPicPath)){
+                    $headPicPath = "./pics/memberhead.png"; // 預設圖片路徑
+                }
+            }
+            ?>
+
+            <div id="section_1">
                 <img style="width: 200px" alt="memberpic" id="head_pic" src="<?php echo $headPicPath; ?>">
                 <h2>歡迎，<?php echo $member_name; ?></h2>
                 <form method="POST" action="" enctype="multipart/form-data">
                     <input type="file" name="photo" accept="image/jpeg, image/png" required>
                     <button type="submit">更換圖片</button>
                 </form>
+                <form method="POST" action="">
+                    <input type="hidden" name="clear" value="1">
+                    <button type="submit">清空圖片</button>
+                </form>
             </div>
+
 
 
 
