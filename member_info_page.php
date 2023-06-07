@@ -53,8 +53,19 @@ else
                             echo '<script>alert("檔案上傳成功！");</script>';
                             // 儲存圖片路徑到檔案&SQL
                             $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-                            $sql = "UPDATE regular_member SET pic_path='$filePath' WHERE member_id='$member_id'";
-                            mysqli_query($link,$sql);
+                            $sql = "SELECT pic_path FROM regular_member WHERE member_id='$member_id'";
+                            $sql2 = "UPDATE regular_member SET pic_path='$filePath' WHERE member_id='$member_id'";
+                            $result_find = mysqli_query($link,$sql);
+                            if (mysqli_num_rows($result_find) > 0) {
+                                $row = mysqli_fetch_assoc($result_find);
+                                $file = $row["pic_path"];
+                                if (file_exists($file)) {
+                                    unlink($file);
+                                }
+                                mysqli_query($link,$sql2);
+                            }else{
+                                mysqli_query($link,$sql2);
+                                } 
                             $headPicPath = $filePath;
                             
                         } else {
@@ -71,8 +82,19 @@ else
             // 清空圖片按鈕邏輯
             if(isset($_POST['clear'])){
                 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-                $sql = "UPDATE regular_member SET pic_path='' WHERE member_id='$member_id'";
-                $result1 = mysqli_query($link,$sql);
+                $sql = "SELECT pic_path FROM regular_member WHERE member_id='$member_id'";
+                $sql2 = "UPDATE regular_member SET pic_path='' WHERE member_id='$member_id'";
+                $result_find = mysqli_query($link,$sql);
+                if (mysqli_num_rows($result_find) > 0) {
+                    $row = mysqli_fetch_assoc($result_find);
+                    $file = $row["pic_path"];
+                    if (file_exists($file)) {
+                        unlink($file);
+                    }
+                    mysqli_query($link,$sql2);
+                }else{
+                    mysqli_query($link,$sql2);
+                    } 
                 $headPicPath = "./pics/memberhead.png"; // 設定為預設圖片路徑
             }
             else{
