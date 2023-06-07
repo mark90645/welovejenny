@@ -30,17 +30,53 @@ else
             <div class = "banner">             
                 <input id = "index_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
             </div>
-            <div id = "section_1">
-                <img style="width:200px"alt="memberpic" id = "head_pic" src = "./pics/memberhead.png">
+            <div id="section_1">
+                <?php
+                $headPicPath = "./pics/memberhead.png"; // 預設圖片路徑
+                if(isset($_FILES['photo'])){
+                    $file = $_FILES['photo'];
+
+                    // 檢查檔案大小
+                    if($file['size'] <= 5 * 1024 * 1024){
+                        // 檢查檔案類型（可根據需求修改）
+                        $allowedTypes = ['image/jpeg', 'image/png'];
+                        if(in_array($file['type'], $allowedTypes)){
+                            // 設定儲存路徑（可根據需求修改）
+                            $uploadDir = './pics/';
+                            $fileName = uniqid() . '_' . $file['name'];
+                            $filePath = $uploadDir . $fileName;
+
+                            if(move_uploaded_file($file['tmp_name'], $filePath)){
+
+                                $headPicPath = $filePath; // 更新圖片路徑
+                            } else {
+                                echo '<script>alert("檔案上傳失敗");</script>';;
+                            }
+                        } else {
+                            echo '<script>alert("不允許的檔案類型");</script>';;
+                        }
+                    } else {
+                        echo '<script>alert("檔案大小超過5MB！");</script>';;
+                    }
+                }
+                ?>
+                <img style="width: 200px" alt="memberpic" id="head_pic" src="<?php echo $headPicPath; ?>">
                 <h2>歡迎，<?php echo $member_name; ?></h2>
+                <form method="POST" action="" enctype="multipart/form-data">
+                    <input type="file" name="photo" accept="image/jpeg, image/png" required>
+                    <button type="submit">更換圖片</button>
+                </form>
             </div>
-            
-                    <input class = "bt" id = "back_bt1" type="button" value="預約課程" onclick = "location.href = 'reserve_page.php'">
-                    <br>
-                    <br>
-                    <input class = "bt" id = "back_bt2" type="button" value="方案選擇" onclick = "location.href = 'plan_choose.php'">
-                    <br>
-                    <br>
+
+
+
+
+            <input class = "bt" id = "back_bt1" type="button" value="預約課程" onclick = "location.href = 'reserve_page.php'">
+            <br>
+            <br>
+            <input class = "bt" id = "back_bt2" type="button" value="方案選擇" onclick = "location.href = 'plan_choose.php'">
+            <br>
+            <br>
              <div id = "section_2">     
             <?php
                 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
