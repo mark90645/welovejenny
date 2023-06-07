@@ -112,14 +112,13 @@
 
 .box_1{
     text-align:center;
-    width:63.4%;
-    height:800px;
+    width:65%;
+    padding-bottom:5%;
     float:center;
     background-color: #fff0c9;
     border-color: gray;
     box-shadow: 0 2px 7px black;
     border-radius: 0px 0px 20px 20px;
-    padding-left: 20px;
     display: flex; /* 彈性排版 */
     flex-direction: column; /* 彈性方向：縱向*/
     /*justify-content: center;*/ 
