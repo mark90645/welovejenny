@@ -29,6 +29,7 @@ class BookableCell
     public function update(Calendar $cal, $class)
     {
         $date = $cal->getCurrentDate();
+        $currentDate = date('Y-m-d');
 
         if ($this->isDateBooked($date, $class)) {
             // 如果已經被使用者預訂，就顯示已預訂狀態
@@ -38,7 +39,15 @@ class BookableCell
             return $cal->cellContent = $this->closeCell($date, $class);
         } else {
             // 如果還沒被預訂且還沒額滿，就顯示可預訂狀態
-            return $cal->cellContent = $this->openCell($date, $class);
+            if ($date < $currentDate)
+            {
+                // 防呆
+                return $cal->cellContent = $this->pastCell($date, $class);
+            }
+            else
+            {
+                return $cal->cellContent = $this->openCell($date, $class);
+            }
         }
     }
 
@@ -73,6 +82,11 @@ class BookableCell
             // 如果現在使用者還沒預訂該日期，就顯示已額滿狀態
             return '<div class="close">已額滿</div>';
         }
+    }
+
+    private function pastCell($date)
+    {
+        return '<div class="past">' . '<p class="date">' . substr($date, -2) . '</p>' . '已過期</div>';
     }
  
 

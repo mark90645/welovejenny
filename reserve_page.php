@@ -38,8 +38,8 @@ else
 include "Calendar.php";
 include "Booking.php";
 include "BookableCell.php";
- 
- 
+
+
 $booking = new Booking(
     'gym',
     '25.41.90.151:3306',
