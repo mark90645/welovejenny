@@ -82,7 +82,11 @@ else
                 $result = mysqli_query($link,$sql);
                 $row = mysqli_fetch_assoc($result);
                 $path = $row["pic_path"];
-                $headPicPath = $path;
+                if(empty($path)){
+                    $headPicPath = "./pics/memberhead.png";
+                }else{
+                    $headPicPath = $path;
+                }             
             }
             ?>
 
