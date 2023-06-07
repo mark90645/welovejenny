@@ -111,6 +111,7 @@
 }
 
 .box_1{
+    text-align:center;
     width:63.4%;
     height:800px;
     float:center;
@@ -121,23 +122,30 @@
     padding-left: 20px;
     display: flex; /* 彈性排版 */
     flex-direction: column; /* 彈性方向：縱向*/
-    justify-content: center; 
+    /*justify-content: center;*/ 
     text-align: center;
     align-items: center;
-    color:purple;
+    color:black;
     margin:0 auto
-  }
+}
+
+.sub_title{
+    position: relative;
+    margin: 6% 0% 4% 0%;
+    font-size: 200%;
+    color: rgb(55, 2, 2);
+}
 
 .box_1 table {
     border-collapse: collapse;
     margin: 0 auto;
-    color:purple;
+    color:black;
 }
 
 .box_1 th, .box_1 td {
     border: 1px solid black;
     padding: 5px;
-    color:purple;
+    color:black;
 }
 .box_2 {
     width:1000px;

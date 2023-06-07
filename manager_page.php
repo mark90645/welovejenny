@@ -67,8 +67,8 @@ else
                 <button class = "change_bt" id = "cbt_5" onclick="showPageB('box_5')">批量匯入資料</button>
             </div>
             <!-- 會員資料總覽 -->
-            <div style="color:red;text-align:center"class="boxes box_1" id = "box_1">
-                <h3>會員總覽</h3>
+            <div class="boxes box_1" id = "box_1">
+                <h3 class = "sub_title">會員總覽</h3>
                 <hr/>
                 <?php
                     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
