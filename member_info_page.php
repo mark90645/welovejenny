@@ -72,7 +72,7 @@ else
             if(isset($_POST['clear'])){
                 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                 $sql = "UPDATE regular_member SET pic_path='' WHERE member_id='$member_id'";
-                mysqli_query($link,$sql);
+                $result1 = mysqli_query($link,$sql);
                 $headPicPath = "./pics/memberhead.png"; // 設定為預設圖片路徑
             }
             else{
