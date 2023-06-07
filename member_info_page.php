@@ -5,11 +5,12 @@ if (isset($_COOKIE["member_account"]))
     $log_check = True;
     $conn=require_once "configure.php";
     $cookie = $_COOKIE['member_account'];
-    $sql = "SELECT member_name FROM regular_member WHERE member_account = '".$cookie."'";
+    $sql = "SELECT member_id, member_name FROM regular_member WHERE member_account = '".$cookie."'";
     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
     $result = mysqli_query($link,$sql);
     $row = mysqli_fetch_assoc($result);
     $member_name = $row["member_name"];
+    $member_id = $row["member_id"];
 }
 else
 {
@@ -31,7 +32,9 @@ else
                 <input id = "index_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
             </div>
             <?php
-            // 檢查是否有上傳檔案
+            $member_id = $member_id;
+            // 大頭照上傳功能
+            //檢查是否有上傳檔案
             if(isset($_FILES['photo'])){
                 $file = $_FILES['photo'];
 
@@ -48,9 +51,12 @@ else
                         if(move_uploaded_file($file['tmp_name'], $filePath)){
                             // 檔案上傳成功
                             echo '<script>alert("檔案上傳成功！");</script>';
-
-                            // 儲存圖片路徑到檔案
-                            file_put_contents('uploaded_image_path.txt', $filePath);
+                            // 儲存圖片路徑到檔案&SQL
+                            $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                            $sql = "UPDATE regular_member SET pic_path='$filePath' WHERE member_id='$member_id'";
+                            mysqli_query($link,$sql);
+                            $headPicPath = $filePath;
+                            
                         } else {
                             echo '<script>alert("檔案上傳失敗！");</script>';
                         }
@@ -62,22 +68,21 @@ else
                 }
             }
 
-            // 讀取圖片路徑
-            $headPicPath = file_get_contents('uploaded_image_path.txt');
-            if(empty($headPicPath)){
-                $headPicPath = "./pics/memberhead.png"; // 預設圖片路徑
-            }
             // 清空圖片按鈕邏輯
             if(isset($_POST['clear'])){
+                $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                $sql = "UPDATE regular_member SET pic_path='' WHERE member_id='$member_id'";
+                mysqli_query($link,$sql);
                 $headPicPath = "./pics/memberhead.png"; // 設定為預設圖片路徑
-                file_put_contents('uploaded_image_path.txt', ''); // 清空圖片路徑檔案
             }
             else{
                 // 讀取圖片路徑
-                $headPicPath = file_get_contents('uploaded_image_path.txt');
-                if(empty($headPicPath)){
-                    $headPicPath = "./pics/memberhead.png"; // 預設圖片路徑
-                }
+                $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                $sql = "SELECT member_id, pic_path FROM regular_member WHERE member_id='$member_id'";
+                $result = mysqli_query($link,$sql);
+                $row = mysqli_fetch_assoc($result);
+                $path = $row["pic_path"];
+                $headPicPath = $path;
             }
             ?>
 
