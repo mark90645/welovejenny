@@ -5,11 +5,12 @@ if (isset($_COOKIE["member_account"]))
     $log_check = True;
     $conn=require_once "configure.php";
     $cookie = $_COOKIE['member_account'];
-    $sql = "SELECT member_name FROM regular_member WHERE member_account = '".$cookie."'";
+    $sql = "SELECT member_id, member_name FROM regular_member WHERE member_account = '".$cookie."'";
     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
     $result = mysqli_query($link,$sql);
     $row = mysqli_fetch_assoc($result);
     $member_name = $row["member_name"];
+    $member_id = $row["member_id"];
 }
 else
 {
@@ -30,43 +31,100 @@ else
             <div class = "banner">             
                 <input id = "index_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
             </div>
-            <div id="section_1">
-                <?php
-                $headPicPath = "./pics/memberhead.png"; // 預設圖片路徑
-                if(isset($_FILES['photo'])){
-                    $file = $_FILES['photo'];
+            <?php
+            $member_id = $member_id;
+            // 大頭照上傳功能
+            //檢查是否有上傳檔案
+            if(isset($_FILES['photo'])){
+                $file = $_FILES['photo'];
 
-                    // 檢查檔案大小
-                    if($file['size'] <= 5 * 1024 * 1024){
-                        // 檢查檔案類型（可根據需求修改）
-                        $allowedTypes = ['image/jpeg', 'image/png'];
-                        if(in_array($file['type'], $allowedTypes)){
-                            // 設定儲存路徑（可根據需求修改）
-                            $uploadDir = './pics/';
-                            $fileName = uniqid() . '_' . $file['name'];
-                            $filePath = $uploadDir . $fileName;
+                // 檢查檔案大小
+                if($file['size'] <= 5 * 1024 * 1024){
+                    // 檢查檔案類型（可根據需求修改）
+                    $allowedTypes = ['image/jpeg', 'image/png'];
+                    if(in_array($file['type'], $allowedTypes)){
+                        // 設定儲存路徑（可根據需求修改）
+                        $uploadDir = './pics/';
+                        $fileName = uniqid() . '_' . $file['name'];
+                        $filePath = $uploadDir . $fileName;
 
-                            if(move_uploaded_file($file['tmp_name'], $filePath)){
-
-                                $headPicPath = $filePath; // 更新圖片路徑
-                            } else {
-                                echo '<script>alert("檔案上傳失敗");</script>';;
-                            }
+                        if(move_uploaded_file($file['tmp_name'], $filePath)){
+                            // 檔案上傳成功
+                            echo '<script>alert("檔案上傳成功！");</script>';
+                            // 儲存圖片路徑到檔案&SQL
+                            $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                            $sql = "SELECT pic_path FROM regular_member WHERE member_id='$member_id'";
+                            $sql2 = "UPDATE regular_member SET pic_path='$filePath' WHERE member_id='$member_id'";
+                            $result_find = mysqli_query($link,$sql);
+                            if (mysqli_num_rows($result_find) > 0) {
+                                $row = mysqli_fetch_assoc($result_find);
+                                $file = $row["pic_path"];
+                                if (file_exists($file)) {
+                                    unlink($file);
+                                }
+                                mysqli_query($link,$sql2);
+                            }else{
+                                mysqli_query($link,$sql2);
+                                } 
+                            $headPicPath = $filePath;
+                            
                         } else {
-                            echo '<script>alert("不允許的檔案類型");</script>';;
+                            echo '<script>alert("檔案上傳失敗！");</script>';
                         }
                     } else {
-                        echo '<script>alert("檔案大小超過5MB！");</script>';;
+                        echo '<script>alert("不允許的檔案類型！");</script>';
                     }
+                } else {
+                    echo '<script>alert("檔案大小過大！請使用小於5MB的圖片");</script>';
                 }
-                ?>
+            }
+
+            // 清空圖片按鈕邏輯
+            if(isset($_POST['clear'])){
+                $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                $sql = "SELECT pic_path FROM regular_member WHERE member_id='$member_id'";
+                $sql2 = "UPDATE regular_member SET pic_path='' WHERE member_id='$member_id'";
+                $result_find = mysqli_query($link,$sql);
+                if (mysqli_num_rows($result_find) > 0) {
+                    $row = mysqli_fetch_assoc($result_find);
+                    $file = $row["pic_path"];
+                    if (file_exists($file)) {
+                        unlink($file);
+                    }
+                    mysqli_query($link,$sql2);
+                }else{
+                    mysqli_query($link,$sql2);
+                    } 
+                $headPicPath = "./pics/memberhead.png"; // 設定為預設圖片路徑
+            }
+            else{
+                // 讀取圖片路徑
+                $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                $sql = "SELECT member_id, pic_path FROM regular_member WHERE member_id='$member_id'";
+                $result = mysqli_query($link,$sql);
+                $row = mysqli_fetch_assoc($result);
+                $path = $row["pic_path"];
+                if(empty($path)){
+                    $headPicPath = "./pics/memberhead.png";
+                }else{
+                    $headPicPath = $path;
+                }             
+            }
+            ?>
+
+            <div id="section_1">
                 <img style="width: 200px" alt="memberpic" id="head_pic" src="<?php echo $headPicPath; ?>">
                 <h2>歡迎，<?php echo $member_name; ?></h2>
                 <form method="POST" action="" enctype="multipart/form-data">
                     <input type="file" name="photo" accept="image/jpeg, image/png" required>
                     <button type="submit">更換圖片</button>
                 </form>
+                <form method="POST" action="">
+                    <input type="hidden" name="clear" value="1">
+                    <button type="submit">清空圖片</button>
+                </form>
             </div>
+
 
 
 
