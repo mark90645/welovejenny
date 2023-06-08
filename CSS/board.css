@@ -1,6 +1,6 @@
-.background {
-    background-color: rgb(255, 222, 156);
-}
+/* .background {
+    background-color: rgb(255, 255, 255);
+} */
 
 body {
     margin: 0px;
@@ -65,10 +65,10 @@ body {
 
 .end {
     position:absolute;
-    top:1200px;
+    top:1500px;
     background-color: #2D080A;
     color:white;
-    width:100%;
+    width:100vw;
     height:170px;
     z-index: 15;
     margin: 0px;
