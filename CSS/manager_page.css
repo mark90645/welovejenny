@@ -179,13 +179,13 @@
 .box_3 table {
     border-collapse: collapse;
     margin: 0 auto;
-    color:purple;
+    color:black;
 }
 
 .box_3 th, .box_1 td {
     border: 1px solid black;
     padding: 5px;
-    color:purple;
+    color:black;
 }
 
 .box_4 {
