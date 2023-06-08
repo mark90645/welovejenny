@@ -10,6 +10,7 @@
   section {
     margin: 0 10px;
   }
+<<<<<<< Updated upstream
 
   #log_bt {
     top: 25px;
@@ -123,3 +124,15 @@
     top: 750px;
     left:315px;
   }
+=======
+
+  .background {
+    margin: 0px;
+    padding:0px;
+}
+
+.intro_a {
+  font-size:30px;
+}
+ 
+>>>>>>> Stashed changes

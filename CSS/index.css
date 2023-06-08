@@ -39,9 +39,9 @@
     
 }*/
 
-.background {
+/* .background {
     padding-bottom: 200px;
-}
+} */
 
 
 .sections{
@@ -49,44 +49,38 @@
 }
 
 #log_bt {
-    top: 150px;
+    top: 15px;
     left: 200px;
+    border-radius: 10px;
 } 
 
  #sign_bt {
-    top: 150px;
+    top: 15px;
     left: 300px;
 } 
 
  #manager_bt {
-    top: 150px;
+    top: 15px;
     left: 400px;
 } 
 
 #mem_info_bt {
-    top: 150px;
+    top: 15px;
     left: 300px;
 }/*因為共用模板，這個之後再調回來*/
  
 
 #logout_bt {
-    top: 150px;
+    top: 15px;
     left: 200px;
 }
 
 #change_bt {
-    top: 150px;
+    top: 15px;
     left: 450px;
 }
 
-.base{
-    position: absolute;
-    width: 760px;
-    height: 455px;
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-    background-color: #f1d1a8;
-    z-index:3;
-} 
+
 
 
 
@@ -114,19 +108,18 @@
 #gym_head_pic{
     margin:0;
     padding:0;
-    height: 600px;;
-    width:100%;
+    width: 100vw;
+    height:100vh;
     object-fit: cover;
     object-position: center;
-    opacity: 90%;
 }
 
 .color-lump{
-    width: 100%;
-    height: 500px;
-    background-color: #92b79d;
+    width: 100vw;
+    height: 553px;
+    background-color: #b8c3bc;
     position: absolute;
-    top:330px;
+    top:560px;
     left:0px;
     z-index: 1;
 }
@@ -136,36 +129,31 @@
     color: #D4C5C7;
 }
 .color-lump-2{
-    width: 50%;
-    height: 400px;
-    background-color: #f9d9b0;
+    width: 50vw;
+    height: 553px;
+    background-color: #9b9ea1;
     position: absolute;
-    top:800px;
+    top:1113px;
     left:0px;
-    z-index: 1;
+    
 }
-/* .color-lump-2:hover{
-    background-color:  #eecfb4;
-    color: #D4C5C7;
-} */
+
 .adjust_index_2{
     position: absolute;
     top:50px;
     left:100px;
+    
 }
+
 .color-lump-3{
-    width: 50%;
-    height: 400px;
-    background-color: #f59d9d;
+    width: 50vw;
+    height: 553px;
+    background-color: #c1aaaa;
     position: absolute;
-    top:800px;
+    top:1113px;
     right:0px;
-    z-index: 1;
 }
-/* .color-lump-3:hover{
-    background-color:  #f9b0b0;
-    color: #D4C5C7;
-} */
+
 .adjust_index_3{
     position: absolute;
     top:50px;
@@ -176,6 +164,7 @@
     box-sizing: border-box
   }
   
+  /*幻燈片*/
   .mySlides {
     display: none
   }
@@ -183,12 +172,11 @@
   .slideshow-container {
   position:relative;
   margin-top: 1.5%;
-  margin-left: 25%;
-  margin-right: 25%;
-  height: 80%;
-  border-radius: 10%;
+  margin-left: 1%;
+  width:70%;
+  height: 88%;
   overflow: hidden;
-  border: solid 4px #ffffff;
+  border: solid 1px #ffffff;
   }
   
   .prev, .next {
@@ -239,9 +227,7 @@
   to {opacity: 1}
   }
   
-  img:hover{
-        opacity: 80%;
-  }
+ 
   @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
   }
@@ -249,7 +235,7 @@
 /*標籤頁的css*/
   .tabs {
     background-color: #eee;
-    height: 200px;
+    height: 250px;
     width: 400px;
     left:50%
   }
@@ -300,6 +286,9 @@
     display: block;
   }
 
+  #text_2{
+    font-size: 20px;
+  }
 
 
 

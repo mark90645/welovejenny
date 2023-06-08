@@ -59,6 +59,8 @@ $calendar->attachObserver('showCell', $bookableCell);
 $bookableCell->routeActions();
  
 echo $calendar->show();
+
+$booking->autoDelete();
 ?>
 <div class = "info_box">
     <div class = "info_text">
