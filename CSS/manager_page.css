@@ -115,7 +115,7 @@
     width:65%;
     padding-bottom:5%;
     float:center;
-    background-color: #fff0c9;
+    background-color: #c0cddc;
     border-color: gray;
     box-shadow: 0 2px 7px black;
     border-radius: 0px 0px 20px 20px;
@@ -134,27 +134,28 @@
     font-size: 200%;
     color: rgb(55, 2, 2);
 }
-
 .box_1 table {
     border-collapse: collapse;
     margin: 0 auto;
     color:black;
 }
-
 .box_1 th, .box_1 td {
     border: 1px solid black;
     padding: 5px;
     color:black;
 }
+
 .box_2 {
-    width:1000px;
+    width:65%;
+    height:500%;
     margin:0 auto;
-    background-color: rgb(153, 215, 248);
-    padding:15px;
+    background-color: #c97e82;
+    padding:3% 0% 5% 0%;
     justify-content: center; 
     text-align: center;
     align-items: center;
-    border-radius: 15px;  
+    border-radius: 0px 0px 15px 15px; 
+    box-shadow: 0 2px 7px black; 
 }
 
 .box_3{
@@ -218,6 +219,8 @@
     border-radius: 15px;  
 }
 .delete{
+    position: relative;
+    top:20px;
     border-radius: 5px;
     font-size: 18px;
     background-color: rgb(234, 189, 130);
