@@ -115,7 +115,7 @@
     width:65%;
     padding-bottom:5%;
     float:center;
-    background-color: #c0cddc;
+    background-color: #dbe1e8;
     border-color: gray;
     box-shadow: 0 2px 7px black;
     border-radius: 0px 0px 20px 20px;
@@ -132,7 +132,6 @@
     position: relative;
     margin: 6% 0% 4% 0%;
     font-size: 200%;
-    color: rgb(55, 2, 2);
 }
 .box_1 table {
     border-collapse: collapse;
@@ -149,53 +148,55 @@
     width:65%;
     height:500%;
     margin:0 auto;
-    background-color: #c97e82;
-    padding:3% 0% 5% 0%;
+    background-color: #dbe1e8;
+    padding:2% 0% 5% 0%;
     justify-content: center; 
     text-align: center;
     align-items: center;
     border-radius: 0px 0px 15px 15px; 
     box-shadow: 0 2px 7px black; 
 }
+.sub_title2{
+    position: relative;
+    margin: 2% 0% 4% 0%;
+    font-size: 200%;
+}
 
 .box_3{
-    width:1000px;
-    height:800px;
+    width:65%;
     float:center;
-    background-color: #fff0c9;
+    background-color: #dbe1e8;
     border-color: gray;
     box-shadow: 0 2px 7px black;
-    border-radius: 20px;
-    padding-left: 20px;
+    border-radius: 0px 0px 15px 15px; 
     flex-direction: column; /* 彈性方向：縱向*/
-    justify-content: center; 
+    /*justify-content: center;*/
     text-align: center;
     align-items: center;
-    color:purple;
     margin:0 auto
   }
 
 .box_3 table {
     border-collapse: collapse;
     margin: 0 auto;
-    color:purple;
+    color:black;
 }
 
 .box_3 th, .box_1 td {
     border: 1px solid black;
     padding: 5px;
-    color:purple;
+    color:black;
 }
 
 .box_4 {
-    width:800px;
+    width:65%;
     margin:0 auto;
-    background-color: rgb(241, 191, 227);
-    padding:15px;
+    background-color: #dbe1e8;
+    padding:2% 0% 5% 0%;
     justify-content: center; 
     text-align: center;
     align-items: center;
-    border-radius: 15px;  
+    border-radius: 0px 0px 20px 20px;  
 }
 .box_4 table {
     border-collapse: collapse;
@@ -209,14 +210,14 @@
     color:rgb(55, 2, 2);
 }
 .box_5 {
-    width:800px;
+    width:65%;
     margin:0 auto;
-    background-color: rgb(146, 247, 159);
-    padding:15px;
+    background-color: #dbe1e8;
+    padding:5% 0% 5% 0%;
     justify-content: center; 
     text-align: center;
     align-items: center;
-    border-radius: 15px;  
+    border-radius: 0px 0px 20px 20px; 
 }
 .delete{
     position: relative;
