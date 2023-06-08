@@ -149,4 +149,19 @@ class Booking
 
         return $result['days'];
     }
+
+    public function autoDelete()
+    {
+        $currentDate = date('Y-m-d');
+
+        $query = $this->dbh->prepare('SELECT id FROM bookings WHERE booking_date < :currentDate');
+        $query->execute([':currentDate' => $currentDate]);
+        $expiredBookings = $query->fetchAll(PDO::FETCH_COLUMN);
+
+        if (!empty($expiredBookings)) {
+            $placeholders = rtrim(str_repeat('?,', count($expiredBookings)), ',');
+            $deleteQuery = $this->dbh->prepare("DELETE FROM bookings WHERE id IN ($placeholders)");
+            $deleteQuery->execute($expiredBookings);
+        }
+    }
 }

@@ -59,6 +59,8 @@ $calendar->attachObserver('showCell', $bookableCell);
 $bookableCell->routeActions();
  
 echo $calendar->show();
+
+$booking->autoDelete();
 ?>
 <div class = "info_box">
     <div class = "info_text">
@@ -68,3 +70,4 @@ echo $calendar->show();
 <img class = "motion_pic" src="./pics/yoga.png" />
 </body>
 </html>
+

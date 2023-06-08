@@ -104,7 +104,7 @@ else
             </div>
             <!-- 手動新增區 -->
             <div class="boxes box_2" id = "box_2"> 
-                <h3>新增會員資料</h3>
+                <h3 class = "sub_title2">新增會員資料</h3>
                 <div id = "the_back_4">
                     <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
                     <p class = "input_bar">
@@ -168,7 +168,7 @@ else
                     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                     $sql = "SELECT bookings.id, bookings.booking_date, bookings.member_account, regular_member.member_name, regular_member.phone FROM bookings JOIN regular_member ON bookings.member_account = regular_member.member_account";
                     $result_1 = mysqli_query($link, $sql);
-                    echo "<h2 style='text-align:center;'>課程管理</h2>";
+                    echo "<h3 class = 'sub_title' style='text-align:center;'>課程管理</h3>";
                     echo "<form action='' method='post'>";
                     echo "<table>";
                     echo "<tr><th>預定編號</th><th>會員帳號名稱</th><th>會員姓名</th><th>會員電話</th><th>課程預定日期</th></tr>";
@@ -182,11 +182,11 @@ else
                     echo "</table>";
                     echo "</form>";
                 ?>
-                
+                <div class = "margins"></div>
             </div>  
             <!-- 方案管理總覽 -->
             <div class="boxes box_4"  id = "box_4">
-            <h2 style="text-align:center;">方案管理</h2>
+            <h3 class = "sub_title2" style="text-align:center;">方案管理</h3>
             <?php
                 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                 $sql = "SELECT 
