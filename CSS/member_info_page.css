@@ -1,19 +1,111 @@
+#index_bt{
+    position: absolute;
+    top:6%;
+}
+
+.bt{
+    font-size: 100%;
+    border: none;
+    background-color: #2e3a47;
+    color: aliceblue;
+    padding: 1% 2% 1% 2%;
+    border-radius: 5px;
+}
+.bt:hover{
+    color: #21272d;
+    background-color: #ccd6e0;
+}
 
 #back_bt1{
     position: absolute;
-    top:20px;
-    right:50px;
+    top:6%;
+    right:3%;
 }
 #back_bt2{
     position: absolute;
-    top:20px;
-    right:200px;
+    top:6%;
+    right:13%;
 }
-
-#section_2{
-    background-color:  #92b79d;
+#change_bt{
     position: absolute;
-    top:180px;
-    left:300px;
+    top:6%;
+    right:23%;
 }
 
+#head_pic{
+    position: absolute;
+    top: 32vh;
+    left: 3vw;
+}
+
+.seperate_line{
+    position: absolute;
+    top: 31vh;
+    left: 20vw;
+    width: 0.9px;
+    height: 30%;
+    background-color: #21272d;
+}
+
+.info_text{
+    position:absolute;
+    top:31%;
+    left: 22vw;
+}
+.text1{
+    color: #2e3a47;
+}
+.text2{
+    top:41%;
+}
+.text3{
+    top:50%;
+}
+
+.pic_bt{
+    position: absolute;
+    top:65%;
+    left:5vw;
+}
+.pb2{
+    left:20vw;
+}
+.pb3{
+    left:30vw;
+}
+
+#section_3{
+    position: absolute;
+    right:0%;
+    top: 0%;
+    width: 50vw;
+    height: 100vh;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    background-color:  #2e3a47;
+    position: absolute;
+    z-index: -100;
+}
+
+.class_text{
+    position: absolute;
+    top:24%;
+    left: 35%;
+    font-size: 200%;
+    color: aliceblue;
+}
+
+.class_line{
+    position: absolute;
+    top:38%;
+    left: 35%;
+    width:45%;
+    height:0.5px;
+    background-color: aliceblue;
+}
+
+.text_position{
+    position: absolute;
+    top:38%;
+    left: 35%;
+    color: aliceblue;
+}
