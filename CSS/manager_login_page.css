@@ -7,19 +7,74 @@
     width:120px;
     background-color: #2D080A;
     color: white;
-    font-size: 15px;
+    font-size: 15px;    
 }
 
 #manager_login_part:hover{
     color: #DCAB6B;
 }
 
-#log_in_bt{
+
+/* #log_in_bt{
     top: 100px;
     left: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top:100px;
+    margin-left:600px;
 }
 
 #back_bt{
     top: 100px;
     left: 130px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top:100px;
+    margin-left:600px;
+} */
+
+#the_back_4{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+input[type=submit] {
+    width: 8%;
+    background-color: #cecece;
+    color: rgb(0, 0, 0);
+    padding: 10px 11px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  input[type=button] {
+    width: 8%;
+    background-color: #cecece;
+    color: rgb(0, 0, 0);
+    padding: 10px 11px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+.input_bar{
+    font-size: 20px;
+}
+input[type=text]{
+    border-radius: 10px;
+    border-style: none;
+    padding: 6px;
+}
+input[type=password]{
+    border-radius: 10px;
+    border-style: none;
+    padding: 6px;
 }
