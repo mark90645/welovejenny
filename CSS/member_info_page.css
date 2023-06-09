@@ -80,6 +80,10 @@
     position: absolute;
     top:65%;
     left:5vw;
+    border: none;
+    padding:0.5% 1% 0.5% 1%;
+    border-radius: 3px;
+    color: #2e3a47;
 }
 
 .pb2{

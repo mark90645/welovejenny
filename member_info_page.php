@@ -118,7 +118,7 @@ else
                 <div class = "seperate_line"></div>
                 <h2 class = "info_text text1">歡迎，<?php echo $member_name; ?></h2>
                 <form method="POST" action="" enctype="multipart/form-data">
-                    <input  class = "pic_bt_sp pb1" type="file" name="photo" accept="image/jpeg, image/png" required>
+                    <input  class = "pic_bt_sp pb1" type="file" name="photo" accept="image/jpeg, image/png" required value="選取圖片">
                     <button class = "pic_bt pb2" type="submit">更換圖片</button>
                 </form>
                 <form method="POST" action="">
