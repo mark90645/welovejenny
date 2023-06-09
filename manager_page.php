@@ -259,8 +259,7 @@ else
 
                         $success = false;
 
-                        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                            $id = $data[0];
+                        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {                    
                             $name = $data[1];
                             $account = $data[2];
                             $pw = $data[3];
@@ -269,12 +268,26 @@ else
                             $phone = $data[6];
                             $gender = $data[7];
 
-                            $sql = "INSERT INTO regular_member(member_id, member_name, member_account, password, birthday, gmail, phone, gender) VALUES('$id','$name','$account','$pw','$birth','$gmail', '$phone','$gender')";
-                            if(mysqli_query($link,$sql)){
-                                $success = true;                             
+                            if($data[0]==""){
+                                $id = rand(500000000, 999999999);
+                                $id = strval($id);
                             }else{
-                                $fail = true;
+                                $id = $data[0];
+                                $id = strval($id);
                             }
+                            $sql = "INSERT INTO regular_member(member_id, member_name, member_account, password, birthday, gmail, phone, gender) VALUES('$id','$name','$account','$pw','$birth','$gmail', '$phone','$gender')";
+                            $sql_check = "SELECT member_id FROM regular_member WHERE member_id = '$id'";
+                            $check = mysqli_query($link,$sql_check);
+                            if(mysqli_num_rows($check) > 0){
+                                echo '<script>alert("會員ID有重複值！");</script>';
+                                $fail = true;
+                            }else{
+                                if(mysqli_query($link,$sql)){
+                                    $success = true;                             
+                                }else{
+                                    $fail = true;
+                                }
+                            }                
                         }
                         fclose($handle);
                         if($success){
