@@ -164,18 +164,32 @@ else
             <div class="boxes box_3" id = "box_3">
                 <?php
                     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-                    $sql = "SELECT bookings.id, bookings.booking_date, bookings.member_account, regular_member.member_name, regular_member.phone FROM bookings JOIN regular_member ON bookings.member_account = regular_member.member_account";
+                    $sql = "SELECT bookings.id, bookings.booking_date, bookings.member_account, regular_member.member_name, regular_member.phone, bookings.class_type FROM bookings JOIN regular_member ON bookings.member_account = regular_member.member_account";
                     $result_1 = mysqli_query($link, $sql);
                     echo "<h3 class = 'sub_title' style='text-align:center;'>課程管理</h3>";
                     echo "<form action='' method='post'>";
                     echo "<table>";
-                    echo "<tr><th>預定編號</th><th>會員帳號名稱</th><th>會員姓名</th><th>會員電話</th><th>課程預定日期</th></tr>";
+                    echo "<tr><th>預定編號</th><th>會員帳號名稱</th><th>會員姓名</th><th>預約課程</th><th>會員電話</th><th>課程預約日期</th></tr>";
                     if (mysqli_num_rows($result_1) > 0) { 
-                        while($row = mysqli_fetch_assoc($result_1)) {           
-                        echo "<tr><td>" . $row["id"]."</td><td>" . $row["member_account"] . "</td><td>". $row["member_name"] . "</td><td>". $row["phone"] . "</td><td>" . $row["booking_date"] ."</td></tr>";              
+                        while($row = mysqli_fetch_assoc($result_1)) {   
+                            switch ($row["class_type"]) {
+                                case "yoga":
+                                    $class_type = "瑜珈課程";
+                                    break;
+                                case "bike":
+                                    $class_type = "飛輪課程";
+                                    break;
+                                case "aerobic":
+                                    $class_type = "有氧舞蹈";
+                                    break;
+                                default:
+                                    $class_type = "";
+                                    break;
+                            }        
+                            echo "<tr><td>" . $row["id"]."</td><td>" . $row["member_account"] . "</td><td>". $row["member_name"] . "</td><td>". $class_type. "</td><td>". $row["phone"] . "</td><td>" . $row["booking_date"] ."</td></tr>";              
                         }
                     } else {
-                        echo "<tr><td colspan='5'>沒有結果</td></tr>";
+                        echo "<tr><td colspan='6'>沒有結果</td></tr>";
                     }
                     echo "</table>";
                     echo "</form>";
