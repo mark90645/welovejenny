@@ -108,8 +108,6 @@ else
                 <div id = "the_back_4">
                     <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
                     <p class = "input_bar">
-                        會員ID：<input type="text" name="member_id"></p>
-                    <p class = "input_bar">
                         會員姓名：<input type="text" name="member_name"></p>
                     <p class = "input_bar">
                         會員帳號：<input type="text" name="member_account"></p>
@@ -134,7 +132,6 @@ else
                         if(!$link){
                             die('資料庫連線失敗！'.mysqli_connect_error());
                         }
-                        $id = $_POST['member_id'];
                         $name = $_POST['member_name'];
                         $account = $_POST['member_account'];
                         $pw = $_POST['password'];
@@ -143,9 +140,10 @@ else
                         $phone = $_POST['phone'];
                         $gender = $_POST['gender'];
 
-                        $query = "SELECT * FROM regular_member WHERE member_id='$id'";
+                        $query = "SELECT * FROM regular_member WHERE member_id='$name'";
                         $result = mysqli_query($link, $query);
-
+                        $id = rand(500000000, 999999999);
+                        $id = strval($id);                       
                         if(mysqli_num_rows($result) > 0){ 
                             echo '<script>alert("該會員已經存在或ID重複！");</script>';
                         }

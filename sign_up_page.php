@@ -2,7 +2,7 @@
 $conn=require_once("configure.php");
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-    $rand = rand(100000000, 999999999);
+    $rand = rand(100000000, 499999999);
     $member_account=$_POST["member_account"];
     $member_name=$_POST["member_name"];
     $password=$_POST["password"];
