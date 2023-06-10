@@ -119,7 +119,6 @@ else
 
             <div class="color-lump-2"> 
                 <div class = "adjust_index_2">
-                        <p id = "text_2"><b>方案內容</b></p> 
                         <?php
                         if($log_check == 0)
                         {?>
@@ -131,29 +130,8 @@ else
                         <?php
                         }    
                         ?>
-                        <?php
-                        $conn=require_once "configure.php";
-                        $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-                        $sql = "SELECT * FROM plan_detail";
-                        $result_plan = mysqli_query($link, $sql);
-                        if (mysqli_num_rows($result_plan) > 0) {
-                            while($row = mysqli_fetch_assoc($result_plan)) {
-                                echo "<p>".$row["plan_id"]." : "."<span>".$row["price"]."</span>"."</p>";
-                            }
-                        } else {
-                            echo "<tr><td colspan='4'>沒有結果</td></tr>";
-                        }
-                        mysqli_close($link);
-                    ?>
-                </div>
-            </div>
-
-            <div class="color-lump-3">
-            <div class = "adjust_index_3">
-            <input class = "bt_2" id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
-            <br>
-            <br>
-            <div class="tabs">
+                        
+                    <div class="tabs">
             <ul class="tabs__list">
             <li class="tabs__tab">
             <input class="tabs__input" type="radio" id="tab-0" name="tab-group" checked>
@@ -181,6 +159,16 @@ else
          </li>
         </ul>
         </div>
+
+                </div>
+            </div>
+
+            <div class="color-lump-3">
+            <div class = "adjust_index_3">
+            <input class = "bt_2" id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
+            <br>
+            <br>
+            
                         
                     </div>
                     

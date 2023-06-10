@@ -30,28 +30,29 @@
 
 .title{
     position: absolute;
-    left:800px;
-    top:265px;
+    left:860px;
+    top:200px;
     margin: 0px;
+    font-size: 25px;
 }
 
 .input_bar{
     position: absolute;
-    left: 800px;
+    left: 835px;
 }
 
 #account_bar{
-    top:300px;
+    top:250px;
 }
 
 #password_bar{
-    top:350px;
+    top:280px;
 }
 
 .bt{
     position: absolute;
     padding: 7px 17px 7px 17px;
-    top:420px
+    top:340px
 }
 
 #log_in_bt{

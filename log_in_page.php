@@ -23,7 +23,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                     <input class = "redirect" id = "log_part" type="button" value="登入頁面" onclick = "location.href = 'log_in_page.php'">
                     <input class = "redirect" id = "sign_part" type="button" value="註冊頁面" onclick = "location.href = 'sign_up_page.php'">
                 </div>
-                <img class = "pic" id = "pic_left" src = "./pics/dc_strange.jpg"/><!--我覺得可以學單一入口在左半邊弄個圖片-->
+                <img class = "pic" id = "pic_left" src = "./pics/login_head.png"/><!--我覺得可以學單一入口在左半邊弄個圖片-->
                 <h3 class = "title">健身房會員登入</h3>
                 <div id = "the_back_4">
                     <form method="post" action="log_procedure.php">

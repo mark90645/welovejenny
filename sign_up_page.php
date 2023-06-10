@@ -73,7 +73,7 @@ function function_alert($message) {
                     <input class = "redirect" id = "log_part" type="button" value="登入頁面" onclick = "location.href = 'log_in_page.php'">
                     <input class = "redirect" id = "sign_part" type="button" value="註冊頁面" onclick = "location.href = 'sign_up_page.php'">
                 </div>
-                <img class = "pic" id = "pic_left" src = "./pics/dc_strange.jpg"/>
+                <img class = "pic" id = "pic_left" src = "./pics/login_head.png"/>
                 <div id = "the_back_4">
                     <form name="registerForm" method="post" action="sign_up_page.php" onsubmit="return validateForm()">
                         <p class = "input_bar"  id = "gmail_bar">
