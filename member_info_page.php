@@ -114,7 +114,7 @@ else
             ?>
 
             <div id="section_1">
-                <img style="width: 200px" alt="memberpic" id="head_pic" src="<?php echo $headPicPath; ?>">
+                <img alt="memberpic" class="head_pic" src="<?php echo $headPicPath; ?>">
                 <div class = "seperate_line"></div>
                 <h2 class = "info_text text1">歡迎，<?php echo $member_name; ?></h2>
                 <form method="POST" action="" enctype="multipart/form-data">

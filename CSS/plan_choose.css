@@ -94,28 +94,45 @@ body{
 }
 
 .bt {
-    width:120px;
-    height:40px;
-    top:560px;
-    border-radius: 10px;
-    font-size: 15px;
+    position: absolute;
+    border: none;
+    padding: 5px 15px 5px 15px;
+    background-color: floralwhite;
+    border-radius: 5px;
+    font-size: 14px;
     z-index: 0;
 }
+.bt:hover{
+    background-color: lightgray;
+}
 
+.bt1 {
+    width:100px;
+    height:35px;
+    left:78vw;
+}
+.bt2 {
+    width:100px;
+    height:35px;
+    left:89vw;
+}
 #confirm_bt{
-    left:15%;
+    top:57%;
 }
-
 #clear_bt{
-    left:25%;
+    top:71%;
 }
-
+#member_bt{
+    top:57%;
+}
+#class_bt{
+    top:71%;
+}
 #back_bt{
-    left:35%;
+    top:85%;
 }
-
 #update_bt{
-    left:45%;
+    top:85%;
 }
 
 .side_block{

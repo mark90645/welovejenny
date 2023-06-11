@@ -32,10 +32,13 @@
     right:23%;
 }
 
-#head_pic{
+.head_pic{
     position: absolute;
     top: 32vh;
     left: 3vw;
+    width: 15vw;
+    overflow: hidden;
+    clip:rect(0px,15vw,28vh,0px);
 }
 
 .seperate_line{
