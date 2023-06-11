@@ -10,11 +10,10 @@
   section {
     margin: 0 10px;
   }
-<<<<<<< Updated upstream
 
   #log_bt {
     top: 25px;
-    left: 200px;
+    left: 300px;
 } 
 
  #sign_bt {
@@ -124,7 +123,6 @@
     top: 750px;
     left:315px;
   }
-=======
 
   .background {
     margin: 0px;
@@ -135,4 +133,3 @@
   font-size:30px;
 }
  
->>>>>>> Stashed changes

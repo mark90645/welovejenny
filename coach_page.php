@@ -44,7 +44,7 @@ else
             <?php
             }
             ?>
-<<<<<<< Updated upstream
+
        </div>
 
             <br>
@@ -112,27 +112,6 @@ else
             <input class = "contact_pic" id = "pic_d" type="button" onclick = "location.href = 'reserve_page.php'"><img src = "./pics/instagram.png" id = "ig"></button>
         </div>
        
-=======
-            </div>
-            <br>
-           <div class = "grade_a">
-             <p><strong>初級課程</p> 
-             <p align ="middle">教練1</p> 
-             <img src="./pics/coach_a.jpg" height="300" style="float:left" > 
-             <p align ="middle">專長</p> 
-          </div>
-          
-          <div class="intro_a">
-          <ul style='list-style-type:upper-roman;'>
-            <li >香蕉</li>
-            <li>芭樂</li>
-            <li>鳳梨</li>
-            </ul>
-          </div>  
 
-        
-    </div>      
-
->>>>>>> Stashed changes
     </body>
 </html>
