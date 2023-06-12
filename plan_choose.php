@@ -137,9 +137,12 @@ else
                 $sql = "SELECT member_id, member_name, member_account FROM regular_member WHERE member_name = '$member_name'";
                 $result = mysqli_query($link, $sql);
                 $row = mysqli_fetch_assoc($result);
-                $id = $row["member_id"]; 
+                $id = $row["member_id"];
+                $account = $row["member_account"];
                 $sql_clear = "DELETE FROM `plan_choose` WHERE member_id = '$id'";
+                $booking_clear = "DELETE FROM `bookings` WHERE member_account = '$account'";
                 mysqli_query($link, $sql_clear);
+                mysqli_query($link, $booking_clear);
                 echo '<script>alert("已清除方案！");</script>';
                 mysqli_close($link);
             }
