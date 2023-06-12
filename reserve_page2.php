@@ -13,6 +13,7 @@ else
 
 <html>
 <head>
+    <title>飛輪課程</title>
     <link rel="stylesheet" href="./CSS/calendar.css?v=<?php echo time(); ?>" type="text/css">
     <link rel="stylesheet" href="./CSS/reserve_page.css">
     <link rel="icon" href="./pics/PH.png" type="image/x-icon" />
