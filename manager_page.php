@@ -26,7 +26,7 @@ else
         <title>管理者頁面</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
         <link rel = "stylesheet" href = "./CSS/manager_page.css" />
-        <link rel="icon" href="./pics/facebook.png" type="image/x-icon" />
+        <link rel="icon" href="./pics/JAB.png" type="image/x-icon" />
     </head>
     <body>
         <div id = "background">

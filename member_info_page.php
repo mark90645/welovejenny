@@ -25,6 +25,7 @@ else
         <title>會員資訊</title>
         <!--<link rel = "stylesheet" href = "./CSS/board.css" />-->
         <link rel = "stylesheet" href = "./CSS/member_info_page.css" />
+        <link rel="icon" href="./pics/JAB.png" type="image/x-icon" />
     </head>
     <body>
         <div class = "background">         

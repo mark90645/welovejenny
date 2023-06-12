@@ -51,6 +51,7 @@ function function_alert($message) {
         <title>註冊</title>
         <link rel = "stylesheet" href = "./CSS/board2.css" />
         <link rel = "stylesheet" href = "./CSS/sign_up_page.css" />
+        <link rel="icon" href="./pics/JAB.png" type="image/x-icon" />
         <script>
         function validateForm() {
             var x = document.forms["registerForm"]["password"].value;

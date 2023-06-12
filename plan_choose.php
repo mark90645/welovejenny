@@ -22,6 +22,7 @@ else
         <title>選擇方案</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
         <link rel = "stylesheet" href = "./CSS/plan_choose.css" />
+        <link rel="icon" href="./pics/JAB.png" type="image/x-icon" />
     </head>
     <body>
         <div class = "background">

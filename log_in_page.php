@@ -15,6 +15,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
         <title>登入</title>
         <link rel = "stylesheet" href = "./CSS/board2.css" />
         <link rel = "stylesheet" href = "./CSS/log_in_page.css" />
+        <link rel="icon" href="./pics/JAB.png" type="image/x-icon" />
     </head>
     <body>
         <div class = "background" >
