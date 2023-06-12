@@ -28,7 +28,7 @@ else
     </head>
     <body>
         <div class = "background">         
-            <input id = "index_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
+            <input class = "bt" id = "index_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
             <input class = "bt" id = "back_bt1" type="button" value="預約課程" onclick = "location.href = 'reserve_page.php'">
             <input class = "bt" id = "back_bt2" type="button" value="方案選擇" onclick = "location.href = 'plan_choose.php'">
             <input class = "bt" id = "change_bt" type="button" value="修改個人資料" onclick = "location.href = 'change_password.php'">
