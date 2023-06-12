@@ -18,6 +18,7 @@ else
         <title>健身房系統首頁</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
         <link rel = "stylesheet" href = "./CSS/index.css" />
+        <link rel="icon" href="./pics/五花肉.png" type="image/x-icon" />
     </head>
     <body>
         <div class = "background">
