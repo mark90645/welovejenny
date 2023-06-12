@@ -10,8 +10,9 @@ body{
 
 .text{
     position: absolute;
-    left:42%;
-    color: white;
+    top: 6%;
+    left:28%;
+    color: #2e3a47;
 }
 
 .adjust{
@@ -20,19 +21,27 @@ body{
 
 .blocks {
     position: relative;
-    top:-45px;
+    top:-6.8vh;
     left:0px;
     margin: 0px;
-    height:360px;
-    width:240px;
+    height:67vh;
+    width:22vw;
     background-color: lightgray;
     border-radius: 15px;
     z-index: -10;
 }
 
+.plan_title{
+    position: relative;
+    top: 2vw;
+    left: 1.2vw;
+    margin: 0%;
+}
+
 .check_bt{
     display: none;
     opacity: 0;
+    text-align: center;
 }
 
 .labels{
@@ -46,13 +55,13 @@ body{
     z-index: 20;
 }
 #rookie{
-    left:85px;
+    left:2vw;
 }
 #advance{
-    left:345px;
+    left:26vw;
 }
 #master{
-    left:605px;
+    left:50vw;
 }
 
 .labels:hover input ~ .blocks {  
@@ -60,7 +69,7 @@ body{
 }
     
 .labels input:checked ~ .blocks {  
-    background-color: #2D080A;  
+    background-color: #947610;  
 }
 .labels:has( input:checked){  
     color: white;  
@@ -74,9 +83,9 @@ body{
 
 .line{
     position: relative;
-    top:-340px;
+    top:-57vh;
     left:40px;
-    width:170px;
+    width:84%;
     height:0.5px;
     background-color: black;
     z-index: 20;
@@ -85,11 +94,11 @@ body{
 .text2{
     position: relative;
     width:100%;
-    top:-330px;
-    left: 50px;
+    top:-55vh;
+    left: 4.2vw;
     text-align:left;
     font-size: 15px;
-    line-height: 140%;   
+    line-height: 180%;   
     z-index: 20;
 }
 
@@ -97,25 +106,32 @@ body{
     position: absolute;
     border: none;
     padding: 5px 15px 5px 15px;
-    background-color: floralwhite;
+    background-color: #2e3a47;
+    color: aliceblue;
     border-radius: 5px;
     font-size: 14px;
     z-index: 0;
 }
-.bt:hover{
-    background-color: lightgray;
-}
-
 .bt1 {
     width:100px;
     height:35px;
     left:78vw;
+    border: 1px solid aliceblue;
+}
+.bt1:hover {
+    color: #2e3a47;
+    background-color: white;
 }
 .bt2 {
     width:100px;
     height:35px;
     left:89vw;
 }
+.bt2:hover {
+    border: 1px solid aliceblue;
+    background-color: #2e3a47;
+}
+
 #confirm_bt{
     top:57%;
 }
@@ -137,32 +153,34 @@ body{
 
 .side_block{
     position: absolute;
-    top:80px;
     right:0px;
-    width:320px;
-    height: 87.5%;
-    background-color: floralwhite;
+    width:25vw;
+    height: 100vh;
+    background-color: #2e3a47;
 }
 
 .side_text{
     position: relative;
-    top:30px;
+    top:8vh;
     width: 100%;
     text-align: center;
     font-size: 20px;
+    color: aliceblue;
 }
 
 #side_text2{
-    top:50px;
+    top:16vh;
 }
 
 #line_d{
-    top:40px;
+    top:12vh;
     left:110px;
     width:100px;
+    background-color: aliceblue;
 }
 #line_e{
-    top:60px;
+    top:20vh;
     left:110px;
     width:100px;
+    background-color: aliceblue;
 }
