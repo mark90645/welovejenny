@@ -18,6 +18,7 @@ else
         <title>教練簡介</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
         <link rel = "stylesheet" href = "./CSS/coach_page.css" />
+        <link rel="icon" href="./pics/PH.png" type="image/x-icon" />
     </head>
 
     <body>

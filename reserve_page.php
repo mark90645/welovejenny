@@ -15,6 +15,7 @@ else
 <head>
     <link rel="stylesheet" href="./CSS/calendar.css?v=<?php echo time(); ?>" type="text/css">
     <link rel="stylesheet" href="./CSS/reserve_page.css">
+    <link rel="icon" href="./pics/PH.png" type="image/x-icon" />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"> -->
 </head>
 <body>
