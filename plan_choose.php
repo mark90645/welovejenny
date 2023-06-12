@@ -25,9 +25,7 @@ else
     </head>
     <body>
         <div class = "background">
-            <div class = "banner">
-                <h1 class = "text">健身房方案選擇</h1>
-            </div>
+            <h1 class = "text">健身房方案選擇</h1>
             <div class = "side_block">
                 <h3 class = "side_text"><?php echo $member_name; ?>，您好<br>請選擇健身方案</h3>
                 <div class = "line" id = "line_d"></div>
@@ -51,48 +49,53 @@ else
                 <div class = "adjust">
                     <div id = "b1">
                         <label class = "labels" id = "rookie">
-                            <input class = "check_bt" type="radio" name="plan" value="新手方案">新手方案
+                            <input class = "check_bt" type="radio" name="plan" value="新手方案">
+                            <p class = "plan_title">新手方案 $4799</p>
                             <div class = "blocks" id = "block_1"></div>
                             <div class = "line" id = "line_a"></div>
                             <p class = "text2 text2a">針對初學者而設計的</p>
                             <p class = "text2 text2a">暢享所有健身器材</p>
-                            <p class = "text2 text2a">自由參加各式課程</p>
                             <p class = "text2 text2a">半年會員時長</p>
+                            <p class = "text2 text2a">提供瑜珈課程</p>
                         </label>
                         
                     </div>
                     <div id = "b2">
                         <label class = "labels" id = "advance">
-                            <input class = "check_bt" type="radio" name="plan" value="進階方案">進階方案
+                            <input class = "check_bt" type="radio" name="plan" value="進階方案">
+                            <p class = "plan_title">進階方案 $8799</p>
                             <div class = "blocks" id = "block_2"></div>
                             <div class = "line" id = "line_b"></div>
                             <p class = "text2 text2b">針對有基礎者而設計的</p>
                             <p class = "text2 text2b">暢享所有健身器材</p>
-                            <p class = "text2 text2b">自由參加各式課程</p>
                             <p class = "text2 text2b">一年會員時長</p>
                             <p class = "text2 text2b">專屬健身教練</p>
+                            <p class = "text2 text2b">提供瑜珈與飛輪課程</p>
                         </label>
                     </div>
                     <div id = "b3">
                         <label class = "labels" id = "master">
-                            <input class = "check_bt" type="radio" name="plan" value="達人方案">達人方案
+                            <input class = "check_bt" type="radio" name="plan" value="達人方案">
+                            <p class = "plan_title">達人方案 $12999</p>
                             <div class = "blocks" id = "block_3"></div>
                             <div class = "line" id = "line_c"></div>
                             <p class = "text2 text2c">針對專業用戶設計的</p>
                             <p class = "text2 text2c">暢享所有健身器材</p>
-                            <p class = "text2 text2c">自由參加各式課程</p>
                             <p class = "text2 text2c">兩年會員時長</p>
                             <p class = "text2 text2c">專屬健身教練</p>
                             <p class = "text2 text2c">相關比賽參賽權</p>
+                            <p class = "text2 text2c">提供所有課程可選擇</p>
                         </label>
                     </div>
                 </div>
                 </p>
                 <div class = "adjust">
-                    <input class = "bt" id = "confirm_bt" type="submit" value="確認方案" name = "submit">
-                    <input class = "bt" id = "clear_bt" type="submit" value="清空我的方案" name = "clear">
-                    <input class = "bt" id = "back_bt" type="button" value="回首頁" onclick = "location.href = 'index.php'">
-                    <input class = "bt" id = "update_bt" type="button" value="更新頁面" onclick="Updating();">
+                    <input class = "bt bt1" id = "confirm_bt" type="submit" value="確認方案" name = "submit">
+                    <input class = "bt bt1" id = "clear_bt" type="submit" value="清空方案" name = "clear">
+                    <input class = "bt bt1" id = "update_bt" type="button" value="更新頁面" onclick="Updating();">
+                    <input class = "bt bt2" id = "member_bt" type="button" value="會員資訊" onclick = "location.href = 'member_info_page.php'">
+                    <input class = "bt bt2" id = "class_bt" type="button" value="預約課程" onclick = "location.href = 'reserve_page.php'">
+                    <input class = "bt bt2" id = "back_bt" type="button" value="回首頁" onclick = "location.href = 'index.php'">
                 </div>
             </form>
             <script>

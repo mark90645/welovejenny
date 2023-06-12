@@ -28,7 +28,7 @@ else
     </head>
     <body>
         <div class = "background">         
-            <input id = "index_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
+            <input class = "bt" id = "index_bt" type="button" value="回到首頁" onclick = "location.href = 'index.php'">
             <input class = "bt" id = "back_bt1" type="button" value="預約課程" onclick = "location.href = 'reserve_page.php'">
             <input class = "bt" id = "back_bt2" type="button" value="方案選擇" onclick = "location.href = 'plan_choose.php'">
             <input class = "bt" id = "change_bt" type="button" value="修改個人資料" onclick = "location.href = 'change_password.php'">
@@ -114,7 +114,7 @@ else
             ?>
 
             <div id="section_1">
-                <img style="width: 200px" alt="memberpic" id="head_pic" src="<?php echo $headPicPath; ?>">
+                <img alt="memberpic" class="head_pic" src="<?php echo $headPicPath; ?>">
                 <div class = "seperate_line"></div>
                 <h2 class = "info_text text1">歡迎，<?php echo $member_name; ?></h2>
                 <form method="POST" action="" enctype="multipart/form-data">
