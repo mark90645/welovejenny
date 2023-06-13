@@ -1,9 +1,17 @@
-body{
-    background-color: rgb(255, 222, 156);
-}
-
 .head_adjust{
     height: 50px;
+}
+
+.back_rec{
+    position: absolute;
+    left:0%;
+    top: 0%;
+    width: 30vw;
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+    background-color:  #2e3a47;
+    position: absolute;
+    z-index: -100;
 }
 
 .title_box{
@@ -12,7 +20,10 @@ body{
     left:50px;
     width:160px;
     height:50px;
-    background-color:antiquewhite;
+    background-color:#2e3a47;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
 }
 
 .title{
@@ -102,7 +113,10 @@ body{
     left:50px;
     width:160px;
     height:60px;
-    background-color:antiquewhite;
+    background-color:#2e3a47;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
 }
 
 .info_text{
@@ -132,4 +146,16 @@ body{
     right: 60px;
     opacity: 0.5;
     z-index: -10;
+}
+
+.back_rec2{
+    position: absolute;
+    right:0%;
+    bottom: 0%;
+    width: 6vw;
+    height: 50vh;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+    background-color:  #2e3a47;
+    position: absolute;
+    z-index: -100;
 }
