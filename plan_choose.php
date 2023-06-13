@@ -127,11 +127,10 @@ else
                 if(mysqli_num_rows($result2) == 0){
                     $sql3="INSERT INTO plan_choose(member_id, member_name, member_account, plan_id) VALUES('$id','$member_name','$account','$plan')";
                     $result3 = mysqli_query($link, $sql3);                
-                }else{
-                    $sql4 = "UPDATE plan_choose SET plan_id = '$plan' WHERE member_id = '$id'";
-                    $result4 = mysqli_query($link, $sql4);
                 }
-                
+                else{
+                    echo '<script>alert("請先清除方案!");</script>';
+                }
                 mysqli_close($link);
                 }else{echo '<script>alert("未選擇方案！");</script>';}
                 
