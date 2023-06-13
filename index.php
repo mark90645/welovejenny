@@ -18,7 +18,7 @@ else
         <title>健身房系統首頁</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
         <link rel = "stylesheet" href = "./CSS/index.css" />
-        <link rel="icon" href="./pics/健.png" type="image/x-icon" />
+        <link rel="icon" href="./pics/誼.png" type="image/x-icon" />
     </head>
     <body>
         <div class = "background">
