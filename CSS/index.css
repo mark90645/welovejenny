@@ -351,13 +351,51 @@
 
 .email_pic{
   position: absolute;
-  bottom: 16vh;
-  left:16vw;
+  bottom: 15vh;
+  left:18vw;
 }
 .email_text{
   position: absolute;
-  bottom: 14vh;
-  left:19vw;
+  bottom: 13vh;
+  left:21vw;
+  letter-spacing: 1.2px;
+  color:rgb(205, 205, 205);
+}
+
+.fb_pic{
+  position: absolute;
+  bottom: 7vh;
+  left:17.8vw;
+}
+.fb_text{
+  position: absolute;
+  bottom: 5vh;
+  left:21vw;
+  letter-spacing: 1.2px;
+  color:rgb(205, 205, 205);
+}
+.fb_link{
+  position: absolute;
+  bottom: 7.5vh;
+  left:28vw;
+  letter-spacing: 1.2px;
+  color: white;
+  text-decoration: none;
+  color:rgb(205, 205, 205);
+}
+
+.phone_pic{
+  position: absolute;
+  bottom: 14.5vh;
+  left:46vw;
+  height: 27px;
+}
+.phone_text{
+  position: absolute;
+  bottom: 13vh;
+  left:49.5vw;
+  letter-spacing: 1.2px;
+  color:rgb(205, 205, 205);
 }
 
 .end_line3{
