@@ -164,14 +164,12 @@ else
             </div>
 
             <div class="color-lump-3">
-            <div class = "adjust_index_3">
-            <input class = "bt_2" id = "reserve_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
-            <br>
-            <br>
-            
-                        
-                    </div>
-                    
+            <img id="peppa_pic" src = "./pics/peppa.png"/>
+                <div class = "adjust_index_3">
+                    <input class = "bt_2" id = "coach_bt" type="button" value="教練簡介" onclick = "location.href = 'coach_page.php'">
+                    <br>    
+                </div>
+                
             </div>
         </div>
 
