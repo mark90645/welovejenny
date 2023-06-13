@@ -172,6 +172,7 @@ else
                 
             </div>
         </div>
+       </div>
 
         <div class = "end">
             <img class = "email_pic" src = "./pics/email.png"/>

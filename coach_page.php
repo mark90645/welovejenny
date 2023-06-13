@@ -108,9 +108,28 @@ else
 
       </div>
       <div class = "end">
-            <p>聯絡資訊</p>
-            <input class = "contact_pic" id = "pic_c" type="button" onclick = "location.href = 'reserve_page.php'"><!--這裡我不會把圖案變按鈕 CSS大神救我-->
-            <input class = "contact_pic" id = "pic_d" type="button" onclick = "location.href = 'reserve_page.php'"><img src = "./pics/instagram.png" id = "ig"></button>
+      <img class = "email_pic" src = "./pics/email.png"/>
+            <p class = "email_text">email : 5huameat@gmail.com</p>
+            <img class = "fb_pic" src = "./pics/facebook.png"/>
+            <p class = "fb_text">facebook : </p>
+            <a class = "fb_link" href="https://www.facebook.com/profile.php?id=100007760377475" target=_blank>五花肉運動會館</a>
+            <div class = "end_line3"></div>
+            <img class = "phone_pic" src = "./pics/phone.png"/>
+            <p class = "phone_text">phone : (02)2940-6086</p>
+            <img class = "house_pic" src = "./pics/house.png"/>
+            <p class = "house_text">address : 新竹市東區大學路1001號游泳館2樓</p>
+            <input class = "sp_bt privacy" type="button" value="隱私權政策" target=_blank onclick = "location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
+            <div class = "end_line1"></div>
+            <input class = "sp_bt user" type="button" value="使用者條款" target=_blank onclick = "location.href = 'https://www.youtube.com/watch?v=w0AOGeqOnFY'">
+            <div class = "end_line2"></div>
+            <?php
+                if ($log_check == 0)
+                {
+                ?>
+                <input class = "sp_bt manager" type="button" value="管理員登入" onclick = "location.href = 'manager_login_page.php'">
+                <?php
+                }
+                ?>
         </div>
        
 
