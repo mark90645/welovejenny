@@ -132,4 +132,144 @@
 .intro_a {
   font-size:30px;
 }
+
+/*end的css*/
+.end{
+  z-index: 200;
+}
+
+.email_pic{
+  position: absolute;
+  bottom: 15vh;
+  left:18vw;
+  height: 27px;
+}
+
+.email_text{
+  position: absolute;
+  bottom: 13vh;
+  left:21vw;
+  letter-spacing: 1.2px;
+  color:rgb(205, 205, 205);
+}
+
+.fb_pic{
+  position: absolute;
+  bottom: 7vh;
+  left:17.8vw;
+  height: 27px;
+}
+.fb_text{
+  position: absolute;
+  bottom: 5vh;
+  left:21vw;
+  letter-spacing: 1.2px;
+  color:rgb(205, 205, 205);
+}
+.fb_link{
+  position: absolute;
+  bottom: 7.5vh;
+  left:28vw;
+  letter-spacing: 1.2px;
+  color: white;
+  text-decoration: none;
+  color:rgb(205, 205, 205);
+}
+
+.phone_pic{
+  position: absolute;
+  bottom: 14.5vh;
+  left:46vw;
+  height: 27px;
+}
+.phone_text{
+  position: absolute;
+  bottom: 13vh;
+  left:49.5vw;
+  letter-spacing: 1.2px;
+  color:rgb(205, 205, 205);
+}
+
+.house_pic{
+  position: absolute;
+  bottom: 7vh;
+  left:41vw;
+  height: 29px;
+}
+.house_text{
+  position: absolute;
+  bottom: 5vh;
+  left:44.5vw;
+  color:rgb(205, 205, 205);
+}
+
+.end_line3{
+  position: absolute;
+  bottom: 5vh;
+  left: 42vw;
+  background-color: rgb(205, 205, 205);
+  height: 15vh;
+  width: 0.3px;
+  z-index: 150;
+}
+
+.sp_bt{
+  position: absolute;
+  bottom: 1.5vh;
+  border: 1px solid #2D080A;
+  background-color: #2D080A;
+  font-size: 13px;
+  color: rgb(205, 205, 205);
+  z-index: 100;
+  padding: 5px 10.5px 5px 10.5px;
+}
+.source{
+  right: 23vw;
+}
+.privacy{
+  right: 16vw;
+}
+.user{
+  right: 9vw;
+}
+.source:hover, .privacy:hover, .user:hover{
+  color: rgb(255, 255, 255);
+}
+
+.manager{
+  right: 2vw;
+}
+.manager:hover{
+  border: 1px solid white;
+  border-radius: 2px;
+  color: white;
+}
+
+.end_line1{
+  position: absolute;
+  bottom: 2vh;
+  right: 8.75vw;
+  background-color: rgb(205, 205, 205);
+  height: 3vh;
+  width: 0.8px;
+  z-index: 150;
+}
+.end_line2{
+  position: absolute;
+  bottom: 2vh;
+  right: 15.7vw;
+  background-color: rgb(205, 205, 205);
+  height: 3vh;
+  width: 0.7px;
+  z-index: 150;
+}
+.end_line4{
+  position: absolute;
+  bottom: 2vh;
+  right: 22.8vw;
+  background-color: rgb(205, 205, 205);
+  height: 3vh;
+  width: 0.7px;
+  z-index: 150;
+}
  
