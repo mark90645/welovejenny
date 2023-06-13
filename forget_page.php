@@ -12,7 +12,7 @@
                 <div class = "the_back_4">
                     <form method="post"  action="<?php echo $_SERVER['PHP_SELF'];?>">
                     <p class = "input_bar a">
-                        帳號：<input type="text" name="member_account"></p>
+                        帳號： <input type="text" name="member_account"></p>
                     <p class = "input_bar b">
                         gmail：<input type="text" name="gmail"></p>
                     <input class = "bt find_password_bt" type="submit" value="找回密碼" name = "submit">
