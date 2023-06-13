@@ -1,8 +1,45 @@
 .the_back_4{
     position: absolute;
-    top: 0vh;
-    left:0vw;
-    width: 30vh;
-    height: 30vh;
+    top: 18vh;
+    left:35vw;
+    width: 65vh;
+    height: 65vh;
     background-color: #2e3a47;
+    border-radius: 50%;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_bar{
+    position: absolute;
+    left:7vw;
+    color: aliceblue;
+}
+.a{
+    top:20vh;
+}
+.b{
+    top:27vh;
+}
+
+.bt{
+    position: absolute;
+    top:37vh;
+    background-color: #2e3a47;
+    border-radius: 15%;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    padding: 5px 10px 5px 10px;
+    font-size: 110%;
+}
+.bt:hover{
+    background-color: aliceblue;
+    color: #2e3a47;
+}
+.find_password_bt{
+    left:8vw;
+}
+.back_bt{
+    left:18vw;
 }

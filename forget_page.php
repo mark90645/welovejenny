@@ -11,12 +11,12 @@
             <div class = "backstage" >
                 <div class = "the_back_4">
                     <form method="post"  action="<?php echo $_SERVER['PHP_SELF'];?>">
-                    <p class = "input_bar">
+                    <p class = "input_bar a">
                         帳號：<input type="text" name="member_account"></p>
-                    <p class = "input_bar">
+                    <p class = "input_bar b">
                         gmail：<input type="text" name="gmail"></p>
-                    <input id = "find_password_bt" type="submit" value="找回密碼" name = "submit">
-                    <input id = "back_bt" type="button" value="返回" onclick = "location.href = 'log_in_page.php'">
+                    <input class = "bt find_password_bt" type="submit" value="找回密碼" name = "submit">
+                    <input class = "bt back_bt" type="button" value="返回" onclick = "location.href = 'log_in_page.php'">
                 </div>
                 <?php
                     session_start();
