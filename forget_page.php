@@ -38,9 +38,9 @@
                         $gmail = $_POST['gmail'];
                         $code = rand(100000, 999999);
                         $code = strval($code);
-                        $subject = "五花肉健身房，忘記密碼信件";
+                        $subject = "五花肉健身房，驗證碼信件";
                         $subject = mb_encode_mimeheader($subject, 'UTF-8');
-                        $message = "請查看以下驗證碼：".$code;
+                        $message = "以下為您的重設驗證碼：".$code."，請於五分鐘內輸入";
                         $time = date('Y-m-d H:i:s');
                         
                         $mail =  new PHPMailer(true);
