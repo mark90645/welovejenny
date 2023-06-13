@@ -12,9 +12,9 @@
             <div class = "backstage" >
                 <div id = "the_back_4">
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                    <p class = "input_bar">
-                        新密碼：<input type="password" name="newpassword"></p>
-                    <p class = "input_bar">
+                    <p class = "input_bar1">
+                        新密碼：&emsp;&emsp;&emsp;<input type="password" name="newpassword"></p>
+                    <p class = "input_bar2">
                         再次確認密碼：<input type="password" name="newpasswordverify"></p>
                     <input id = "verify" type="submit" value="確認修改" name = "submit">
                 </div>
@@ -44,7 +44,6 @@
                     }
                 ?>
             </div>
-            <div class = "end"></div>
         </div>
     </body>
 </html>
