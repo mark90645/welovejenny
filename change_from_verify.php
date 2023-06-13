@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!--網頁編碼-->
         <title>修改密碼</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
-        <!-- <link rel = "stylesheet" href = "./c_ss/log_pages.css" /> -->
+        <link rel = "stylesheet" href = "./css/change_from_verify.css" /> 
     </head>
     <body>
         <div class = "background" >
@@ -13,9 +13,9 @@
                 <div id = "the_back_4">
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
                     <p class = "input_bar">
-                        新密碼：<input type="text" name="newpassword"></p>
+                        新密碼：<input type="password" name="newpassword"></p>
                     <p class = "input_bar">
-                        再次確認密碼：<input type="text" name="newpasswordverify"></p>
+                        再次確認密碼：<input type="password" name="newpasswordverify"></p>
                     <input id = "verify" type="submit" value="確認修改" name = "submit">
                 </div>
                 <?php

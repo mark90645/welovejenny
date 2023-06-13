@@ -3,8 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!--網頁編碼-->
         <title>忘記密碼</title>
-        <!--<link rel = "stylesheet" href = "./CSS/board.css" />-->
-        <link rel = "stylesheet" href = "./CSS/forget_pages.css" />
+        <link rel = "stylesheet" href = "./CSS/board.css" />
+        <link rel = "stylesheet" href = "./css/forget_pages.css" />
     </head>
     <body>
         <div class = "background" >
