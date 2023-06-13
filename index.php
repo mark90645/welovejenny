@@ -73,7 +73,7 @@ else
               </div>
                 <br>
 
-            <div style="margin-left:425px">
+            <div style="margin-left:580px">
             <span class="dot" onclick="currentSlide(1)"></span> 
             <span class="dot" onclick="currentSlide(2)"></span> 
             <span class="dot" onclick="currentSlide(3)"></span> 
@@ -174,10 +174,6 @@ else
                     </div>
                     
             </div>
-            
-              
-
-           
         </div>
 
         <div class = "end">

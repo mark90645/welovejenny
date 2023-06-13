@@ -1,7 +1,7 @@
-.background {
+/* .background {
     margin: 0px;
     padding-bottom:562px;
-}
+} */
 
 #manager_login_part{
     width:120px;
@@ -36,13 +36,13 @@
 } */
 
 #the_back_4{
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding-top: 80px;
+   position: absolute;
+   top: 250px;
+   right: 100px;
+   z-index: 10;
 }
 
-input[type=submit] {
+/* input[type=submit] {
     width: 8%;
     background-color: #cecece;
     color: rgb(0, 0, 0);
@@ -53,6 +53,7 @@ input[type=submit] {
     cursor: pointer;
     font-size: 20px;
   }
+
   input[type=button] {
     width: 8%;
     background-color: #cecece;
@@ -63,11 +64,13 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     font-size: 20px;
-  }
+  } */
+
+
 
 .input_bar{
     font-size: 20px;
-}
+}  
 input[type=text]{
     border-radius: 10px;
     border-style: none;
@@ -78,3 +81,22 @@ input[type=password]{
     border-style: none;
     padding: 6px;
 }
+
+.bt{
+    position: absolute;
+    padding: 7px 17px 7px 17px;
+    top:100px
+}
+
+ #log_in_bt{
+    top: 120px;
+    left: 100px;
+}
+
+#back_bt{
+    top: 120px;
+    left: 0px;
+}
+
+
+
