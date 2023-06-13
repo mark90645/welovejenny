@@ -36,7 +36,7 @@
                         $currenttime = date('Y-m-d H:i:s');
                         $currenttime = strtotime($currenttime);
                         $verifytime = strtotime($row["verify_time"]);
-                        if($currenttime - $verifytime < 10){
+                        if($currenttime - $verifytime < 300){
                             if ($row["authentication"]===$V) { 
                                 header("location:change_from_verify.php");
                             }else{   
