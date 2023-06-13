@@ -21,6 +21,8 @@ else
 </head>
 <body>
     <div class = "head_adjust"></div>
+    <div class = "back_rec"></div>
+    <div class = "back_rec2"></div>
     <div class = "title_box">
         <p class = "title">目前課程: </p>
         <p class = "title2">飛輪</p>
