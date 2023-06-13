@@ -8,9 +8,8 @@
     </head>
     <body>
         <div class = "background" >
-            <div id = "top_bar"></div>
             <div class = "backstage" >
-                <div id = "the_back_4">
+                <div class = "the_back_4">
                     <form method="post"  action="<?php echo $_SERVER['PHP_SELF'];?>">
                     <p class = "input_bar">
                         帳號：<input type="text" name="member_account"></p>
@@ -77,7 +76,6 @@
                    
                 ?>
             </div>
-            <div class = "end"></div>
         </div>
     </body>
 </html>
