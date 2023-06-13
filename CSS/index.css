@@ -195,14 +195,16 @@
   z-index: 100;
   padding: 5px 10.5px 5px 10.5px;
 }
-
+.source{
+  right: 23vw;
+}
 .privacy{
   right: 16vw;
 }
 .user{
   right: 9vw;
 }
-.privacy:hover, .user:hover{
+.source:hover, .privacy:hover, .user:hover{
   color: rgb(255, 255, 255);
 }
 
@@ -228,6 +230,15 @@
   position: absolute;
   bottom: 2vh;
   right: 15.7vw;
+  background-color: rgb(205, 205, 205);
+  height: 3vh;
+  width: 0.7px;
+  z-index: 150;
+}
+.end_line4{
+  position: absolute;
+  bottom: 2vh;
+  right: 22.8vw;
   background-color: rgb(205, 205, 205);
   height: 3vh;
   width: 0.7px;
