@@ -18,7 +18,7 @@ else
         <title>健身房系統首頁</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
         <link rel = "stylesheet" href = "./CSS/index.css" />
-        <link rel="icon" href="./pics/健.png" type="image/x-icon" />
+        <link rel="icon" href="./pics/誼.png" type="image/x-icon" />
     </head>
     <body>
         <div class = "background">
@@ -73,7 +73,7 @@ else
               </div>
                 <br>
 
-            <div style="margin-left:425px">
+            <div style="margin-left:580px">
             <span class="dot" onclick="currentSlide(1)"></span> 
             <span class="dot" onclick="currentSlide(2)"></span> 
             <span class="dot" onclick="currentSlide(3)"></span> 
@@ -174,10 +174,6 @@ else
                     </div>
                     
             </div>
-            
-              
-
-           
         </div>
 
         <div class = "end">
