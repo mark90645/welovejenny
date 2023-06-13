@@ -31,7 +31,6 @@ else
                 ?>
                 <input class = "bt" id = "log_bt" type="button" value="登入" onclick = "location.href = 'log_in_page.php'">
                 <input class = "bt" id = "sign_bt" type="button" value="註冊" onclick = "location.href = 'sign_up_page.php'">
-                <input class = "bt" id = "manager_bt" type="button" value="管理員登入" onclick = "location.href = 'manager_login_page.php'">
                 <?php
                 }
                 else
@@ -180,8 +179,18 @@ else
             <p>聯絡資訊</p>
             <input class = "contact_pic" id = "pic_c" type="button" onclick = "location.href = 'reserve_page.php'"><!--這裡我不會把圖案變按鈕 CSS大神救我-->
             <input class = "contact_pic" id = "pic_d" type="button" onclick = "location.href = 'reserve_page.php'"><img src = "./pics/instagram.png" id = "ig"></button>
+            <input class = "sp_bt privacy" type="button" value="隱私權政策" onclick = "location.href = 'manager_login_page.php'">
+            <div class = "end_line1"></div>
+            <input class = "sp_bt user" type="button" value="使用者條款" onclick = "location.href = 'manager_login_page.php'">
+            <div class = "end_line2"></div>
+            <?php
+                if ($log_check == 0)
+                {
+                ?>
+                <input class = "sp_bt manager" type="button" value="管理員登入" onclick = "location.href = 'manager_login_page.php'">
+                <?php
+                }
+                ?>
         </div>
-
-
     </body>
 </html>

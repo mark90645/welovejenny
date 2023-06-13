@@ -167,6 +167,55 @@
     right:200px;
 }
 
+.sp_bt{
+  position: absolute;
+  bottom: 1.5vh;
+  border: 1px solid #2D080A;
+  background-color: #2D080A;
+  font-size: 13px;
+  color: rgb(205, 205, 205);
+  z-index: 100;
+  padding: 5px 8px 5px 8px;
+}
+
+.privacy{
+  right: 16vw;
+}
+.user{
+  right: 9vw;
+}
+.privacy:hover, .user:hover{
+  color: rgb(255, 255, 255);
+}
+
+.manager{
+  right: 2vw;
+}
+.manager:hover{
+  border: 1px solid white;
+  border-radius: 2px;
+  color: white;
+}
+
+.end_line1{
+  position: absolute;
+  bottom: 2vh;
+  right: 8.7vw;
+  background-color: rgb(205, 205, 205);
+  height: 3vh;
+  width: 0.8px;
+  z-index: 150;
+}
+.end_line2{
+  position: absolute;
+  bottom: 2vh;
+  right: 15.7vw;
+  background-color: rgb(205, 205, 205);
+  height: 3vh;
+  width: 0.7px;
+  z-index: 150;
+}
+
 * {
     box-sizing: border-box
   }
@@ -299,8 +348,6 @@
   #text_2{
     font-size: 20px;
   }
-
-
 
 /*螢幕改動*/
 
