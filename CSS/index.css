@@ -112,6 +112,8 @@
 
 
 
+
+
 #gym_head_pic{
     margin:0;
     padding:0;
@@ -142,6 +144,7 @@
     position: absolute;
     top:1113px;
     left:0px;
+    z-index: 50;
     
 }
 
@@ -166,6 +169,21 @@
     top:50px;
     right:200px;
 }
+
+#peppa_pic{
+  position: absolute;
+    width: 656px;
+    height: 553px;
+    overflow:hidden;
+    transform:scale(1,1);transition: all 1s ease-out;
+}
+
+#peppa_pic:hover{
+  transform:scale(1.2,1.2);
+  overflow:hidden;
+}
+
+
 
 .sp_bt{
   position: absolute;
@@ -349,21 +367,77 @@
     font-size: 20px;
   }
 
+.end{
+  z-index: 200;
+}
+
 .email_pic{
   position: absolute;
-  bottom: 16vh;
-  left:16vw;
+  bottom: 15vh;
+  left:13vw;
 }
+
 .email_text{
   position: absolute;
-  bottom: 14vh;
-  left:19vw;
+  bottom: 13vh;
+  left:16vw;
+  letter-spacing: 1.2px;
+  color:rgb(205, 205, 205);
+}
+
+.fb_pic{
+  position: absolute;
+  bottom: 7vh;
+  left:12.8vw;
+}
+.fb_text{
+  position: absolute;
+  bottom: 5vh;
+  left:16vw;
+  letter-spacing: 1.2px;
+  color:rgb(205, 205, 205);
+}
+.fb_link{
+  position: absolute;
+  bottom: 7.5vh;
+  left:23vw;
+  letter-spacing: 1.2px;
+  color: white;
+  text-decoration: none;
+  color:rgb(205, 205, 205);
+}
+
+.phone_pic{
+  position: absolute;
+  bottom: 14.5vh;
+  left:41vw;
+  height: 25px;
+}
+.phone_text{
+  position: absolute;
+  bottom: 13vh;
+  left:44.5vw;
+  letter-spacing: 1.2px;
+  color:rgb(205, 205, 205);
+}
+
+.house_pic{
+  position: absolute;
+  bottom: 7vh;
+  left:41vw;
+  height: 29px;
+}
+.house_text{
+  position: absolute;
+  bottom: 5vh;
+  left:44.5vw;
+  color:rgb(205, 205, 205);
 }
 
 .end_line3{
   position: absolute;
   bottom: 5vh;
-  left: 42vw;
+  left: 37vw;
   background-color: rgb(205, 205, 205);
   height: 15vh;
   width: 0.3px;
