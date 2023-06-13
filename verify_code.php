@@ -4,18 +4,21 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!--網頁編碼-->
         <title>驗證碼確認</title>
         <link rel = "stylesheet" href = "./CSS/board.css" />
-        <!-- <link rel = "stylesheet" href = "./c_ss/log_pages.css" /> -->
+        <link rel = "stylesheet" href = "./css/verify_code.css" /> 
     </head>
     <body>
         <div class = "background" >
             <div id = "top_bar"></div>
             <div class = "backstage" >
+                
                 <div id = "the_back_4">
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
                     <p class = "input_bar">
                         驗證碼：<input type="text" name="verification"></p>
                     <input id = "verify" type="submit" value="提交" name = "submit">
                 </div>
+
+         
                 <?php
                 session_start();
                 if(isset($_SESSION['account'])) {
@@ -52,7 +55,7 @@
                     }
                 ?>
             </div>
-            <div class = "end"></div>
+           
         </div>
     </body>
 </html>
