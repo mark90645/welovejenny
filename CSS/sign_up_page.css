@@ -20,6 +20,16 @@
     position: absolute;
     left: 820px;
 }
+input[type=text]{
+    border-radius: 10px;
+    border-style: none;
+    padding: 6px;
+}
+input[type=password]{
+    border-radius: 10px;
+    border-style: none;
+    padding: 6px;
+}
 
 #gmail_bar{
     top:160px;

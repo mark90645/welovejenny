@@ -29,9 +29,9 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                 <div id = "the_back_4">
                     <form method="post" action="log_procedure.php">
                     <p class = "input_bar" id = "account_bar">
-                        帳號：<input type="text" name="member_account"></p>
+                        帳號：<input type="text" class = "underline" name="member_account"></p>
                     <p class = "input_bar" id = "password_bar">
-                        密碼：<input type="password" name="password"></p>
+                        密碼：<input type="password" class = "underline" name="password"></p>
                     <input class = "bt" id = "log_in_bt" type="submit" value="我要登入" name = "submit">
                     <input class = "bt" id = "forget_bt" type="button" value="忘記密碼" onclick = "location.href = 'forget_page.php'">
                     <input class = "bt" id = "back_bt" type="button" value="訪客瀏覽" onclick = "location.href = 'index.php'">
