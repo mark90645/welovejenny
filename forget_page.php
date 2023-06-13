@@ -20,6 +20,13 @@
                     <input id = "back_bt" type="button" value="返回" onclick = "location.href = 'log_in_page.php'">
                 </div>
                 <?php
+                    session_start();
+                    
+                    use PHPMailer\PHPMailer\PHPMailer;
+                    use PHPMailer\PHPMailer\Exception;
+                    require 'phpmailer/src/Exception.php';
+                    require 'phpmailer/src/PHPMailer.php';
+                    require 'phpmailer/src/SMTP.php';
                     if(isset($_POST['submit'])){
                         $conn = require_once "configure.php";
                         $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -27,27 +34,41 @@
                             die('資料庫連線失敗！'.mysqli_connect_error());
                         }
                         $account = $_POST['member_account'];
+                        $_SESSION['account'] = $account;
                         $gmail = $_POST['gmail'];
-                        $code = rand(10000000, 99999999);
+                        $code = rand(100000, 999999);
+                        $code = strval($code);
                         $subject = "五花肉健身房，忘記密碼信件";
+                        $subject = mb_encode_mimeheader($subject, 'UTF-8');
                         $message = "請查看以下驗證碼：".$code;
-                        ini_set("SMTP", "smtp.gmail.com");
-                        ini_set("smtp_port", "587");
-                        ini_set("smtp_ssl", "tls");
-                        ini_set("sendmail_from", "fongcar.mg09@nycu.edu.tw");
-
-                        $headers = 'From: fongcar.mg09@nycu.edu.tw' . "\r\n" .
-                                    'Reply-To: fongcar.mg09@nycu.edu.tw' . "\r\n" .
-                                    'X-Mailer: PHP/' . phpversion();              
+                        $currentDateTime = date('Y-m-d H:i:s');
+                        
+                        $mail =  new PHPMailer(true);
+                        $mail->isSMTP();
+                        $mail->Host = 'smtp.gmail.com';
+                        $mail->SMTPAuth = true;
+                        $mail->Username = 'ericwf36@gmail.com';
+                        $mail->Password = 'deqfdtjhefnafssj';
+                        $mail->SMTPSecure = 'ssl';
+                        $mail->Port = 465;
+                        $mail->setFrom('ericwf36@gmail.com');
+                        $mail->addAddress($gmail);
+                        $mail->isHTML(true);
+                        $mail->Subject = $subject;
+                        $mail->Body = $message;
+             
                         $check = "SELECT member_account,gmail FROM regular_member WHERE member_account = '$account' AND gmail = '$gmail'";
                         $exist = mysqli_query($link, $check);
                         if (mysqli_num_rows($exist) > 0) { 
-                            mail($gmail,$subject,$message,$headers);
+                            if ($mail->send()) {
+                                echo "郵件已送出";
+                            } else {
+                                echo "郵件發送失敗";
+                            }     
                             $sql = "UPDATE regular_member SET authentication = '$code' WHERE gmail = '$gmail'";
-                            $sql2 = "UPDATE regular_member SET password = '00000000' WHERE gmail = '$gmail'";
                             mysqli_query($link, $sql);
-                            mysqli_query($link, $sql2);
-                            echo '<script>alert("請重新登入帳號！");</script>';
+                            echo '<script>alert("請重設密碼！");</script>';
+                            header("location:verify_code.php");
                         }else{
                                 echo '<script>alert("帳號不存在！");</script>';
                             }
