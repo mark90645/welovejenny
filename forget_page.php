@@ -41,17 +41,17 @@
                         $subject = "五花肉健身房，忘記密碼信件";
                         $subject = mb_encode_mimeheader($subject, 'UTF-8');
                         $message = "請查看以下驗證碼：".$code;
-                        $currentDateTime = date('Y-m-d H:i:s');
+                        $time = date('Y-m-d H:i:s');
                         
                         $mail =  new PHPMailer(true);
                         $mail->isSMTP();
                         $mail->Host = 'smtp.gmail.com';
                         $mail->SMTPAuth = true;
-                        $mail->Username = 'ericwf36@gmail.com';
-                        $mail->Password = 'deqfdtjhefnafssj';
+                        $mail->Username = 'agentfong2001x1@gmail.com';
+                        $mail->Password = 'sgjrmbuwjfhjiano';
                         $mail->SMTPSecure = 'ssl';
                         $mail->Port = 465;
-                        $mail->setFrom('ericwf36@gmail.com');
+                        $mail->setFrom('agentfong2001x1@gmail.com');
                         $mail->addAddress($gmail);
                         $mail->isHTML(true);
                         $mail->Subject = $subject;
@@ -65,7 +65,7 @@
                             } else {
                                 echo "郵件發送失敗";
                             }     
-                            $sql = "UPDATE regular_member SET authentication = '$code' WHERE gmail = '$gmail'";
+                            $sql = "UPDATE regular_member SET authentication = '$code',verify_time='$time' WHERE gmail = '$gmail'";
                             mysqli_query($link, $sql);
                             echo '<script>alert("請重設密碼！");</script>';
                             header("location:verify_code.php");

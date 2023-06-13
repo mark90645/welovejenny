@@ -30,15 +30,24 @@
                         }
                         $V = $_POST['verification'];
                         $V = strval($V);
-                        $check = "SELECT authentication FROM regular_member WHERE member_account = '$account'";
+                        $check = "SELECT authentication,verify_time FROM regular_member WHERE member_account = '$account'";
                         $result = mysqli_query($link, $check);
                         $row = mysqli_fetch_assoc($result);
-                        if ($row["authentication"]===$V) { 
-                            header("location:change_from_verify.php");
-                        }else{   
-                            echo '<script>alert("驗證碼錯誤！");window.location.href="index.php";</script>';                                  
-                            exit;                        
-                            }
+                        $currenttime = date('Y-m-d H:i:s');
+                        $currenttime = strtotime($currenttime);
+                        $verifytime = strtotime($row["verify_time"]);
+                        if($currenttime - $verifytime < 10){
+                            if ($row["authentication"]===$V) { 
+                                header("location:change_from_verify.php");
+                            }else{   
+                                echo '<script>alert("驗證碼錯誤！");window.location.href="index.php";</script>';                                  
+                                exit;                        
+                                }
+                        }else{
+                            $delete = "UPDATE regular_member SET authentication = '',verify_time='' WHERE member_account = '$account'";
+                            mysqli_query($link, $delete);
+                            echo '<script>alert("驗證碼已過期！");window.location.href="index.php";</script>'; 
+                        }                
                         mysqli_close($conn);
                     }
                 ?>
