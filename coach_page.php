@@ -107,7 +107,7 @@ else
         
 
       </div>
-      <div class = "end">
+      <!-- <div class = "end">
       <img class = "email_pic" src = "./pics/email.png"/>
             <p class = "email_text">email : 5huameat@gmail.com</p>
             <img class = "fb_pic" src = "./pics/facebook.png"/>
@@ -132,7 +132,7 @@ else
                 <?php
                 }
                 ?>
-        </div>
+        </div> -->
        
 
     </body>
