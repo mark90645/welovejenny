@@ -176,13 +176,13 @@ else
 
         <div class = "end">
             <img class = "email_pic" src = "./pics/email.png"/>
-            <p class = "email_text">email : 5huameat@gmail.com</p>
+            <p class = "email_text">email : yeechen@gmail.com</p>
             <img class = "fb_pic" src = "./pics/facebook.png"/>
             <p class = "fb_text">facebook : </p>
             <a class = "fb_link" href="https://www.facebook.com/profile.php?id=100007760377475" target=_blank>五花肉運動會館</a>
             <div class = "end_line3"></div>
             <img class = "phone_pic" src = "./pics/phone.png"/>
-            <p class = "phone_text">phone : (02)2940-6086</p>
+            <p class = "phone_text">phone : (03)571-2121</p>
             <img class = "house_pic" src = "./pics/house.png"/>
             <p class = "house_text">address : 新竹市東區大學路1001號游泳館2樓</p>
             <input class = "sp_bt source" type="button" value="來源" target=_blank onclick = "location.href = 'https://icons8.com/'">
