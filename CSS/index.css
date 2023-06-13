@@ -370,13 +370,13 @@
 .email_pic{
   position: absolute;
   bottom: 15vh;
-  left:18vw;
+  left:13vw;
 }
 
 .email_text{
   position: absolute;
   bottom: 13vh;
-  left:21vw;
+  left:16vw;
   letter-spacing: 1.2px;
   color:rgb(205, 205, 205);
 }
@@ -384,19 +384,19 @@
 .fb_pic{
   position: absolute;
   bottom: 7vh;
-  left:17.8vw;
+  left:12.8vw;
 }
 .fb_text{
   position: absolute;
   bottom: 5vh;
-  left:21vw;
+  left:16vw;
   letter-spacing: 1.2px;
   color:rgb(205, 205, 205);
 }
 .fb_link{
   position: absolute;
   bottom: 7.5vh;
-  left:28vw;
+  left:23vw;
   letter-spacing: 1.2px;
   color: white;
   text-decoration: none;
@@ -406,21 +406,34 @@
 .phone_pic{
   position: absolute;
   bottom: 14.5vh;
-  left:46vw;
-  height: 27px;
+  left:41vw;
+  height: 25px;
 }
 .phone_text{
   position: absolute;
   bottom: 13vh;
-  left:49.5vw;
+  left:44.5vw;
   letter-spacing: 1.2px;
+  color:rgb(205, 205, 205);
+}
+
+.house_pic{
+  position: absolute;
+  bottom: 7vh;
+  left:41vw;
+  height: 29px;
+}
+.house_text{
+  position: absolute;
+  bottom: 5vh;
+  left:44.5vw;
   color:rgb(205, 205, 205);
 }
 
 .end_line3{
   position: absolute;
   bottom: 5vh;
-  left: 42vw;
+  left: 37vw;
   background-color: rgb(205, 205, 205);
   height: 15vh;
   width: 0.3px;
