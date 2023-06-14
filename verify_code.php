@@ -21,8 +21,8 @@
          
                 <?php
                 session_start();
-                if(isset($_SESSION['account'])) {
-                    $account = $_SESSION['account'];
+                if(isset($_SESSION['gmail'])) {
+                    $gmail = $_SESSION['gmail'];
                 }
                 
                     if(isset($_POST['submit'])){
@@ -33,7 +33,7 @@
                         }
                         $V = $_POST['verification'];
                         $V = strval($V);
-                        $check = "SELECT authentication,verify_time FROM regular_member WHERE member_account = '$account'";
+                        $check = "SELECT authentication,verify_time FROM regular_member WHERE gmail = '$gmail'";
                         $result = mysqli_query($link, $check);
                         $row = mysqli_fetch_assoc($result);
                         $currenttime = date('Y-m-d H:i:s');
@@ -47,7 +47,7 @@
                                 exit;                        
                                 }
                         }else{
-                            $delete = "UPDATE regular_member SET authentication = '',verify_time='' WHERE member_account = '$account'";
+                            $delete = "UPDATE regular_member SET authentication = '',verify_time='' WHERE gmail = '$gmail'";
                             mysqli_query($link, $delete);
                             echo '<script>alert("驗證碼已過期！");window.location.href="index.php";</script>'; 
                         }                

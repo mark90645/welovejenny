@@ -11,8 +11,8 @@
             <div class = "backstage" >
                 <div class = "the_back_4">
                     <form method="post"  action="<?php echo $_SERVER['PHP_SELF'];?>">
-                    <p class = "input_bar a">
-                        帳號：&thinsp;<input type="text" name="member_account"></p>
+                    <!-- <p class = "input_bar a">
+                        帳號：&thinsp;<input type="text" name="member_account"></p> -->
                     <p class = "input_bar b">
                         gmail：<input type="text" name="gmail"></p>
                     <input class = "bt find_password_bt" type="submit" value="找回密碼" name = "submit">
@@ -32,9 +32,10 @@
                         if(!$link){
                             die('資料庫連線失敗！'.mysqli_connect_error());
                         }
-                        $account = $_POST['member_account'];
-                        $_SESSION['account'] = $account;
+                        // $account = $_POST['member_account'];
+                        // $_SESSION['account'] = $account;
                         $gmail = $_POST['gmail'];
+                        $_SESSION['gmail'] = $gmail;
                         $code = rand(100000, 999999);
                         $code = strval($code);
                         $subject = "五花肉健身房，驗證碼信件";
@@ -56,11 +57,11 @@
                         $mail->Subject = $subject;
                         $mail->Body = $message;
              
-                        $check = "SELECT member_account,gmail FROM regular_member WHERE member_account = '$account' AND gmail = '$gmail'";
+                        $check = "SELECT gmail FROM regular_member WHERE gmail = '$gmail'";
                         $exist = mysqli_query($link, $check);
                         if (mysqli_num_rows($exist) > 0) { 
                             if ($mail->send()) {
-                                echo "郵件已送出";
+                                echo '<script>alert("郵件已送出！");</script>';
                             } else {
                                 echo "郵件發送失敗";
                             }     

@@ -20,8 +20,8 @@
                 </div>
                 <?php
                 session_start();
-                if(isset($_SESSION['account'])) {
-                    $account = $_SESSION['account'];
+                if(isset($_SESSION['gmail'])) {
+                    $gmail = $_SESSION['gmail'];
                 }
                     if(isset($_POST['submit'])){
                         $conn = require_once "configure.php";
@@ -34,7 +34,7 @@
                         $newvf = $_POST['newpasswordverify'];
                         $newvf = strval($newvf);
                         if($new==$newvf){
-                            $update = "UPDATE regular_member SET password = '$newvf' WHERE member_account = '$account'";
+                            $update = "UPDATE regular_member SET password = '$newvf' WHERE gmail = '$gmail'";
                             mysqli_query($link, $update);
                             echo '<script>alert("修改成功！請重新登入");window.location.href="log_in_page.php";</script>';
                         }else{
